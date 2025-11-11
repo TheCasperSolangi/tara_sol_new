@@ -1,0 +1,164 @@
+{
+  "Ruta de Competencias Digitales": {
+    "Python": [
+      {
+        "name": "Desarrollo de Modelos de Aprendizaje Automático con Python",
+        "description": "Capacita a los estudiantes en la creación, entrenamiento y evaluación de modelos de aprendizaje automático con Python, abarcando clasificación, regresión y agrupación, optimización de modelos y selección de características.",
+        "career": ["Ingeniería de Datos", "Científico de Datos", "Analista de Datos", "Desarrollador de Machine Learning"]
+      },
+      {
+        "name": "Analizar Datos Financieros con Python",
+        "description": "Proporciona habilidades para análisis estadístico y modelado financiero con Python, usando Pandas y NumPy.",
+        "career": ["Analista Financiero", "Analista de Riesgos", "Consultor Financiero", "Científico de Datos Financieros"]
+      },
+      {
+        "name": "Desarrollo de Chatbots con Python",
+        "description": "Cubre procesamiento de lenguaje natural (NLP) y desarrollo de chatbots con NLTK, spaCy, ChatterBot y Rasa.",
+        "career": ["Desarrollador de Chatbots", "Ingeniero de Automatización de Conversaciones", "Especialista en Interfaz Conversacional"]
+      },
+      {
+        "name": "Construir Aplicaciones Web con Python y Flask",
+        "description": "Desarrollo web con Flask, creación de rutas, formularios, bases de datos (SQLAlchemy) y APIs RESTful.",
+        "career": ["Desarrollador Web", "Ingeniero de Software", "Desarrollador Backend"]
+      },
+      {
+        "name": "Construir Modelos de Aprendizaje Profundo con Tensorflow",
+        "description": "Implementación de redes neuronales, optimización de modelos y transferencia de aprendizaje con TensorFlow.",
+        "career": ["Ingeniero de Machine Learning", "Científico de Datos", "Desarrollador de IA", "Investigador en Deep Learning"]
+      },
+      {
+        "name": "Aplicar Procesamiento de Lenguaje Natural con Python",
+        "description": "Aplicación de PLN en análisis de sentimientos, extracción de entidades y traducción automática con NLTK, spaCy y transformers.",
+        "career": ["Ingeniero de PLN", "Desarrollador de Aplicaciones PLN", "Científico de Datos en PLN"]
+      },
+      {
+        "name": "Construir Aplicaciones Web con Python y Django",
+        "description": "Desarrollo web con Django, administración de modelos, autenticación y permisos.",
+        "career": ["Desarrollador Full Stack", "Ingeniero de Software Web", "Arquitecto de Aplicaciones Web"]
+      },
+      {
+        "name": "Ingeniería de Software para Científicos de Datos",
+        "description": "Principios de ingeniería de software aplicados a proyectos de ciencia de datos, buenas prácticas y automatización.",
+        "career": ["Ingeniero de Software para Ciencia de Datos", "Científico de Datos", "Ingeniero de Datos"]
+      },
+      {
+        "name": "Aprendizaje Automático",
+        "description": "Cobertura de algoritmos supervisados y no supervisados, evaluación de modelos y aplicaciones prácticas.",
+        "career": ["Científico de Datos", "Ingeniero de ML", "Analista de Datos"]
+      },
+      {
+        "name": "Fundamentos de Aprendizaje Automático e Inteligencia Artificial",
+        "description": "Introducción a ML e IA con conceptos de clasificación, regresión, agrupación y ética en IA.",
+        "career": ["Estudiantes", "Principiantes en Ciencia de Datos", "Desarrolladores"]
+      },
+      {
+        "name": "Analizar y Visualizar Datos con Python",
+        "description": "Uso de Pandas, Matplotlib y Seaborn para análisis y visualización, creación de dashboards.",
+        "career": ["Analista de Datos", "Científico de Datos", "Consultor BI"]
+      }
+    ],
+    "JavaScript": [
+      {
+        "name": "Crear una Aplicación Web Avanzada con React y Redux",
+        "description": "Desarrollo frontend avanzado con React y Redux, manejo de estado y componentes reutilizables.",
+        "career": ["Desarrollador Frontend", "Ingeniero Web", "Especialista UI"]
+      },
+      {
+        "name": "Crear una Aplicación Front-End con React",
+        "description": "Fundamentos de React, componentes, estado y arquitectura moderna para interfaces interactivas.",
+        "career": ["Desarrollador Frontend", "Diseñador UI/UX"]
+      },
+      {
+        "name": "Crear una Aplicación Back-End con JavaScript",
+        "description": "Desarrollo de servidores, rutas y bases de datos para aplicaciones full stack con JavaScript.",
+        "career": ["Desarrollador Backend", "Arquitecto de Software", "Full Stack"]
+      },
+      {
+        "name": "Crear un Videojuego con Phaser.js",
+        "description": "Diseño y desarrollo de juegos 2D interactivos con Phaser.js, optimización y lógica de juego.",
+        "career": ["Desarrollador de Videojuegos", "Diseñador de Juegos"]
+      }
+    ],
+    "HTML & CSS": [
+      {
+        "name": "Construir un Sitio Web con HTML, CSS y GitHub Pages",
+        "description": "Creación de sitios web estáticos y hospedaje en GitHub Pages.",
+        "career": ["Desarrollador Web", "Diseñador Web", "Especialista Frontend"]
+      }
+    ],
+    "SQL": [
+      {
+        "name": "Analizar Datos con SQL",
+        "description": "Consultas, joins y operaciones de agregación en bases de datos relacionales.",
+        "career": ["Analista de Datos", "Ingeniero de Datos"]
+      },
+      {
+        "name": "Diseñar Bases de Datos con PostgreSQL",
+        "description": "Modelado de datos, relaciones y optimización de consultas.",
+        "career": ["Diseñador de BD", "Administrador de BD", "Desarrollador Backend"]
+      }
+    ],
+    "Java": [
+      {
+        "name": "Construir Aplicaciones Android con Java",
+        "description": "Desarrollo de apps móviles Android, manejo de eventos e interfaces.",
+        "career": ["Desarrollador Android", "Ingeniero Móvil"]
+      },
+      {
+        "name": "Crear APIs REST con Spring y Java",
+        "description": "Desarrollo de servicios RESTful con Spring y Java.",
+        "career": ["Desarrollador Java", "Ingeniero de Software"]
+      }
+    ],
+    "C": [
+      {
+        "name": "Aprender el Lenguaje de Programación C",
+        "description": "Introducción al lenguaje C, estructuras de control y memoria.",
+        "career": ["Programador C", "Ingeniero de Sistemas Embebidos"]
+      }
+    ],
+    "R": [
+      {
+        "name": "Analizar Data con R",
+        "description": "Análisis estadístico y visualización avanzada con R.",
+        "career": ["Analista de Datos", "Científico de Datos"]
+      }
+    ],
+    "PHP": [
+      {
+        "name": "Aprender PHP",
+        "description": "Desarrollo de sitios web dinámicos y conexión con bases de datos usando PHP.",
+        "career": ["Desarrollador PHP", "Ingeniero Backend"]
+      }
+    ],
+    "Swift": [
+      {
+        "name": "Desarrollar Aplicaciones iOS con SwiftUI",
+        "description": "Construcción de apps iOS modernas con SwiftUI.",
+        "career": ["Desarrollador iOS", "Ingeniero de Software Móvil"]
+      }
+    ],
+    "Excel & Power BI": [
+      {
+        "name": "Excel Avanzado para Análisis de Datos Empresariales",
+        "career": ["Analista de Datos Empresariales", "Consultor de Datos"]
+      },
+      {
+        "name": "Automatización y Eficiencia con Macros en Excel",
+        "career": ["Especialista en Automatización", "Ingeniero de Datos"]
+      },
+      {
+        "name": "Power Query y Power Pivot en Excel: Transformación de Datos",
+        "career": ["Analista de Datos", "Ingeniero de Datos"]
+      },
+      {
+        "name": "Análisis Predictivo con Excel",
+        "career": ["Analista de Negocios", "Científico de Datos"]
+      },
+      {
+        "name": "Visualización de Datos Efectiva con Power BI",
+        "career": ["Consultor BI", "Analista de Datos"]
+      }
+    ]
+  }
+}
