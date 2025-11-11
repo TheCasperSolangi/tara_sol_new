@@ -45,6 +45,10 @@ export default function Footer() {
                     width={80}
                     height={80}
                     className="h-20 w-auto"
+                    onError={(e) => {
+                      console.error('Main logo failed to load');
+                      e.target.style.display = 'none';
+                    }}
                   />
                 </div>
                 <div className="flex-1 text-center lg:text-left">
@@ -88,6 +92,10 @@ export default function Footer() {
                         width={20}
                         height={20}
                         className="mr-2"
+                        onError={(e) => {
+                          console.error('Bell icon failed to load');
+                          e.target.style.display = 'none';
+                        }}
                       />
                       {t('subscribe')}
                     </Button>
@@ -110,24 +118,51 @@ export default function Footer() {
                 {t('aboutDescription')}
               </p>
               <div className="flex items-center gap-3">
-                <Image
-                  src="/assets/brands/mastercard_logo.png"
-                  alt={t('educationAwardAlt')}
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src="/assets/brands/Visa_logo.png"
-                  alt={t('isoCertifiedAlt')}
-                  width={40}
-                  height={40}
-                />
-                 <Image
-                  src="/assets/brands/AMEX_logo.png"
-                  alt={t('isoCertifiedAlt')}
-                  width={40}
-                  height={40}
-                />
+                {/* Mastercard Logo with Error Handling */}
+                <div className="w-10 h-6 relative">
+                  <Image
+                    src="/assets/brands/mastercard_logo.png"
+                    alt="Mastercard"
+                    width={40}
+                    height={24}
+                    className="object-contain"
+                    onError={(e) => {
+                      console.error('Mastercard logo failed to load');
+                      // Fallback to text or placeholder
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                </div>
+                
+                {/* Visa Logo */}
+                <div className="w-10 h-6 relative">
+                  <Image
+                    src="/assets/brands/Visa_logo.png"
+                    alt="Visa"
+                    width={40}
+                    height={24}
+                    className="object-contain"
+                    onError={(e) => {
+                      console.error('Visa logo failed to load');
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                </div>
+                
+                {/* Amex Logo */}
+                <div className="w-10 h-6 relative">
+                  <Image
+                    src="/assets/brands/AMEX_logo.png"
+                    alt="American Express"
+                    width={40}
+                    height={24}
+                    className="object-contain"
+                    onError={(e) => {
+                      console.error('Amex logo failed to load');
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                </div>
               </div>
             </div>
 
@@ -204,6 +239,10 @@ export default function Footer() {
                     width={20}
                     height={20}
                     className="mt-1 flex-shrink-0"
+                    onError={(e) => {
+                      console.error('Location icon failed to load');
+                      e.target.style.display = 'none';
+                    }}
                   />
                   <span className="text-gray-400 text-sm leading-relaxed">
                     {t('companyAddress')}
@@ -213,37 +252,36 @@ export default function Footer() {
               
               <div>
                 <h5 className="font-semibold text-sm mb-4 text-white">{t('followUs')}</h5>
-            <div className="flex gap-3">
-  <Link 
-    href="https://www.facebook.com/profile.php?id=61552120787685&mibextid=LQQJ4d" 
-    className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-  >
-    <Facebook size={18} />
-  </Link>
+                <div className="flex gap-3">
+                  <Link 
+                    href="https://www.facebook.com/profile.php?id=61552120787685&mibextid=LQQJ4d" 
+                    className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  >
+                    <Facebook size={18} />
+                  </Link>
 
+                  <Link 
+                    href="https://www.linkedin.com/company/tarasolutions-cr/" 
+                    className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  >
+                    <Linkedin size={18} />
+                  </Link>
 
-  <Link 
-    href="https://www.linkedin.com/company/tarasolutions-cr/" 
-    className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-  >
-    <Linkedin size={18} />
-  </Link>
+                  <Link 
+                    href="https://instagram.com/tara_solutions?igshid=OGQ5ZDc2ODk2ZA==" 
+                    className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  >
+                    <Instagram size={18} />
+                  </Link>
 
-  <Link 
-    href="https://instagram.com/tara_solutions?igshid=OGQ5ZDc2ODk2ZA==" 
-    className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-  >
-    <Instagram size={18} />
-  </Link>
-
-  {/* ✅ New WhatsApp Icon */}
-<Link
-  href="https://wa.me/message/IGSA6YHQPVHDB1"
-  className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
->
-  <WhatsappIcon size={18} />
-</Link>
-</div>
+                  {/* ✅ New WhatsApp Icon */}
+                  <Link
+                    href="https://wa.me/message/IGSA6YHQPVHDB1"
+                    className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  >
+                    <WhatsappIcon size={18} />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

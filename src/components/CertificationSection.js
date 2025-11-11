@@ -2,11 +2,13 @@
 "use client"
 import { useState } from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { useLocalization } from '../context/LocalizationContext'
 
 const CertificationsSection = () => {
   const [activeTab, setActiveTab] = useState('international')
   const { t } = useLocalization()
+  const router = useRouter()
 
   const certifications = {
     international: [
@@ -43,6 +45,16 @@ const CertificationsSection = () => {
     ]
   }
 
+  const handleTabClick = (tab) => {
+    setActiveTab(tab)
+    // Redirect based on the tab clicked
+    if (tab === 'international') {
+      router.push('/international_certifications')
+    } else if (tab === 'executive') {
+      router.push('/executive_programs')
+    }
+  }
+
   return (
     <section className="category-section-area py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -60,7 +72,7 @@ const CertificationsSection = () => {
           {/* Tab Navigation */}
           <div className="flex space-x-1 bg-gray-100 rounded-lg p-1">
             <button
-              onClick={() => setActiveTab('international')}
+              onClick={() => handleTabClick('international')}
               className={`px-6 py-3 rounded-md text-sm font-medium transition-all ${
                 activeTab === 'international'
                   ? 'bg-white text-purple-600 shadow-sm'
@@ -70,7 +82,7 @@ const CertificationsSection = () => {
               {t('internationalCertifications')}
             </button>
             <button
-              onClick={() => setActiveTab('executive')}
+              onClick={() => handleTabClick('executive')}
               className={`px-6 py-3 rounded-md text-sm font-medium transition-all ${
                 activeTab === 'executive'
                   ? 'bg-white text-purple-600 shadow-sm'
