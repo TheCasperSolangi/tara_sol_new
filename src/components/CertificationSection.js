@@ -45,12 +45,10 @@ const CertificationsSection = () => {
     ]
   }
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab)
-    // Redirect based on the tab clicked
-    if (tab === 'international') {
+  const handleCertificationClick = (tabType) => {
+    if (tabType === 'international') {
       router.push('/international_certifications')
-    } else if (tab === 'executive') {
+    } else if (tabType === 'executive') {
       router.push('/executive_programs')
     }
   }
@@ -72,7 +70,7 @@ const CertificationsSection = () => {
           {/* Tab Navigation */}
           <div className="flex space-x-1 bg-gray-100 rounded-lg p-1">
             <button
-              onClick={() => handleTabClick('international')}
+              onClick={() => setActiveTab('international')}
               className={`px-6 py-3 rounded-md text-sm font-medium transition-all ${
                 activeTab === 'international'
                   ? 'bg-white text-purple-600 shadow-sm'
@@ -82,7 +80,7 @@ const CertificationsSection = () => {
               {t('internationalCertifications')}
             </button>
             <button
-              onClick={() => handleTabClick('executive')}
+              onClick={() => setActiveTab('executive')}
               className={`px-6 py-3 rounded-md text-sm font-medium transition-all ${
                 activeTab === 'executive'
                   ? 'bg-white text-purple-600 shadow-sm'
@@ -106,6 +104,7 @@ const CertificationsSection = () => {
                   <div 
                     key={index} 
                     className="destination-single-item bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                    onClick={() => handleCertificationClick(tab)}
                   >
                     <div className="thumbnail mb-3">
                       <div className="w-16 h-16 mx-auto relative">
