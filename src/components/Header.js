@@ -12,10 +12,20 @@ export default function Header() {
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
+  // Complete language data with fallbacks
   const languageData = {
     en: { name: 'English', flag: '🇺🇸' },
-    es: { name: 'Español', flag: '🇪🇸' },
+    es: { name: 'Español', flag: '🇪🇸' }
+ 
+    // Add more languages as needed
+  };
 
+  // Safe language data access with fallbacks
+  const getLanguageData = (lang) => {
+    return languageData[lang] || { 
+      name: lang.toUpperCase(), 
+      flag: '🌐' // Default globe emoji for unknown languages
+    };
   };
 
   const navigation = [
@@ -31,6 +41,9 @@ export default function Header() {
     },
     { name: 'contact', href: '/contact' },
   ];
+
+  // Get current language data safely
+  const currentLanguageData = getLanguageData(language);
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
@@ -116,30 +129,33 @@ export default function Header() {
                 onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
                 className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 p-2 rounded-md transition-colors border border-gray-200 hover:border-gray-300"
               >
-                <span className="text-lg">{languageData[language].flag}</span>
-                <span className="text-sm font-medium">{languageData[language].name}</span>
+                <span className="text-lg">{currentLanguageData.flag}</span>
+                <span className="text-sm font-medium">{currentLanguageData.name}</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
 
               {isLanguageDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
-                  {availableLanguages.map((lang) => (
-                    <button
-                      key={lang}
-                      onClick={() => {
-                        setLanguage(lang);
-                        setIsLanguageDropdownOpen(false);
-                      }}
-                      className={`flex items-center space-x-3 w-full text-left px-4 py-2 text-sm transition-colors ${
-                        language === lang
-                          ? 'bg-blue-50 text-blue-700'
-                          : 'text-gray-700 hover:bg-gray-50'
-                      }`}
-                    >
-                      <span className="text-lg">{languageData[lang].flag}</span>
-                      <span>{languageData[lang].name}</span>
-                    </button>
-                  ))}
+                  {availableLanguages.map((lang) => {
+                    const langData = getLanguageData(lang);
+                    return (
+                      <button
+                        key={lang}
+                        onClick={() => {
+                          setLanguage(lang);
+                          setIsLanguageDropdownOpen(false);
+                        }}
+                        className={`flex items-center space-x-3 w-full text-left px-4 py-2 text-sm transition-colors ${
+                          language === lang
+                            ? 'bg-blue-50 text-blue-700'
+                            : 'text-gray-700 hover:bg-gray-50'
+                        }`}
+                      >
+                        <span className="text-lg">{langData.flag}</span>
+                        <span>{langData.name}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -155,28 +171,31 @@ export default function Header() {
                 onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
                 className="p-2 rounded-md text-gray-700 hover:text-gray-900 border border-gray-200 hover:border-gray-300"
               >
-                <span className="text-lg">{languageData[language].flag}</span>
+                <span className="text-lg">{currentLanguageData.flag}</span>
               </button>
 
               {isLanguageDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
-                  {availableLanguages.map((lang) => (
-                    <button
-                      key={lang}
-                      onClick={() => {
-                        setLanguage(lang);
-                        setIsLanguageDropdownOpen(false);
-                      }}
-                      className={`flex items-center space-x-3 w-full text-left px-4 py-2 text-sm ${
-                        language === lang
-                          ? 'bg-blue-50 text-blue-700'
-                          : 'text-gray-700 hover:bg-gray-50'
-                      }`}
-                    >
-                      <span className="text-lg">{languageData[lang].flag}</span>
-                      <span>{languageData[lang].name}</span>
-                    </button>
-                  ))}
+                  {availableLanguages.map((lang) => {
+                    const langData = getLanguageData(lang);
+                    return (
+                      <button
+                        key={lang}
+                        onClick={() => {
+                          setLanguage(lang);
+                          setIsLanguageDropdownOpen(false);
+                        }}
+                        className={`flex items-center space-x-3 w-full text-left px-4 py-2 text-sm ${
+                          language === lang
+                            ? 'bg-blue-50 text-blue-700'
+                            : 'text-gray-700 hover:bg-gray-50'
+                        }`}
+                      >
+                        <span className="text-lg">{langData.flag}</span>
+                        <span>{langData.name}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -234,23 +253,26 @@ export default function Header() {
               <div className="px-3 py-4 border-t border-gray-200">
                 <div className="text-gray-700 font-medium mb-2">Language</div>
                 <div className="flex space-x-2">
-                  {availableLanguages.map((lang) => (
-                    <button
-                      key={lang}
-                      onClick={() => {
-                        setLanguage(lang);
-                        setIsMenuOpen(false);
-                      }}
-                      className={`flex items-center space-x-2 px-3 py-2 rounded-md border text-sm ${
-                        language === lang
-                          ? 'bg-blue-50 text-blue-700 border-blue-200'
-                          : 'text-gray-700 border-gray-200 hover:bg-gray-50'
-                      }`}
-                    >
-                      <span className="text-lg">{languageData[lang].flag}</span>
-                      <span>{languageData[lang].name}</span>
-                    </button>
-                  ))}
+                  {availableLanguages.map((lang) => {
+                    const langData = getLanguageData(lang);
+                    return (
+                      <button
+                        key={lang}
+                        onClick={() => {
+                          setLanguage(lang);
+                          setIsMenuOpen(false);
+                        }}
+                        className={`flex items-center space-x-2 px-3 py-2 rounded-md border text-sm ${
+                          language === lang
+                            ? 'bg-blue-50 text-blue-700 border-blue-200'
+                            : 'text-gray-700 border-gray-200 hover:bg-gray-50'
+                        }`}
+                      >
+                        <span className="text-lg">{langData.flag}</span>
+                        <span>{langData.name}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             </div>
