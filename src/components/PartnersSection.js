@@ -9,13 +9,20 @@ export default function PartnersSection() {
   const { t } = useLocalization()
   
   const partners = [
-    { logo: '/assets/brands/BAC_logo.png', altKey: 'bacAlt' },
+  
     { logo: '/assets/brands/Cloud_Credential_Council_logo.png', altKey: 'cloudCredentialAlt' },
-    { logo: '/assets/brands/Diners_Club_Logo3.svg', altKey: 'dinersClubAlt' },
-    { logo: '/assets/brands/Discover_logo.jpg', altKey: 'discoverAlt' },
-    { logo: '/assets/brands/lssi_logo.png', altKey: 'lssiAlt' },
-    { logo: '/assets/brands/usd_american_marketing_association_cover.jpeg', altKey: 'amaAlt' },
-    { logo: '/assets/brands/PDTS_logo.png', altKey: 'pdtsAlt' }
+    { logo: "/assets/brands/american.png", altKey: "American Marketing Association"},
+    { logo: "/assets/brands/651fbf9cc81f6688480772.png", altKey: "Python Institute Py"},
+    { logo: "/assets/brands/ProfessionalDesignations_logo.png", altKey: "Professional Designations"},
+    { logo: "/assets/brands/nforceit-partner-microsoft-logo.png", altKey: "Microsoft"},
+    { logo: "/assets/brands/CertiProf+Logo+Full+Color.webp", altKey: "CertiProf Logo"},
+    { logo: "/assets/brands/ITPrenuers_logo.png", altKey: "IT Prenuers"},
+    { logo: "/assets/brands/Screenshot 2025-11-15 040117.png", altKey: "Lean Six Sigma"},
+    { logo: "/assets/brands/5f87b9bdfc4a43ef97342e5e3c4b98c9.png", altKey: "Arcitura"},
+    { logo: "/assets/brands/scrumstudy-1.svg", altKey: "Scrum Study"},
+    { logo: "/assets/brands/3BLpaloaltonetwork_RAoverride_logo_2021mb_1.png", altKey: "paloalt networks"},
+    { logo: "/assets/brands/pc-logo-1200px.png", altKey: "People Cert"}
+ 
   ]
 
   return (

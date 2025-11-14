@@ -15,7 +15,7 @@ export default function Header() {
   const languageData = {
     en: { name: 'English', flag: '🇺🇸' },
     es: { name: 'Español', flag: '🇪🇸' },
-    fr: { name: 'Français', flag: '🇫🇷' },
+
   };
 
   const navigation = [

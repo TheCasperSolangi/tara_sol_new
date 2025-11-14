@@ -63,7 +63,7 @@ export default function FeedbackSection() {
 
   // Custom controls for better mobile experience
   const CustomControls = () => (
-    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-30">
+    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
       <button
         onClick={handlePlayPause}
         className="bg-purple-600 bg-opacity-80 hover:bg-opacity-100 text-white rounded-full p-4 transition-all duration-200 transform hover:scale-105"
@@ -176,9 +176,6 @@ export default function FeedbackSection() {
                 </div>
               )}
             </div>
-            
-           
-              
           </div>
         </div>
       </div>

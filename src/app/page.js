@@ -5,6 +5,7 @@ import FeaturesSection from "../components/FeaturesSection";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import PartnersSection from "../components/PartnersSection";
+import { SecurePaymentSection } from "../components/SecurePaymentSection";
 import StepsSection from "../components/StepsSection";
 import FeedbackSection from "../components/VideoSection";
 import Image from "next/image";
@@ -19,6 +20,7 @@ export default function Home() {
     <CertificationsSection />
     <StepsSection />
     <FAQSection />
+    <SecurePaymentSection />
   
     </>
   );

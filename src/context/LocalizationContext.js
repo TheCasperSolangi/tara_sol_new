@@ -56,7 +56,7 @@ const translations = {
     mountainAlt: 'mountain',
      // Certifications section translations
     ourSpecializations: 'OUR SPECIALIZATIONS',
-    popularCertifications: 'Popular certifications',
+    popularCertifications: 'Certifications',
     internationalCertifications: 'International Certifications',
     executivePrograms: 'Executive Programs',
     // International Certifications
@@ -227,7 +227,7 @@ const translations = {
     allTechnologies: 'All Technologies',
     applyFilters: 'Apply Filters',
     resetAll: 'Reset All',
-    coursesCount: '{count} Courses',
+    coursesCount: 'Courses',
     available: 'Available',
     noCoursesFound: 'No courses found',
     adjustSearchCriteria: 'Try adjusting your search criteria or filters',
@@ -416,8 +416,12 @@ const translations = {
     preferencesSaved: "Your cookie preferences have been saved successfully!",
     confirmClearCookies: "Are you sure you want to clear all cookies? This may affect your browsing experience.",
     cookiesCleared: "All cookies have been cleared successfully.",
+    securePaymentTitle: "Secure payment facility",
+    securePaymentDesc: "We accept payments securely using American Express, Mastercard, Visa, BAC, and Diners Club."
   },
   es: {
+    securePaymentTitle: "Facilidad de Pago Seguro",
+    securePaymentDesc: "Aceptamos pagos de forma segura con American Express, Mastercard, Visa, BAC y Diners Club.",
       heroTitlePart1: 'Votre voyage vers le',
     heroTitleHighlight: 'succès',
     heroTitlePart2: 'commence avec nous !',
@@ -472,7 +476,7 @@ const translations = {
     mountainAlt: 'montaña',
       // Certifications section translations
     ourSpecializations: 'NUESTRAS ESPECIALIZACIONES',
-    popularCertifications: 'Certificaciones populares',
+    popularCertifications: 'Certificaciones',
     internationalCertifications: 'Certificaciones Internacionales',
     executivePrograms: 'Programas Ejecutivos',
     // International Certifications
@@ -637,7 +641,7 @@ const translations = {
     allTechnologies: 'Todas las Tecnologías',
     applyFilters: 'Aplicar Filtros',
     resetAll: 'Restablecer Todo',
-    coursesCount: '{count} Cursos',
+    coursesCount: 'Cursos',
     available: 'Disponibles',
     noCoursesFound: 'No se encontraron cursos',
     adjustSearchCriteria: 'Intenta ajustar tus criterios de búsqueda o filtros',
@@ -872,12 +876,12 @@ const translations = {
     mountainAlt: 'montagne',
      // Certifications section translations
     ourSpecializations: 'NUESTRAS ESPECIALIZACIONES',
-    popularCertifications: 'Certificaciones populares',
+    popularCertifications: 'Certificaciones',
     internationalCertifications: 'Certificaciones Internacionales',
     executivePrograms: 'Programas Ejecutivos',
       // Certifications section translations
     ourSpecializations: 'NOS SPÉCIALISATIONS',
-    popularCertifications: 'Certifications populaires',
+    popularCertifications: 'Certifications',
     internationalCertifications: 'Certifications Internationales',
     executivePrograms: 'Programmes Exécutifs',
     // International Certifications
@@ -1047,7 +1051,7 @@ const translations = {
     allTechnologies: 'Toutes les Technologies',
     applyFilters: 'Appliquer les Filtres',
     resetAll: 'Tout Réinitialiser',
-    coursesCount: '{count} Cours',
+    coursesCount: 'Cours',
     available: 'Disponibles',
     noCoursesFound: 'Aucun cours trouvé',
     adjustSearchCriteria: 'Essayez d\'ajuster vos critères de recherche ou filtres',

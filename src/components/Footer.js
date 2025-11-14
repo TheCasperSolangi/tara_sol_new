@@ -118,51 +118,7 @@ export default function Footer() {
                 {t('aboutDescription')}
               </p>
               <div className="flex items-center gap-3">
-                {/* Mastercard Logo with Error Handling */}
-                <div className="w-10 h-6 relative">
-                  <Image
-                    src="/assets/brands/mastercard_logo.png"
-                    alt="Mastercard"
-                    width={40}
-                    height={24}
-                    className="object-contain"
-                    onError={(e) => {
-                      console.error('Mastercard logo failed to load');
-                      // Fallback to text or placeholder
-                      e.target.style.display = 'none';
-                    }}
-                  />
-                </div>
-                
-                {/* Visa Logo */}
-                <div className="w-10 h-6 relative">
-                  <Image
-                    src="/assets/brands/Visa_logo.png"
-                    alt="Visa"
-                    width={40}
-                    height={24}
-                    className="object-contain"
-                    onError={(e) => {
-                      console.error('Visa logo failed to load');
-                      e.target.style.display = 'none';
-                    }}
-                  />
-                </div>
-                
-                {/* Amex Logo */}
-                <div className="w-10 h-6 relative">
-                  <Image
-                    src="/assets/brands/AMEX_logo.png"
-                    alt="American Express"
-                    width={40}
-                    height={24}
-                    className="object-contain"
-                    onError={(e) => {
-                      console.error('Amex logo failed to load');
-                      e.target.style.display = 'none';
-                    }}
-                  />
-                </div>
+               
               </div>
             </div>
 
