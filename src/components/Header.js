@@ -33,7 +33,7 @@ export default function Header() {
     { name: 'about', href: '/about' },
     { 
       name: 'services', 
-      href: '/services',
+      href: '/international_certifications',
       children: [
         { name: 'international certification', href: '/international_certifications' },
         { name: 'executive programs', href: '/executive_programs' },
@@ -55,9 +55,9 @@ export default function Header() {
               <Image
                 src="/assets/brands/main_logo.png"
                 alt="Your Logo"
-                width={200}
-                height={60}
-                className="h-14 w-auto object-contain"
+                width={267}
+                height={80}
+                className="h-20 w-auto object-contain"
                 priority
                 onError={(e) => {
                   e.target.style.display = 'none';

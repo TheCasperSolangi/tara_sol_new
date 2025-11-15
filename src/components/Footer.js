@@ -230,13 +230,7 @@ export default function Footer() {
                     <Instagram size={18} />
                   </Link>
 
-                  {/* ✅ New WhatsApp Icon */}
-                  <Link
-                    href="https://wa.me/message/IGSA6YHQPVHDB1"
-                    className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                  >
-                    <WhatsappIcon size={18} />
-                  </Link>
+                 
                 </div>
               </div>
             </div>

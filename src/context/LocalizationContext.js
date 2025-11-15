@@ -189,7 +189,7 @@ const translations = {
     startFreeConsultation: 'Start Free Consultation',
     browseCourses: 'Browse Courses',
       // Course listing translations
-    courseListingTitle: 'We have {count} courses total',
+    courseListingTitle: 'We have total courses:',
     courseListingDescription: 'We have professional alliance\'s with leading Universities and Colleges around the world.',
     category: 'Category',
     certifier: 'Certifier',
@@ -442,7 +442,7 @@ const translations = {
     search: 'Buscar...',
     heroTitle: '¡Tu viaje al <span class="text-green-600">éxito</span> comienza con nosotros!',
     heroDescription: 'habilitamos a las empresas para prosperar en un panorama digital en rápida evolución<br />¿Listo para transformarte? Exploremos juntos cómo podemos elevar tu organización.',
-    applyOnline: 'solicitar en línea',
+    applyOnline: 'Slicitar en línea',
     discover: 'Descubrir',
     ellipseAlt: 'Elipse',
     vectorAlt: 'vector',
@@ -603,7 +603,7 @@ const translations = {
     startFreeConsultation: 'Comenzar Consulta Gratuita',
     browseCourses: 'Explorar Cursos',
      // Course listing translations
-    courseListingTitle: 'Tenemos {count} cursos en total',
+    courseListingTitle: 'Tenemos cursos en total:',
     courseListingDescription: 'Tenemos alianzas profesionales con las principales universidades y colegios de todo el mundo.',
     category: 'Categoría',
     certifier: 'Certificador',

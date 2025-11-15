@@ -7,6 +7,8 @@ export default function FeedbackSection() {
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
+  const [showCustomControls, setShowCustomControls] = useState(true)
   const videoRef = useRef(null)
   const { t } = useLocalization()
 
@@ -49,6 +51,10 @@ export default function FeedbackSection() {
     setIsPlaying(false)
   }
 
+  useEffect(() => {
+    setShowCustomControls(isHovered || !isPlaying)
+  }, [isHovered, isPlaying])
+
   // Fallback timeout for mobile devices
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -63,7 +69,11 @@ export default function FeedbackSection() {
 
   // Custom controls for better mobile experience
   const CustomControls = () => (
-    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+    <div 
+      className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 
+        ${showCustomControls ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} // Conditional pointer-events-none when hidden
+      onClick={handlePlayPause}
+    >
       <button
         onClick={handlePlayPause}
         className="bg-purple-600 bg-opacity-80 hover:bg-opacity-100 text-white rounded-full p-4 transition-all duration-200 transform hover:scale-105"
@@ -149,11 +159,13 @@ export default function FeedbackSection() {
                   </button>
                 </div>
               ) : (
-                <div className="relative">
+                <div 
+                  className="relative" 
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
                   <video 
                     ref={videoRef}
-                    controls 
-                    controlsList="nodownload"
                     className="w-full h-auto"
                     onLoadedData={handleVideoLoad}
                     onCanPlay={handleVideoCanPlay}
@@ -162,6 +174,7 @@ export default function FeedbackSection() {
                     onPlay={handleVideoPlay}
                     onPause={handleVideoPause}
                     onEnded={handleVideoEnd}
+                    onClick={handlePlayPause}
                     playsInline
                     preload="metadata"
                     poster="/assets/video-poster.jpg"
