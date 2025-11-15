@@ -16,7 +16,7 @@ import { Textarea } from '../components/ui/textarea';
 import { Label } from '../components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
-import { Star, GraduationCap, Bookmark, CheckCircle2, X, CalendarCheck, Send, Search, Filter, ChevronDown, Play, Users, Clock, Award } from 'lucide-react';
+import { Star, GraduationCap, Bookmark, CheckCircle2, X, CalendarCheck, Send, Search, Filter, ChevronDown, Play, Users, Clock, Award, RefreshCw } from 'lucide-react';
 import { useLocalization } from '../context/LocalizationContext';
 
 // Course data in Spanish (original)
@@ -2002,73 +2002,92 @@ export default function CoursesPage() {
     message: ''
   });
 
-  useEffect(() => {
+    useEffect(() => {
     // Select course data based on language
     const currentCourseData = language === 'es' ? courseDataEs : courseDataEn;
 
-    // Flatten the data
+    // Flatten the data properly
     const courses = [];
+    
     for (const category in currentCourseData) {
-      const subData = currentCourseData[category];
-      if (Array.isArray(subData)) {
-        // Direct array of courses (no technology sub-layer)
-        subData.forEach(course => {
+      const categoryData = currentCourseData[category];
+      
+      if (Array.isArray(categoryData)) {
+        // Direct array of courses (for categories without technologies)
+        categoryData.forEach(course => {
           courses.push({
             ...course,
-            category,
+            category: category,
             technology: '', // Empty for categories without technologies
             course_image: course.course_image ? `/${course.course_image}` : '/assets/img/course/default.png',
+            // Ensure all searchable fields exist
+            name: course.name || '',
+            description: course.description || '',
+            career: course.career || []
           });
         });
       } else {
-        // Object with technology keys
-        for (const technology in subData) {
-          subData[technology].forEach(course => {
-            courses.push({
-              ...course,
-              category,
-              technology,
-              course_image: course.course_image ? `/${course.course_image}` : '/assets/img/course/default.png',
+        // Object with technology keys (like "Digital Skills Path")
+        for (const technology in categoryData) {
+          if (Array.isArray(categoryData[technology])) {
+            categoryData[technology].forEach(course => {
+              courses.push({
+                ...course,
+                category: category,
+                technology: technology,
+                course_image: course.course_image ? `/${course.course_image}` : '/assets/img/course/default.png',
+                // Ensure all searchable fields exist
+                name: course.name || '',
+                description: course.description || '',
+                career: course.career || []
+              });
             });
-          });
+          }
         }
       }
     }
+    
     setAllCourses(courses);
     setFilteredCourses(courses);
 
-    // Extract unique categories and technologies
-    const uniqueCategories = [...new Set(courses.map(c => c.category))].filter(Boolean);
-    const uniqueTechnologies = [...new Set(courses.map(c => c.technology))].filter(Boolean);
-    setCategories(uniqueCategories);
+    // Extract unique technologies (filter out empty strings)
+    const uniqueTechnologies = [...new Set(courses.map(c => c.technology))].filter(tech => tech && tech.trim() !== '');
     setTechnologies(uniqueTechnologies);
   }, [language]);
 
-  const filterCourses = () => {
+  // Automatic filtering when filters change
+  useEffect(() => {
     let filtered = allCourses;
-    if (selectedCategory) {
-      filtered = filtered.filter(c => c.category === selectedCategory);
-    }
-    if (selectedTechnology) {
+    
+    // Technology filter
+    if (selectedTechnology && selectedTechnology !== 'all') {
       filtered = filtered.filter(c => c.technology === selectedTechnology);
     }
+    
+    // Search filter - enhanced to handle all possible fields
     if (searchQuery) {
-      filtered = filtered.filter(c => 
-        c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        c.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        c.technology.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+      const query = searchQuery.toLowerCase().trim();
+      filtered = filtered.filter(course => {
+        // Check all searchable fields
+        return (
+          (course.name && course.name.toLowerCase().includes(query)) ||
+          (course.description && course.description.toLowerCase().includes(query)) ||
+          (course.technology && course.technology.toLowerCase().includes(query)) ||
+          (course.category && course.category.toLowerCase().includes(query)) ||
+          // Search in career array
+          (course.career && Array.isArray(course.career) && 
+           course.career.some(job => job.toLowerCase().includes(query)))
+        );
+      });
     }
+    
     setFilteredCourses(filtered);
     setCurrentPage(1);
-  };
+  }, [selectedTechnology, searchQuery, allCourses]);
 
   const resetFilters = () => {
-    setSelectedCategory('');
     setSelectedTechnology('');
     setSearchQuery('');
-    setFilteredCourses(allCourses);
-    setCurrentPage(1);
   };
 
   const totalPages = Math.ceil(filteredCourses.length / coursesPerPage);
@@ -2421,7 +2440,7 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      {/* Courses Section */}
+        {/* Courses Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Enhanced Filter Section */}
@@ -2433,43 +2452,47 @@ export default function CoursesPage() {
                     <h2 className="text-3xl font-bold text-gray-900">{t('allCourses')}</h2>
                     <p className="text-gray-600 mt-2">{t('findPerfectCourse')}</p>
                   </div>
-                  <div className="mt-4 lg:mt-0">
-                    <div className="relative">
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <Input
-                        placeholder={t('searchCourses')}
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className="pl-10 pr-4 py-3 w-80 rounded-xl border-2 focus:border-blue-500 transition-colors"
-                      />
-                    </div>
+                  <div className="text-right mt-4 lg:mt-0">
+                    <p className="text-lg font-semibold text-gray-900">
+                      {filteredCourses.length} {t('coursesCount')}
+                    </p>
+                    <p className="text-sm text-gray-600">{t('available')}</p>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
-                  {/* Category */}
-                  <div className="space-y-2">
-                    <Label className="text-sm font-semibold text-gray-700">{t('category')}</Label>
-                    <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                      <SelectTrigger className="h-12 rounded-xl border-2">
-                        <SelectValue placeholder={t('allCategories')} />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {categories.map(cat => (
-                          <SelectItem key={cat} value={cat}>{cat}</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                {/* Redesigned Filter Section */}
+                <div className="flex flex-col lg:flex-row items-end gap-4">
+                  {/* Search Filter */}
+                  <div className="flex-1 w-full">
+                    <Label className="text-sm font-medium mb-2 block text-gray-700">
+                      {t('searchCourses') || 'Search Courses'}
+                    </Label>
+                    <div className="relative">
+                      <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                      <Input
+                        type="text"
+                        placeholder={t('searchPlaceholder') || 'Search by course name, technology, description...'}
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-full pl-10 pr-4 py-2 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      />
+                    </div>
                   </div>
 
-                  {/* Technology */}
-                  <div className="space-y-2">
-                    <Label className="text-sm font-semibold text-gray-700">{t('technology')}</Label>
-                    <Select value={selectedTechnology} onValueChange={setSelectedTechnology}>
-                      <SelectTrigger className="h-12 rounded-xl border-2">
-                        <SelectValue placeholder={t('allTechnologies')} />
+                  {/* Technology Filter */}
+                  <div className="w-full lg:w-64">
+                    <Label className="text-sm font-medium mb-2 block text-gray-700">
+                      {t('technology') || 'Technology'}
+                    </Label>
+                    <Select 
+                      value={selectedTechnology} 
+                      onValueChange={setSelectedTechnology}
+                    >
+                      <SelectTrigger className="w-full border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <SelectValue placeholder={t('allTechnologies') || 'All Technologies'} />
                       </SelectTrigger>
                       <SelectContent>
+                        <SelectItem value="all">{t('allTechnologies') || 'All Technologies'}</SelectItem>
                         {technologies.map(tech => (
                           <SelectItem key={tech} value={tech}>{tech}</SelectItem>
                         ))}
@@ -2477,34 +2500,57 @@ export default function CoursesPage() {
                     </Select>
                   </div>
 
-                  {/* Filter Button */}
-                  <Button 
-                    onClick={filterCourses}
-                    className="h-12 rounded-xl font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg"
-                  >
-                    <Filter className="w-4 h-4 mr-2" />
-                    {t('applyFilters')}
-                  </Button>
-
                   {/* Reset Button */}
                   <Button 
-                    variant="outline"
                     onClick={resetFilters}
-                    className="h-12 rounded-xl font-semibold border-2"
+                    variant="outline"
+                    className="whitespace-nowrap border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900 rounded-xl"
                   >
-                    {t('resetAll')}
+                    <RefreshCw className="h-4 w-4 mr-2" />
+                    {t('resetAll') || 'Reset'}
                   </Button>
-
-                  <div className="text-right">
-                    <p className="text-lg font-semibold text-gray-900">
-                      {t('coursesCount')}
-                    </p>
-                    <p className="text-sm text-gray-600">{t('available')}</p>
-                  </div>
                 </div>
+
+                {/* Active Filters Display */}
+                {(selectedTechnology || searchQuery) && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {selectedTechnology && selectedTechnology !== 'all' && (
+                      <div className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                        Technology: {selectedTechnology}
+                        <button 
+                          onClick={() => setSelectedTechnology('')}
+                          className="hover:text-blue-900 focus:outline-none"
+                        >
+                          <X className="h-3 w-3" />
+                        </button>
+                      </div>
+                    )}
+                    {searchQuery && (
+                      <div className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                        Search: "{searchQuery}"
+                        <button 
+                          onClick={() => setSearchQuery('')}
+                          className="hover:text-purple-900 focus:outline-none"
+                        >
+                          <X className="h-3 w-3" />
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>
+
+          {/* Debug info - remove in production */}
+          {process.env.NODE_ENV === 'development' && (
+            <div className="mb-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+              <p className="text-sm text-yellow-800">
+                <strong>Debug:</strong> Showing {filteredCourses.length} of {allCourses.length} courses. 
+                Search: "{searchQuery}", Technology: "{selectedTechnology}"
+              </p>
+            </div>
+          )}
 
           {/* Courses Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -2513,10 +2559,14 @@ export default function CoursesPage() {
                 <div className="w-24 h-24 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
                   <Search className="w-8 h-8 text-gray-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('noCoursesFound')}</h3>
-                <p className="text-gray-600 mb-4">{t('adjustSearchCriteria')}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {t('noCoursesFound') || 'No courses found'}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {t('adjustSearchCriteria') || 'Try adjusting your search terms or filters'}
+                </p>
                 <Button onClick={resetFilters} variant="outline">
-                  {t('resetFilters')}
+                  {t('resetFilters') || 'Reset Filters'}
                 </Button>
               </div>
             ) : (
@@ -2524,12 +2574,12 @@ export default function CoursesPage() {
                 <Card key={index} className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
-                      src={course.course_image}
+                      src={course.course_image || '/assets/img/course/default.png'}
                       alt={course.name}
                       width={400}
                       height={192}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                      priority={index < 4} // Prioritize loading first 4 images
+                      priority={index < 4}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="absolute top-4 left-4">
@@ -2560,7 +2610,7 @@ export default function CoursesPage() {
                       onClick={() => openModal(course)}
                     >
                       <CalendarCheck className="w-5 h-5 mr-2 transition-transform group-hover/btn:scale-110" />
-                      {t('bookMySeat')}
+                      {t('bookMySeat') || 'Book My Seat'}
                     </Button>
                   </CardContent>
                 </Card>
@@ -2577,7 +2627,7 @@ export default function CoursesPage() {
                 onClick={() => changePage(currentPage - 1)}
                 className="rounded-xl px-6 py-3"
               >
-                {t('previous')}
+                {t('previous') || 'Previous'}
               </Button>
               
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
@@ -2614,12 +2664,13 @@ export default function CoursesPage() {
                 onClick={() => changePage(currentPage + 1)}
                 className="rounded-xl px-6 py-3"
               >
-                {t('next')}
+                {t('next') || 'Next'}
               </Button>
             </div>
           )}
         </div>
       </section>
+
 
       {/* Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>

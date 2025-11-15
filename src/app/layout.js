@@ -23,13 +23,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <LocalizationProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <div className="min-h-screen flex flex-col w-full overflow-x-hidden">
+            <Header />
+            <main className="flex-1 w-full">{children}</main>
+            <Footer />
+          </div>
           
           {/* WhatsApp Button */}
           <div className="fixed bottom-6 right-6 z-50">

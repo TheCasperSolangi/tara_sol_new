@@ -9,7 +9,6 @@ export default function PartnersSection() {
   const { t } = useLocalization()
   
   const partners = [
-  
     { logo: '/assets/brands/Cloud_Credential_Council_logo.png', altKey: 'cloudCredentialAlt' },
     { logo: "/assets/brands/american.png", altKey: "American Marketing Association"},
     { logo: "/assets/brands/651fbf9cc81f6688480772.png", altKey: "Python Institute Py"},
@@ -22,7 +21,6 @@ export default function PartnersSection() {
     { logo: "/assets/brands/scrumstudy-1.svg", altKey: "Scrum Study"},
     { logo: "/assets/brands/3BLpaloaltonetwork_RAoverride_logo_2021mb_1.png", altKey: "paloalt networks"},
     { logo: "/assets/brands/pc-logo-1200px.png", altKey: "People Cert"}
- 
   ]
 
   return (
@@ -63,9 +61,9 @@ export default function PartnersSection() {
 
         {/* Partners Slider */}
         <div className="partners-slider mb-12 overflow-hidden">
-          <div className="partners-track flex animate-scroll">
-            {/* Triple the partners for seamless looping */}
-            {[...partners, ...partners, ...partners].map((partner, index) => (
+          <div className="partners-track flex">
+            {/* Double the partners for seamless looping */}
+            {[...partners, ...partners].map((partner, index) => (
               <div key={index} className="partners-item flex-shrink-0 mx-4 lg:mx-8">
                 <div className="w-32 h-20 lg:w-40 lg:h-24 relative grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
                   <Image
@@ -73,6 +71,7 @@ export default function PartnersSection() {
                     alt={t(partner.altKey)}
                     fill
                     className="object-contain"
+                    sizes="(max-width: 768px) 128px, 160px"
                   />
                 </div>
               </div>
@@ -83,9 +82,9 @@ export default function PartnersSection() {
         {/* CTA Button */}
         <div className="text-center mt-10">
           <Link href="/contact">
-          <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg rounded-lg">
-            {t('applyOnline')}
-          </Button>
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg rounded-lg">
+              {t('applyOnline')}
+            </Button>
           </Link>
         </div>
       </div>
@@ -96,13 +95,14 @@ export default function PartnersSection() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-100% / 3));
+            transform: translateX(-50%);
           }
         }
-        .animate-scroll {
+        .partners-track {
           animation: scroll 30s linear infinite;
+          width: max-content;
         }
-        .partners-track:hover .animate-scroll {
+        .partners-track:hover {
           animation-play-state: paused;
         }
       `}</style>

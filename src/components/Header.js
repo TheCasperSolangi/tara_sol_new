@@ -35,8 +35,8 @@ export default function Header() {
       name: 'services', 
       href: '/international_certifications',
       children: [
-        { name: 'international certification', href: '/international_certifications' },
-        { name: 'executive programs', href: '/executive_programs' },
+        { name: `${t('intCert')}`, href: '/international_certifications' },
+        { name: `${t('execPrograms')}`, href: '/executive_programs' },
       ]
     },
     { name: 'contact', href: '/contact' },

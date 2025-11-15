@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../components/
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Textarea } from '../components/ui/textarea';
-import { CheckCircle2, Calendar, Clock, Bookmark, GraduationCap, Send, X } from 'lucide-react'; // Added X import assuming it's needed
+import { CheckCircle2, Calendar, Clock, Bookmark, GraduationCap, Send, X, Search, RefreshCcw, RefreshCw } from 'lucide-react'; // Added X import assuming it's needed
 import { useLocalization, LocalizationContext } from '../context/LocalizationContext';
 
 // Sample course data in Spanish
@@ -4354,12 +4354,13 @@ const BookingModal = ({ isOpen, onClose, courseName, courseDetails }) => {
     </Dialog>
   );
 };
+
+
+
 export default function CourseListing() {
   const [filters, setFilters] = useState({
-    area: '',
-    certifier: '',
-    duration: '',
-    modality: ''
+    category: '',
+    search: ''
   });
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCourse, setSelectedCourse] = useState('');
@@ -4372,20 +4373,28 @@ export default function CourseListing() {
   }, [language]);
 
   const filterOptions = useMemo(() => ({
-    areas: [...new Set(coursesData.map(c => c["Área"]).filter(Boolean))],
-    certifiers: [...new Set(coursesData.map(c => c["Ente Certificador"]).filter(Boolean))],
-    durations: [...new Set(coursesData.map(c => c["Cantidad de horas de capacitación"]).filter(Boolean))],
-    modalities: [...new Set(coursesData.map(c => c["Modalidad"]).filter(Boolean))]
+    categories: [...new Set(coursesData.map(c => c["Área"]).filter(Boolean))],
   }), [coursesData]);
 
   const filteredCourses = useMemo(() => {
     return coursesData.filter(course => {
-      return (
-        (!filters.area || course["Área"] === filters.area) &&
-        (!filters.certifier || course["Ente Certificador"] === filters.certifier) &&
-        (!filters.duration || course["Cantidad de horas de capacitación"] === filters.duration) &&
-        (!filters.modality || course["Modalidad"] === filters.modality)
-      );
+      const matchesCategory = filters.category === 'all' || !filters.category || course["Área"] === filters.category;
+      
+      const matchesSearch = !filters.search || 
+        // Search in course name (Certificaciones)
+        course["Certificaciones"]?.toLowerCase().includes(filters.search.toLowerCase()) ||
+        // Search in area
+        course["Área"]?.toLowerCase().includes(filters.search.toLowerCase()) ||
+        // Search in general objective
+        course["Objetivo general"]?.toLowerCase().includes(filters.search.toLowerCase()) ||
+        // Search in target profile
+        course["Perfil de salida"]?.toLowerCase().includes(filters.search.toLowerCase()) ||
+        // Search in contents
+        course["Contenidos"]?.toLowerCase().includes(filters.search.toLowerCase()) ||
+        // Search in certifier
+        course["Ente Certificador"]?.toLowerCase().includes(filters.search.toLowerCase());
+
+      return matchesCategory && matchesSearch;
     });
   }, [coursesData, filters]);
 
@@ -4399,7 +4408,12 @@ export default function CourseListing() {
   };
 
   const resetFilters = () => {
-    setFilters({ area: '', certifier: '', duration: '', modality: '' });
+    setFilters({ category: '', search: '' });
+    setCurrentPage(1);
+  };
+
+  const handleFilterChange = (key, value) => {
+    setFilters(prev => ({ ...prev, [key]: value }));
     setCurrentPage(1);
   };
 
@@ -4417,99 +4431,133 @@ export default function CourseListing() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <Card className="p-6 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
-            <div>
-              <Label className="text-sm mb-2 block">{t('category')}</Label>
-              <Select value={filters.area} onValueChange={(value) => setFilters({...filters, area: value})}>
-                <SelectTrigger>
-                  <SelectValue placeholder={t('select')} />
+        {/* Redesigned Filter Section */}
+        <Card className="p-6 mb-8 shadow-sm border">
+          <div className="flex flex-col lg:flex-row items-end gap-4">
+            {/* Search Filter - Now takes more space */}
+            <div className="flex-1 w-full">
+              <Label className="text-sm font-medium mb-2 block text-gray-700">
+                {t('searchCourses') || 'Search Courses'}
+              </Label>
+              <div className="relative">
+                <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                <Input
+                  type="text"
+                  placeholder={t('searchPlaceholder') || 'Search by course name, area, description...'}
+                  value={filters.search}
+                  onChange={(e) => handleFilterChange('search', e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="w-full lg:w-64">
+              <Label className="text-sm font-medium mb-2 block text-gray-700">
+                {t('category') || 'Category'}
+              </Label>
+              <Select 
+                value={filters.category} 
+                onValueChange={(value) => handleFilterChange('category', value)}
+              >
+                <SelectTrigger className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                  <SelectValue placeholder={t('selectCategory') || 'All Categories'} />
                 </SelectTrigger>
                 <SelectContent>
-                  {filterOptions.areas.map(area => (
-                    <SelectItem key={area} value={area}>{area}</SelectItem>
+                  <SelectItem value="all">{t('allCategories') || 'All Categories'}</SelectItem>
+                  {filterOptions.categories.map(category => (
+                    <SelectItem key={category} value={category}>{category}</SelectItem>
                   ))}
                 </SelectContent>
               </Select>
             </div>
 
-            <div>
-              <Label className="text-sm mb-2 block">{t('certifier')}</Label>
-              <Select value={filters.certifier} onValueChange={(value) => setFilters({...filters, certifier: value})}>
-                <SelectTrigger>
-                  <SelectValue placeholder={t('select')} />
-                </SelectTrigger>
-                <SelectContent>
-                  {filterOptions.certifiers.map(cert => (
-                    <SelectItem key={cert} value={cert}>{cert}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div>
-              <Label className="text-sm mb-2 block">{t('duration')}</Label>
-              <Select value={filters.duration} onValueChange={(value) => setFilters({...filters, duration: value})}>
-                <SelectTrigger>
-                  <SelectValue placeholder={t('select')} />
-                </SelectTrigger>
-                <SelectContent>
-                  {filterOptions.durations.map(dur => (
-                    <SelectItem key={dur} value={dur}>{dur}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div>
-              <Label className="text-sm mb-2 block">{t('modality')}</Label>
-              <Select value={filters.modality} onValueChange={(value) => setFilters({...filters, modality: value})}>
-                <SelectTrigger>
-                  <SelectValue placeholder={t('select')} />
-                </SelectTrigger>
-                <SelectContent>
-                  {filterOptions.modalities.map(mod => (
-                    <SelectItem key={mod} value={mod}>{mod}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <Button 
-              onClick={() => setCurrentPage(1)}
-              className="bg-purple-600 hover:bg-purple-700 mt-6"
-            >
-              {t('filter')}
-            </Button>
-
+            {/* Reset Button */}
             <Button 
               onClick={resetFilters}
               variant="outline"
-              className="mt-6"
+              className="whitespace-nowrap border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900"
             >
-              {t('reset')}
+              <RefreshCw className="h-4 w-4 mr-2" />
+              {t('reset') || 'Reset'}
             </Button>
           </div>
+
+          {/* Active Filters Display */}
+          {(filters.category || filters.search) && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {filters.category && filters.category !== 'all' && (
+                <div className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                  {filters.category}
+                  <button 
+                    onClick={() => handleFilterChange('category', '')}
+                    className="hover:text-purple-900 focus:outline-none"
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                </div>
+              )}
+              {filters.search && (
+                <div className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                  Search: "{filters.search}"
+                  <button 
+                    onClick={() => handleFilterChange('search', '')}
+                    className="hover:text-blue-900 focus:outline-none"
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
         </Card>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
-          {displayedCourses.map((course, index) => (
-            <CourseCard 
-              key={index} 
-              course={course}
-              onBookSeat={handleBookSeat}
-            />
-          ))}
+        {/* Results Count */}
+        <div className="mb-6">
+          <p className="text-gray-600">
+            Showing {displayedCourses.length} of {filteredCourses.length} courses
+            {filters.search && ` for "${filters.search}"`}
+            {filters.category && filters.category !== 'all' && ` in ${filters.category}`}
+          </p>
         </div>
 
-        {totalPages > 1 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+          {displayedCourses.length > 0 ? (
+            displayedCourses.map((course, index) => (
+              <CourseCard 
+                key={index} 
+                course={course}
+                onBookSeat={handleBookSeat}
+              />
+            ))
+          ) : (
+            <div className="col-span-full text-center py-12">
+              <div className="text-gray-400 mb-4">
+                <Search className="h-12 w-12 mx-auto" />
+              </div>
+              <h3 className="text-lg font-medium text-gray-900 mb-2">No courses found</h3>
+              <p className="text-gray-500">
+                Try adjusting your search terms or filters to find what you're looking for.
+              </p>
+              <Button 
+                onClick={resetFilters}
+                variant="outline"
+                className="mt-4"
+              >
+                Clear all filters
+              </Button>
+            </div>
+          )}
+        </div>
+
+        {totalPages > 1 && displayedCourses.length > 0 && (
           <div className="flex justify-center gap-2">
             <Button
               variant="outline"
               onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
               disabled={currentPage === 1}
             >
-              {t('prev')}
+              {t('prev') || 'Previous'}
             </Button>
             
             {[...Array(totalPages)].map((_, i) => (
@@ -4528,7 +4576,7 @@ export default function CourseListing() {
               onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
             >
-              {t('next')}
+              {t('next') || 'Next'}
             </Button>
           </div>
         )}

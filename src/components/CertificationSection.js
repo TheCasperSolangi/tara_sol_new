@@ -23,7 +23,6 @@ const CertificationsSection = () => {
       { logo: '/assets/brands/Microsoft_Power_Platform_logo.svg.png', nameKey: 'msPowerPlatform' },
       { logo: '/assets/brands/istockphoto-953520974-612x612.jpg', nameKey: 'cyberSecurity' },
       { logo: '/assets/brands/10270032.png', nameKey: 'management' },
-      { logo: '/assets/brands/cropped-LOGO-LSSI-ID.png', nameKey: 'leanSixSigma' },
       { logo: '/assets/brands/attachment_6023482.jpeg', nameKey: 'agileCertifications' },
       { logo: '/assets/brands/scum.png', nameKey: 'scrumCertification' }
     ],

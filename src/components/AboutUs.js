@@ -207,27 +207,27 @@ export default function AboutPage() {
             <CarouselContent>
               {[
                 { 
-                  name: "Savannah Nguyen", 
-                  country: "Central African Republic",
-                  image: "/assets/img/sections/testimonial/tesi-01.png",
+                  name: "Danilo Mucedola", 
+                  country: "Italy",
+                  image: "/assets/brands/Illahi-Bakhsh.webp",
                   textKey: "testimonial1"
                 },
                 { 
-                  name: "Kathryn Murphy", 
-                  country: "Monaco",
-                  image: "/assets/img/sections/testimonial/testi-02.png",
+                  name: "Ralph Murphy", 
+                  country: "Austin, Texas, USA",
+                  image: "/assets/brands/s200_shoaib_ahmed.shah.jpg",
                   textKey: "testimonial2"
                 },
                 { 
                   name: "Kristin Watson", 
-                  country: "Guinea",
-                  image: "/assets/img/sections/testimonial/testi-03.png",
+                  country: "Croatia",
+                  image: "/assets/brands/Marvi-Shaikh.webp",
                   textKey: "testimonial3"
                 },
                 { 
                   name: "Alex Johnson", 
                   country: "Australia",
-                  image: "/assets/img/sections/testimonial/testi-02.png",
+                  image: "/assets/brands/1733806280692.jpeg",
                   textKey: "testimonial4"
                 }
               ].map((testimonial, index) => (
