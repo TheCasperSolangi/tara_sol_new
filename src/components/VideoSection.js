@@ -9,8 +9,21 @@ export default function FeedbackSection() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const [showCustomControls, setShowCustomControls] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
   const videoRef = useRef(null)
   const { t } = useLocalization()
+
+  // Detect mobile devices
+  useEffect(() => {
+    const checkMobile = () => {
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768
+      setIsMobile(isMobileDevice)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const handleVideoLoad = () => {
     setIsLoading(false)
@@ -26,7 +39,8 @@ export default function FeedbackSection() {
     setIsLoading(false)
   }
 
-  const handlePlayPause = () => {
+  const handlePlayPause = (e) => {
+    e.stopPropagation() // Prevent event bubbling
     if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause()
@@ -51,27 +65,34 @@ export default function FeedbackSection() {
     setIsPlaying(false)
   }
 
+  // Simplified controls visibility logic
   useEffect(() => {
-    setShowCustomControls(isHovered || !isPlaying)
-  }, [isHovered, isPlaying])
+    if (isMobile) {
+      // On mobile, only show controls briefly when toggling play state
+      // or when video is paused
+      setShowCustomControls(!isPlaying)
+    } else {
+      // On desktop, show on hover or when paused
+      setShowCustomControls(isHovered || !isPlaying)
+    }
+  }, [isHovered, isPlaying, isMobile])
 
-  // Fallback timeout for mobile devices
+  // Hide controls after a delay on mobile when video starts playing
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (isLoading) {
-        setIsLoading(false)
-        console.warn('Video loading timeout - hiding loader')
-      }
-    }, 5000) // 5 second timeout
-
-    return () => clearTimeout(timer)
-  }, [isLoading])
+    let timeoutId
+    if (isMobile && isPlaying) {
+      timeoutId = setTimeout(() => {
+        setShowCustomControls(false)
+      }, 2000) // Hide after 2 seconds
+    }
+    return () => clearTimeout(timeoutId)
+  }, [isPlaying, isMobile])
 
   // Custom controls for better mobile experience
   const CustomControls = () => (
     <div 
       className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 
-        ${showCustomControls ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} // Conditional pointer-events-none when hidden
+        ${showCustomControls ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       onClick={handlePlayPause}
     >
       <button
