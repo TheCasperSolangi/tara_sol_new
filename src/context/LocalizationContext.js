@@ -7,6 +7,8 @@ const LocalizationContext = createContext();
 // Extended Translation dictionaries
 const translations = {
   en: {
+    selectCertifier:"Select Certifier",
+    allCertifiers: "All Certifier",
     home: 'Home',
     about: 'About',
     services: 'Services',
@@ -793,6 +795,8 @@ testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolut
     quickActions: "Acciones Rápidas",
     responseInfo: "Información de Respuesta",
     hours: "horas",
+    selectCertifier: "Seleccionar certificador",
+allCertifiers: "Todos los certificadores",
     typicalResponse: "Tiempo de respuesta típico",
     emergencyResponse: "Informes de infracción de emergencia: 2-4 horas",
     legalProceedings: "Procedimientos legales: Acción inmediata",
