@@ -4,7 +4,7 @@ import React, { useState, useMemo, useContext } from 'react';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription, DialogFooter, DialogClose } from '../components/ui/dialog';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Textarea } from '../components/ui/textarea';
@@ -1043,8 +1043,8 @@ const COURSES_DATA = [
         "Modalidad": "Virtual en vivo + plataforma oficial para ver videos referentes al tema y repasar lo visto en clase"
     },
     {
-        "course_image":"assets/course/hero_SP_Certified_ds_consult.webp",
-        "Certificaciones": "Consultor de Ciencia de Datos (Data Science Consultant) *",
+        "course_image":"assets/courses/Sin-titulo-1.png",
+        "Certificaciones": "Consultor de Ciencia de Datos (Data Science Consultant) ",
         "Área": "Ciencia_de_Datos_(Data_Science)",
         "Ente Certificador": "Arcitura",
         "Dirigido a / Perfil de entrada": "Orientada a profesionales que buscan integrar conocimientos técnicos de ciencia de datos con habilidades estratégicas de consultoría y análisis de negocio. Se enfoca en formar perfiles capaces de traducir datos en recomendaciones accionables, alineadas con objetivos empresariales y de transformación digital.\n",
@@ -1219,7 +1219,7 @@ const COURSES_DATA = [
         "Modalidad": "Virtual en vivo + plataforma oficial para ver videos referentes al tema y repasar lo visto en clase"
     },
     {
-        "courses_image":"assets/courses/hero_Certified_soa_arch_7cd46dfb-29c6-4ba1-8e51-64bfc4c7ec20.webp",
+       "course_image": "assets/courses/twitter_thumb_201604_badge_soacp_arch.png",
         "Certificaciones": "Arquitecto de SOA (SOA Architect) *",
         "Área": "Tecnología_de_Servicios_(Service_Technology)",
         "Ente Certificador": "Arcitura",
@@ -1267,7 +1267,7 @@ const COURSES_DATA = [
         "Modalidad": "Virtual en vivo + plataforma oficial para ver videos referentes al tema y repasar lo visto en clase"
     },
     {
-        "course_image":"assets/courses/scrum-master-professional-certificate.webp",
+        "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Scrum Master Professional Certification*",
         "Área": " Scrum_Certifications",
         "Ente Certificador": "Scrum Study",
@@ -1283,7 +1283,7 @@ const COURSES_DATA = [
         "Modalidad": "Nota: Si es con la organización Scrum Study la modalidad es virtual en vivo + plataforma oficial para ver videos con el curso completo; si es con la organización Certiprof, solo es modalidad virtua en vivo (Modalidad sincrónica)"
     },
     {
-        "course_image":'assets/courses/96898db4cda38bb1ff1c739394114a9c8bd2c072-480x512.webp',
+          "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Scrum Product Owner Certified (SPOCTM)*",
         "Área": " Scrum_Certifications",
         "Ente Certificador": "Scrum Study",
@@ -1299,7 +1299,7 @@ const COURSES_DATA = [
         "Modalidad": "Nota: Si es con la organización Scrum Study la modalidad es virtual en vivo + plataforma oficial para ver videos con el curso completo; si es con la organización Certiprof, solo es modalidad virtua en vivo (Modalidad sincrónica)"
     },
     {
-        "course_image":"assets/courses/SCRUM-DEVELOPER.webp",
+           "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Scrum Developer Professional Certification*",
         "Área": " Scrum_Certifications",
         "Ente Certificador": "Scrum Study",
@@ -1507,7 +1507,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "course_image":"assets/courses/CertiProf-Badge-DCPC.webp",
+        "course_image":"assets/courses/Certiprof_Devops_culture_Practitioner_badge_600x600_1b6c52b3-145d-4123-975a-49a7fbc10d76_1440x1440.webp",
         "Certificaciones": "DevOps Culture Practitioner Certification*",
         "Área": "DevOps",
         "Ente Certificador": "Certiprof",
@@ -1555,7 +1555,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "course_image":"assets/courses/Certified+Lean+Six+Sigma+Yellow+Belt.webp",
+        "course_image":"assets/courses/yello_belt.jpg",
         "Certificaciones": "Lean Six Sigma Yellow Belt Professional Certification*",
         "Área": "Lean_Six_Sigma",
         "Ente Certificador": "International Lean Six Sigma Institute",
@@ -1571,7 +1571,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "course_image":"assets/courses/SSO-Green-Belt-Sample-768x592.jpg",
+        "course_image":"assets/courses/green_belt.jpg",
         "Certificaciones": "Lean Six Sigma Green Belt Professional Certification*",
         "Área": "Lean_Six_Sigma",
         "Ente Certificador": "International Lean Six Sigma Institute",
@@ -1587,7 +1587,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "course_image":"assets/courses/lean-six-sigma-black-belt-professional-certification-certiprof.jpg",
+        "course_image":"assets/courses/black_belt.jpg",
         "Certificaciones": "Lean Six Sigma Black Belt Professional Certification*",
         "Área": "Lean_Six_Sigma",
         "Ente Certificador": "International Lean Six Sigma Institute",
@@ -1619,7 +1619,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "course_image":'assets/courses/R-2.png',
+        "course_image":'assets/courses/Certiprof_Iso_20000_Foundation_badge480x480.webp',
         "Certificaciones": "ISO/IEC 20000 Foundation*",
         "Área": "ISO_20000_Gestión_de_Servicios_TI",
         "Ente Certificador": "Certiprof",
@@ -1635,7 +1635,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "course_image":"assets/courses/images (5).jpg",
+        "course_image":"assets/courses/gempages_487642277401854988-fa4f880e-b59f-42f5-b394-0f3cd26a081a.png",
         "Certificaciones": "ISO/IEC 20000 Lead Auditor*",
         "Área": "ISO_20000_Gestión_de_Servicios_TI",
         "Ente Certificador": "Certiprof",
@@ -1651,7 +1651,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "course_image":'assets/courses/01HZ2EYSP303Q0APF90GF9Y47Q.png',
+        "course_image":'assets/courses/Certiprof_Iso_22301_Foundation_badge480x480.webp',
         "Certificaciones": "ISO 22301 Foundation*",
         "Área": "ISO_22301_Gestión_de_la_Continuidad_del_Negocio",
         "Ente Certificador": "Certiprof",
@@ -1667,7 +1667,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "course_image":"assets/courses/00166.png",
+        "course_image":"assets/courses/twitter_thumb_201604_image (2).png",
         "Certificaciones": "ISO 22301 Lead Auditor*",
         "Área": "ISO_22301_Gestión_de_la_Continuidad_del_Negocio",
         "Ente Certificador": "Certiprof",
@@ -1683,8 +1683,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "course_image":"assets/courses/image (4).png",
-        "Certificaciones": "ISO/IEC 27001:2022 Foundation*",
+        "course_image":"assets/courses/Certiprof_Iso_27001_Foundation_badge480x480.webp",
+        "Certificaciones": "ISO/IEC 27001:2022 Foundation",
         "Área": "ISO_27001_Gestión_de_la_Seguridad_de_la_Información",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Profesionales de seguridad de la información interesados en comprender los principios básicos de la gestión de la seguridad de la información.\nGerentes de seguridad de la información que buscan implementar y mantener sistemas de gestión de la seguridad de la información.\nConsultores de seguridad de la información que desean ayudar a las organizaciones a cumplir con la norma ISO/IEC 27001:2022.\nAuditores internos de seguridad de la información que buscan comprender los requisitos de la norma ISO/IEC 27001:2022.\nEstudiantes de tecnología interesados en la gestión de la seguridad de la información.",
@@ -1699,7 +1699,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "ISO/IEC 27001:2022 Internal Auditor*",
+        "course_image":"assets/courses/Certiprof_ISO_27001_Internal_Auditor_Badge_600x600_69daab6d-412f-4711-8c37-33cba4618dba.webp",
+        "Certificaciones": "ISO/IEC 27001:2022 Internal Auditor",
         "Área": "ISO_27001_Gestión_de_la_Seguridad_de_la_Información",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Auditores internos de seguridad de la información que buscan evaluar la conformidad con la norma ISO/IEC 27001:2022.\nProfesionales de seguridad de la información interesados en mejorar la gestión de la seguridad de la información en sus organizaciones.\nConsultores de seguridad de la información que desean ofrecer servicios de auditoría interna de ISO/IEC 27001:2022.\nGerentes de seguridad de la información que buscan mejorar la calidad y eficiencia de sus sistemas de gestión de la seguridad de la información.\nEstudiantes de tecnología interesados en la auditoría interna de sistemas de gestión de la seguridad de la información.",
@@ -1714,7 +1715,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "ISO/IEC 27001:2022 Lead Auditor*",
+        "course_image":"assets/courses/Certiprof_ISO_27001_Lead_Auditor_badge480x480_898be9c2-0608-4005-b08a-fbf07c6f4967.png",
+        "Certificaciones": "ISO/IEC 27001:2022 Lead Auditor",
         "Área": "ISO_27001_Gestión_de_la_Seguridad_de_la_Información",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Profesionales de auditoría interesados en liderar auditorías de conformidad con ISO/IEC 27001:2022.\nAuditores internos de seguridad de la información que buscan avanzar en sus carreras como auditores líderes.\nConsultores de seguridad de la información que desean ofrecer servicios de auditoría externa de ISO/IEC 27001:2022.\nGerentes de seguridad de la información que buscan mejorar la gestión de la seguridad de la información en sus organizaciones.\nAuditores externos de seguridad de la información que buscan evaluar la conformidad con la norma ISO/IEC 27001:2022.",
@@ -1729,6 +1731,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
+        "course_image":"assets/courses/image (5).png",
         "Certificaciones": "ISO 27001 Lead Implementer*",
         "Área": "ISO_27001_Gestión_de_la_Seguridad_de_la_Información",
         "Ente Certificador": "Certiprof",
@@ -1744,7 +1747,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Help Desk Professional Certification*",
+        "course_image":"assets/courses/image (6).png",
+        "Certificaciones": "Help Desk Professional Certification",
         "Área": "Business &_IT_Certifications",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Profesionales de soporte técnico que desean mejorar sus habilidades en atención al cliente.\nPersonal de help desk que busca comprender mejor los procesos y herramientas de soporte técnico.\nEstudiantes de informática interesados en trabajar en el área de help desk.\nGerentes de TI que desean mejorar la eficiencia y la calidad del servicio de help desk en sus organizaciones.\nProfesionales de soporte técnico que buscan avanzar en sus carreras en el área de IT.",
@@ -1759,7 +1763,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Service Desk Leader Professional Certification*",
+        "course_image":"assets/courses/image (7).png",
+        "Certificaciones": "Service Desk Leader Professional Certification",
         "Área": "Business &_IT_Certifications",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Líderes de equipos de help desk que buscan mejorar la eficiencia y la calidad del servicio.\nGerentes de TI que desean implementar mejores prácticas de gestión en el servicio de help desk.\nProfesionales de soporte técnico que desean avanzar en sus carreras como líderes en el área de IT.\nConsultores de IT que desean ofrecer servicios de mejora de help desk a sus clientes.\nEstudiantes de informática interesados en liderar equipos de soporte técnico.",
@@ -1774,7 +1779,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Business Intelligence Analyst Professional Certification*",
+        "course_image":"assets/courses/Certiprof_Business_Intelligence_Analyst_badge480x480.webp",
+        "Certificaciones": "Business Intelligence Analyst Professional Certification",
         "Área": "Business &_IT_Certifications",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Analistas de datos interesados en convertir datos en información significativa para la toma de decisiones empresariales.\nGerentes de negocio que buscan optimizar procesos y mejorar la eficiencia operativa.\nConsultores de negocio que desean ofrecer servicios de análisis de datos a sus clientes.\nEstudiantes de análisis de datos que desean especializarse en inteligencia empresarial.\nProfesionales de TI que buscan mejorar la capacidad de análisis de datos de sus organizaciones.",
@@ -1789,7 +1795,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Inventory Management Analyst Professional Certification*",
+        "course_image":"assets/courses/blob (3).png",
+        "Certificaciones": "Inventory Management Analyst Professional Certification",
         "Área": "Business &_IT_Certifications",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Analistas de inventario interesados en optimizar el flujo de inventario y reducir costos.\nGerentes de almacén que buscan mejorar la gestión de inventario en sus operaciones.\nConsultores de gestión de inventario que desean ofrecer servicios de optimización de inventario a sus clientes.\nEstudiantes de logística interesados en la gestión eficiente de inventario.\nProfesionales de compras que desean mejorar la gestión de inventario en sus organizaciones.",
@@ -1804,7 +1811,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Data Storytelling Professional Certification*",
+        "course_image":"assets/courses/twitter_thumb_201604_image (3).png",
+        "Certificaciones": "Data Storytelling Professional Certification",
         "Área": "Business &_IT_Certifications",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Profesionales de análisis de datos interesados en comunicar de manera efectiva insights a través de historias.\nGerentes de negocio que buscan mejorar la comunicación de información basada en datos.\nConsultores de datos que desean ayudar a las organizaciones a contar historias con sus datos.\nEstudiantes de análisis de datos que desean desarrollar habilidades de comunicación de datos.\nProfesionales de marketing que desean utilizar datos para contar historias convincentes.",
@@ -1819,7 +1827,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Artificial Intelligence Professional Certificate*",
+        "course_image":'assets/courses/CertiProf-Artificial-Intelligence-Content-Co-Creator.png',
+        "Certificaciones": "Artificial Intelligence Professional Certificate",
         "Área": "New_Technologies",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Profesionales de tecnología interesados en comprender los fundamentos de la inteligencia artificial.\nGerentes de producto que desean integrar inteligencia artificial en sus productos y servicios.\nConsultores de tecnología que desean ofrecer servicios de inteligencia artificial a sus clientes.\nEstudiantes de informática interesados en especializarse en inteligencia artificial.\nProfesionales de negocio que buscan entender cómo la inteligencia artificial puede mejorar sus operaciones.",
@@ -1834,7 +1843,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Artificial Intelligence Expert Certificate*",
+        "course_image":"assets/courses/gempages_487642277401854988-05af6f12-46f2-433b-b62d-868c6ab1c082.png",
+        "Certificaciones": "Artificial Intelligence Expert Certificate",
         "Área": "New_Technologies",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Profesionales de tecnología interesados en especializarse en áreas específicas de la inteligencia artificial.\nConsultores de tecnología que desean ofrecer servicios especializados en inteligencia artificial.\nInvestigadores en inteligencia artificial que desean avanzar en sus carreras.\nProfesionales de negocio que buscan implementar soluciones avanzadas de inteligencia artificial en sus organizaciones.",
@@ -1849,7 +1859,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Blockchain Professional Certification*",
+        "course_image":"assets/courses/gempages_487642277401854988-94618944-19b5-4a24-8868-a47d3e4c0b0c.png",
+        "Certificaciones": "Blockchain Professional Certification",
         "Área": "New_Technologies",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Desarrolladores de software interesados en aprender sobre tecnología blockchain.\nGerentes de proyecto que buscan integrar blockchain en sus proyectos.\nConsultores de tecnología que desean ofrecer servicios relacionados con blockchain.\nEstudiantes de tecnología interesados en comprender el potencial de blockchain.\nProfesionales de negocio que buscan entender cómo blockchain puede transformar sus operaciones.",
@@ -1864,7 +1875,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Big Data Professional Certification*",
+        "course_image":"assets/courses/image (8).png",
+        "Certificaciones": "Big Data Professional Certification",
         "Área": "New_Technologies",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Profesionales de análisis de datos interesados en trabajar con grandes volúmenes de datos.\nGerentes de TI que buscan implementar soluciones de big data en sus organizaciones.\nConsultores de tecnología que desean ofrecer servicios de análisis de big data.\nEstudiantes de análisis de datos que desean especializarse en big data.\nProfesionales de negocio que buscan aprovechar el potencial de los datos en sus operaciones.",
@@ -1879,7 +1891,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Cyber Security Foundation*",
+        "course_image":"assets/courses/Cybersecurity-Foundation-Professional-Certificate-CSFPC.png",
+        "Certificaciones": "Cyber Security Foundation",
         "Área": "Cybersecurity_&_ISMS",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Profesionales de TI interesados en comprender los conceptos básicos de la ciberseguridad.\nGerentes de seguridad de la información que buscan mejorar la seguridad de sus organizaciones.\nConsultores de seguridad de la información que desean ofrecer servicios de ciberseguridad.\nEstudiantes de tecnología interesados en la seguridad informática.\nProfesionales de negocio que buscan proteger la información crítica de su organización.",
@@ -1894,7 +1907,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Lead CyberSecurity Professional Certification*",
+        "course_image":"assets/courses/Lead-Cybersecurity-Certified-Trainer-LCSCT.png",
+        "Certificaciones": "Lead CyberSecurity Professional Certification",
         "Área": "Cybersecurity_&_ISMS",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Profesionales de seguridad de la información interesados en liderar iniciativas de ciberseguridad.\nGerentes de seguridad de la información que buscan mejorar la postura de seguridad de sus organizaciones.\nConsultores de seguridad de la información que desean ofrecer servicios de liderazgo en ciberseguridad.\nEstudiantes de tecnología interesados en especializarse en ciberseguridad.\nProfesionales de TI que buscan avanzar en sus carreras en el campo de la seguridad informática.",
@@ -1909,7 +1923,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Innovation Management Professional Certification*",
+        "course_image":"assets/courses/image (9).png",
+        "Certificaciones": "Innovation Management Professional Certification",
         "Área": "Innovation",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Líder de Proyectos de Manufactura Esbelta\nConsultor de Manufactura Esbelta\nAnalista de Procesos de Manufactura Esbelta\nProfesionales interesados en conocer o tener conocimientos en Lean Manufacturing\nPersonas que quieran cambiar su rumbo profesional hacia Lean Manufacturing",
@@ -1924,7 +1939,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Design Thinking Professional Certification*",
+        "course_image":"assets/courses/Certiprof_Design_Thinking_badge_600x600_25734a8a-284b-42ac-b379-518a4639ab8f.webp",
+        "Certificaciones": "Design Thinking Professional Certification",
         "Área": "Innovation",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Facilitador de Procesos de Diseño\nLíder de Equipos de Innovación\nConsultor de Innovación\nProfesionales interesados en conocer o tener conocimientos en Design Thinking\nPersonas que quieran cambiar su rumbo profesional hacia Design Thinking",
@@ -1939,7 +1955,8 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
-        "Certificaciones": "Design Sprint Certification*",
+        "course_image":"assets/courses/blob (4).png",
+        "Certificaciones": "Design Sprint Certification",
         "Área": "Innovation",
         "Ente Certificador": "Certiprof",
         "Dirigido a / Perfil de entrada": "Equipos de desarrollo de productos que buscan acelerar la iteración y validación de ideas.\nEmprendedores que quieren validar conceptos de productos de manera rápida y efectiva.\nGerentes de producto interesados en implementar procesos ágiles de desarrollo de productos.\nProfesionales de diseño que buscan integrar métodos ágiles en su trabajo diario.\nConsultores empresariales que quieren ofrecer servicios de innovación y diseño ágil a sus clientes.",
@@ -1954,6 +1971,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
+         "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "SCRUMstudy Agile Master Certified (SAMC)",
         "Área": "Scrum & Agile",
         "Ente Certificador": "Scrum Study",
@@ -1969,6 +1987,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
+         "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Scaled Scrum Master Certified (SSMC™)",
         "Área": "Scaled Scrum Master",
         "Ente Certificador": "Scrum Study",
@@ -1984,6 +2003,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
+         "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Scaled Scrum Product Owner Certified (SSPOC'')",
         "Área": "Scaled Scrum Product Owner",
         "Ente Certificador": "Scrum Study",
@@ -1999,6 +2019,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
+         "course_image":"assets/courses/WhatsApp Image 2025-11-16 at 03.43.10_5a1446a8.jpg",
         "Certificaciones": "Project Management Professional PMP",
         "Área": "Proyectos",
         "Ente Certificador": "PMI",
@@ -2014,6 +2035,7 @@ const COURSES_DATA = [
         "Modalidad": "Modalidad virtual en vivo"
     },
     {
+         "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Marketing Strategy Specialist",
         "Área": "Marketing",
         "Ente Certificador": "Scrum Study",
@@ -2029,6 +2051,7 @@ const COURSES_DATA = [
         "Modalidad": "Virtual en vivo + plataforma oficial para ver videos referentes al tema y repasar lo visto en clase"
     },
     {
+         "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Marketing Strategy Professional",
         "Área": "Marketing",
         "Ente Certificador": "Scrum Study",
@@ -2044,6 +2067,7 @@ const COURSES_DATA = [
         "Modalidad": "Virtual en vivo + plataforma oficial para ver videos referentes al tema y repasar lo visto en clase"
     },
     {
+         "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Marketing Strategy Expert",
         "Área": "Marketing",
         "Ente Certificador": "Scrum Study",
@@ -2059,6 +2083,7 @@ const COURSES_DATA = [
         "Modalidad": "Virtual en vivo + plataforma oficial para ver videos referentes al tema y repasar lo visto en clase"
     },
     {
+         "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Digital Marketing Professional",
         "Área": "Marketing",
         "Ente Certificador": "Scrum Study",
@@ -2074,6 +2099,7 @@ const COURSES_DATA = [
         "Modalidad": "Virtual en vivo + plataforma oficial para ver videos referentes al tema y repasar lo visto en clase"
     },
     {
+         "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Digital Marketing Specialist",
         "Área": "Marketing",
         "Ente Certificador": "Scrum Study",
@@ -2089,6 +2115,7 @@ const COURSES_DATA = [
         "Modalidad": "Virtual en vivo + plataforma oficial para ver videos referentes al tema y repasar lo visto en clase"
     },
     {
+         "course_image":"assets/courses/scrum_studies.jpg",
         "Certificaciones": "Digital Marketing Expert",
         "Área": "Marketing",
         "Ente Certificador": "Scrum Study",
@@ -4014,6 +4041,1500 @@ const COURSES_DATA_EN = [
 "Cantidad de intentos": "1 attempt with possibility of a second attempt. (The cost will depend on the exam to be repeated)",
 "Modalidad": "Live virtual modality"
 },
+{
+"course_image": "assets/courses/thumbnail_badge-brochure_AI_pro_3a7fa253-bc9e-4cea-a3a8-c6992cf0a9c0.webp",
+"Certificaciones": "AI Professional",
+"Área": "AI Professional and AI in the Cloud",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Aimed at professionals from any field who wish to gain a comprehensive understanding of artificial intelligence, its fundamentals, practical applications, and current trends. Ideal for leadership, management, or digital transformation roles.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to understand the fundamental principles of artificial intelligence (AI) and its application in business and technological contexts. They will be prepared to identify AI usage opportunities, collaborate on implementation projects, and support strategic decision-making related to intelligent technologies.",
+"Objetivo general": "Train IT and business professionals in the fundamentals of predictive and generative artificial intelligence, providing them with the necessary theoretical-practical knowledge to understand how these technologies work and how to apply them effectively in real environments. The course also prepares for the Arcitura AI Professional certification exam.",
+"Objetivos específicos": "Understand the fundamentals of predictive AI:\nHandle generative AI concepts:\nDevelop practical skills: Work on interactive exercises and labs that reinforce understanding of model training cycles and their implementation.",
+"Contenidos": "Business and technological factors of predictive AI\nBenefits of predictive AI\nCommon risks and challenges of using predictive AI\nCategories of business problems addressed by AI\nTypes of predictive AI\nCommon learning approaches of predictive AI\nHow to understand learning and training of predictive AI models\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning\nHeuristic learning, semi-supervised learning, reinforcement learning\nCommon functional designs of predictive AI, computer vision, pattern recognition\nRobotics, natural language processing (NLP)\nSpeech recognition, natural language understanding (NLU)\nHow to understand AI models and neural networks Business and technological factors of generative AI\nBenefits of generative AI\nCommon risks and challenges of using generative AI\nCategories of business problems addressed by generative AI\nHow to understand models, algorithms, and neural networks\nTypes of generative AI\nTraining of generative models and how to understand the training cycle\nHow to understand Generative Adversarial Networks (GANs)\nHow to understand Variational Autoencoders (VAEs)\nHow to understand Transformers\nSteps to build AI systems\nBest practices of generative AI",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "7 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/491657984_1198816265590229_682982180910742399_n.jpg",
+"Certificaciones": "Predictive AI Specialist",
+"Área": "AI Professional and AI in the Cloud",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for data analysts, statisticians, or professionals working with supervised learning models. Focused on the design and implementation of predictive systems to forecast behaviors, risks, or patterns.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of designing, developing, and implementing predictive artificial intelligence models, using advanced techniques and tools to analyze data and anticipate behaviors, supporting strategic decision-making in various industries.",
+"Objetivo general": "Provide IT and business professionals with essential theoretical and practical knowledge on Predictive Artificial Intelligence, including models, training techniques, and best practices, so they can design, implement, and maintain effective predictive solutions in real contexts, also preparing them for the official Predictive AI Specialist certification.",
+"Objetivos específicos": "Understand the fundamentals and models of predictive AI.\nLearn the complete model training process.\nMaster specific predictive AI techniques",
+"Contenidos": "Business and technological factors of predictive AI This module provides a series of exercises and case-study-based lab problems designed to test your ability to apply your knowledge of the topics covered in previous modules. Completing this lab helps reinforce understanding of previous topics and demonstrates how different practices and technologies can be applied together as part of broader solutions.\nBenefits of predictive AI\nCommon risks and challenges of using predictive AI\nCategories of business problems addressed by AI\nTypes of predictive AI\nCommon learning approaches of predictive AI\nHow to understand learning and training of predictive AI models\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning\nHeuristic learning, semi-supervised learning, reinforcement learning\nCommon functional designs of predictive AI, computer vision, pattern recognition\nRobotics, natural language processing (NLP)\nSpeech recognition, natural language understanding (NLU)\nHow to understand AI models and neural networks Business and technological factors of generative AI\nBenefits of generative AI\nCommon risks and challenges of using generative AI\nCategories of business problems addressed by generative AI\nHow to understand models, algorithms, and neural networks\nTypes of generative AI\nTraining of generative models and how to understand the training cycle\nHow to understand Generative Adversarial Networks (GANs)\nHow to understand Variational Autoencoders (VAEs)\nHow to understand Transformers\nSteps to build AI systems\nBest practices of generative AI",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "7 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/489884320_1193210299484159_24905037896266786_n.jpg",
+"Certificaciones": "Generative AI Specialist",
+"Área": "AI Professional and AI in the Cloud",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Oriented to those working with emerging technologies such as language models, image generation, or AI-based multimedia content. Ideal for researchers, digital creators, and generative solutions developers.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to understand and apply generative artificial intelligence techniques, designing and developing solutions that generate creative content and synthetic data to support innovation and automation processes in different sectors.",
+"Objetivo general": "Train professionals in the fundamental and advanced principles of Generative Artificial Intelligence, focusing on training, use, management, and applications of models like GANs, VAEs, and Transformers, to design innovative generative solutions and prepare for the official Generative AI Specialist certification",
+"Objetivos específicos": "Understand the fundamentals and architectures of generative AI\nLearn to train and evaluate generative models\nApply best practices and manage risks in generative AI",
+"Contenidos": "Business and technological factors of generative AI\nBenefits of generative AI\nCommon risks and challenges of using generative AI\nCategories of business problems addressed by generative AI\nHow to understand models, algorithms, and neural networks\nTypes of generative AI\nTraining of generative models and how to understand the training cycle\nHow to understand Generative Adversarial Networks (GANs)\nHow to understand Variational Autoencoders (VAEs)\nHow to understand Transformers\nSteps to build AI systems\nBest practices of generative AI Ethical guardians and Results translators\nPre-trained language models (PLMs) and Transfer learning\nNoise injection, Temperature adjustment, and Random sparks\nHow to work with Generative Adversarial Networks (GANs)\nHow to work with Variational Autoencoders (VAEs)\nHow to work with Transformers\nHow to work with Conditional Generative Adversarial Networks (cGANs)\nHow to work with Recurrent Neural Networks (RNNs) and Long/short-term memory (LSTM)\nLarge language models (LLMs) and Natural language processing (NLP)\nModel evaluation and Training performance evaluation\nBenchmark modeling and Model optimization\nOverfitting prevention This module provides a series of exercises and case-study-based lab problems designed to test your ability to apply your knowledge of the topics covered in previous modules. Completing this lab helps reinforce understanding of previous topics and demonstrates how different practices and technologies can be applied together as part of broader solutions.",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "7 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_Certified_AI_preAIeng.webp",
+"Certificaciones": "Predictive AI Engineer",
+"Área": "AI Professional and AI in the Cloud",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for engineers, data scientists, or developers who build, train, and deploy predictive models. Includes advanced knowledge in machine learning, regression, classification, and model validation.",
+"Perfil de salida": "Upon concluding the certification, the participant will be able to design, implement, and optimize advanced predictive artificial intelligence solutions through the application of machine learning and data analysis techniques. They will have the ability to manage the complete cycle of AI projects, from data preparation and cleaning to the construction, validation, and deployment of predictive models. Additionally, they will be able to integrate these solutions into business environments to support data-based decision-making and generate strategic value in various industries.",
+"Objetivo general": "Train professionals in advanced practices of Predictive Artificial Intelligence engineering, including design, training, implementation, optimization, and maintenance of predictive models with neural networks, equipping them with the necessary skills to build robust, scalable, and ethical AI systems, and prepare them to obtain the official Certified Predictive AI Engineer certification",
+"Objetivos específicos": "Design and configure predictive neural network architectures\nImplement complete data preparation and training processes\nDeploy, evaluate, maintain, and optimize models in production",
+"Contenidos": "Business and technological factors of predictive AI\nBenefits of predictive AI\nCommon risks and challenges of using predictive AI\nCategories of business problems addressed by AI\nTypes of predictive AI\nCommon learning approaches of predictive AI\nHow to understand learning and training of predictive AI models\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning\nHeuristic learning, semi-supervised learning, reinforcement learning\nCommon functional designs of predictive AI, computer vision, pattern recognition\nRobotics, natural language processing (NLP)\nSpeech recognition, natural language understanding (NLU)\nHow to understand AI models and neural networks How to understand supervised learning\nHow to understand unsupervised learning\nEssential analytical techniques and processes\nIntroduction to feature encoding and feature imputation\nIntroduction to dimensionality reduction\nIntroduction to data management\nIntroduction to model evaluation and training performance evaluation\nIntroduction to benchmark modeling and model optimization\nIntroduction to overfitting prevention\nIntroduction to transfer learning This module delves into a range of predictive AI engineering practices and techniques, and also provides a detailed introduction to neural network architecture components. The module illustrates how and when different practices and neural network system components should be defined and applied. Finally, the module provides a set of key principles and best practices for carrying out AI engineering techniques.",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "7 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/491326247_1198816312256891_1901978319788829092_n.jpg",
+"Certificaciones": "AI Architect",
+"Área": "AI Professional and AI in the Cloud",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for solution architects, senior engineers, and technical managers who design artificial intelligence ecosystems. Focused on technology integration, scalability, efficiency, and compliance with standards.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to design and oversee artificial intelligence solution architectures, integrating technical and strategic components that enable the effective and scalable development of AI projects in organizations.",
+"Objetivo general": "Train professionals in the design and architecture of advanced artificial intelligence systems, both predictive and generative, enabling scalable, reliable, and secure infrastructures in cloud or on-premise environments, and effectively integrating them with enterprise data platforms, all in preparation for the official AI Architect certification.",
+"Objetivos específicos": "Master principles and design patterns of AI systems\nDesign scalable and secure infrastructures for AI in the cloud\nIntegrate predictive and generative models with corporate data platforms",
+"Contenidos": "Business and technological factors of predictive AI\nBenefits of predictive AI\nCommon risks and challenges of using predictive AI\nCategories of business problems addressed by AI\nTypes of predictive AI\nCommon learning approaches of predictive AI\nHow to understand learning and training of predictive AI models\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning\nHeuristic learning, semi-supervised learning, reinforcement learning\nCommon functional designs of predictive AI, computer vision, pattern recognition\nRobotics, natural language processing (NLP)\nSpeech recognition, natural language understanding (NLU)\nHow to understand AI models and neural networks Business and technological factors of generative AI\nBenefits of generative AI\nCommon risks and challenges of using generative AI\nCategories of business problems addressed by generative AI\nHow to understand models, algorithms, and neural networks\nTypes of generative AI\nTraining of generative models and how to understand the training cycle\nHow to understand Generative Adversarial Networks (GANs)\nHow to understand Variational Autoencoders (VAEs)\nHow to understand Transformers\nSteps to build AI systems\nBest practices of generative AI This module provides an essential understanding of AI systems and solutions architecture. It explains the different types, scopes, and modes of AI systems architecture and provides detailed coverage of the core modules of AI systems (including data ingestion, data preprocessing, feature engineering, inference engine, and model repository) and AI system monitors (including operations, data, models, and auxiliary monitors).",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "7 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_AI_consult_3a71d78c-0720-42ec-8ec9-2215b9958d17.webp",
+"Certificaciones": "AI Consultant",
+"Área": "AI Professional and AI in the Cloud",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Aimed at technology consultants, innovation managers, or strategic advisors who implement AI solutions in companies. Emphasizes needs analysis, solution proposal, and change management.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to advise on the planning, implementation, and optimization of artificial intelligence solutions, integrating technologies and strategies to maximize business value and promote innovation.",
+"Objetivo general": "Train professionals in an integral approach that combines predictive and generative AI with engineering, architecture, and change management fundamentals, enabling the successful design, implementation, and adoption of artificial intelligence projects in business environments, and prepare them for the official AI Consultant certification.",
+"Objetivos específicos": "Develop AI-based business cases\nDesign adoption strategies and AI change management\nIntegrate technical fundamentals of predictive, generative AI, engineering, and architecture",
+"Contenidos": "Business and technological factors of predictive AI\nBenefits of predictive AI\nCommon risks and challenges of using predictive AI\nCategories of business problems addressed by AI\nTypes of predictive AI\nCommon learning approaches of predictive AI\nHow to understand learning and training of predictive AI models\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning\nHeuristic learning, semi-supervised learning, reinforcement learning\nCommon functional designs of predictive AI, computer vision, pattern recognition\nRobotics, natural language processing (NLP)\nSpeech recognition, natural language understanding (NLU)\nHow to understand AI models and neural networks Business and technological factors of generative AI\nBenefits of generative AI\nCommon risks and challenges of using generative AI\nCategories of business problems addressed by generative AI\nHow to understand models, algorithms, and neural networks\nTypes of generative AI\nTraining of generative models and how to understand the training cycle\nHow to understand Generative Adversarial Networks (GANs)\nHow to understand Variational Autoencoders (VAEs)\nHow to understand Transformers\nSteps to build AI systems\nBest practices of generative AI Selection of predictive AI models and hyperparameter tuning\nDeployment, monitoring, and maintenance of predictive AI models\nDetection and mitigation of predictive AI biases\nExplainability and interpretability of predictive AI models\nEvaluation and validation techniques of predictive AI models\nData preprocessing techniques, overfitting, and regularization\nHow to understand neural networks and predictive AI models\nTypes of neural networks, neurons, layers, links, weights\nLoss, hyperparameters, learning rate, bias, epoch\nActivation functions (Sigmoid, Tanh, ReLU, Leaky ReLU, Softmax, Softplus)\nTypes of neural cells (input, feedback, noisy, hidden, probabilistic, spiking, recurrent, memory, kernel, convolutional, group, output, input match, etc.)\nCommon neural network architectures for predictive AI systems Representation and data encoding\nLatent space and its manipulation\nPrompt engineering\nMetrics for evaluating generative models\nSelection of generative AI models and hyperparameter tuning\nDeployment, monitoring, and maintenance of generative AI models\nDetection and mitigation of generative AI biases\nExplainability and interpretability of generative AI models\nEvaluation and validation techniques of models for generative AI\nData preprocessing techniques, overfitting, and regularization\nPerformance optimization techniques for generative AI models\nHow to understand neural networks and generative AI models\nTypes of neural networks, neurons, layers, links, weights in generative AI\nLoss, hyperparameters, learning rate, bias, epoch in generative AI\nActivation functions (Leaky ReLU, Tanh, ReLU, Softmax, Sigmoid, Softplus)\nTypes of neural cells (input, feedback, noisy, hidden, probabilistic, spiking, recurrent, memory, kernel, convolutional, group, output, input match, etc.)\nCommon neural network architectures for generative AI systems Comparison between AI architecture and AI engineering\nAI product architectures vs. custom AI architectures\nScopes of AI architecture (system and solution)\nOperational modes of AI solutions (training and production)\nTypes of AI systems architecture (monolithic, modular, hybrid)\nData storage for AI solutions (internal, external, hybrid)\nCore modules of AI systems\nData ingestion for common data sources of predictive AI and generative AI\nData preprocessing in predictive AI and generative AI systems\nFeature engineering in predictive AI and generative AI systems\nInference engine in predictive AI and generative AI systems\nModel repository in predictive AI and generative AI systems\nOperations monitors (performance, resources)\nData monitors (input, output)\nModel monitors (weight and gradient, activation distribution, bias and fairness)\nAuxiliary monitors (explainability, robustness and adversarial attack, data quality, data labeling)",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "7 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_AI_gov_197575ae-0914-4b8d-a1b8-76f7fcb1c66d.webp",
+"Certificaciones": "AI Governance and Ethics Specialist",
+"Área": "AI Professional and AI in the Cloud",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Ideal for compliance professionals, law, public policy, or technology ethics. Focuses on the development and evaluation of ethical, normative, and governance frameworks for the responsible use of artificial intelligence.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to implement governance practices and ethical principles in artificial intelligence projects, ensuring regulatory compliance, transparency, and responsibility in the use of AI technologies.",
+"Objetivo general": "Develop in participants a deep understanding of the principles, processes, and roles necessary for the governance of predictive and generative AI systems throughout their lifecycle, emphasizing fairness, transparency, accountability, and regulatory compliance, as well as preparing them for the official AI Governance and Ethics Specialist certification",
+"Objetivos específicos": "Establish AI governance frameworks and controls\nEnsure ethics, explainability, and regulatory compliance\nImplement governance in cloud-based environments",
+"Contenidos": "Business and technological factors of predictive AI\nBenefits of predictive AI\nCommon risks and challenges of using predictive AI\nCategories of business problems addressed by AI\nTypes of predictive AI\nCommon learning approaches of predictive AI\nHow to understand learning and training of predictive AI models\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning\nHeuristic learning, semi-supervised learning, reinforcement learning\nCommon functional designs of predictive AI, computer vision, pattern recognition\nRobotics, natural language processing (NLP)\nSpeech recognition, natural language understanding (NLU)\nHow to understand AI models and neural networks Business and technological factors of generative AI\nBenefits of generative AI\nCommon risks and challenges of using generative AI\nCategories of business problems addressed by generative AI\nHow to understand models, algorithms, and neural networks\nTypes of generative AI\nTraining of generative models and how to understand the training cycle\nHow to understand Generative Adversarial Networks (GANs)\nHow to understand Variational Autoencoders (VAEs)\nHow to understand Transformers\nSteps to build AI systems\nBest practices of generative AI Introduction to AI governance and fundamental principles of ethical AI\nHow to understand fairness, accountability, transparency, and explainability (FATE)\nHandling biases and discrimination in AI algorithms\nHow to understand the role of data governance in an AI governance framework\nGoverning training data collection and management\nEnsuring data quality and tracking data lineage\nTechniques to address and mitigate biases in datasets\nExamining ethical considerations throughout the lifecycle of an AI system\nHow to understand available tools and techniques for ethical AI design\nUsing risk assessment frameworks to identify and manage potential AI risks Governance precepts and processes for training data, including sensitive data and representativeness\nGovernance precepts and processes for production data, including drift monitoring and ongoing fairness\nEstablishing AI oversight and auditing mechanisms\nBias mitigation strategies and achieving explainability in complex AI models\nPutting ethical principles into practice and aligning AI with values and social responsibility\nAdapting to evolving regulations\nCreating an AI ethics code of conduct and communicating AI ethics to the organization\nUsing AI governance to foster a culture of ethical AI innovation\nProactive risk management and incident response in AI\nHow to understand cloud AI automation mechanisms related to governance This module provides a series of exercises and case-study-based lab problems designed to test your ability to apply your knowledge of the topics covered in previous modules. Completing this lab helps reinforce understanding of previous topics and demonstrates how different practices and technologies can be applied together as part of broader solutions.",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "7 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/AI_program_SP_catalog+(1).png",
+"Certificaciones": "Cloud AI Professional",
+"Área": "AI Professional and AI in the Cloud",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for systems administrators, DevOps, or platform engineers who deploy AI solutions in cloud environments like Azure, AWS, or Google Cloud. Includes resource management, storage, computing, and scalability.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to design, implement, and manage artificial intelligence solutions in cloud environments, leveraging cloud platforms and services to optimize processes, analysis, and deployment of AI models in organizations.",
+"Objetivo general": "Train professionals with a solid understanding of the technologies, practices, and processes necessary to implement, automate, and manage artificial intelligence systems in the cloud, enabling scalable, secure, and efficient infrastructures for training and operating AI models, and prepare them for the official Cloud AI Professional certification",
+"Objetivos específicos": "Master cloud infrastructure and resources for AI\nImplement automation and serverless architectures for AI\nManage data, monitoring, and compliance in cloud AI operations",
+"Contenidos": "Terminology and fundamental concepts of cloud computing\nFundamentals of virtualization\nSpecific characteristics that define a cloud\nHow to understand elasticity, resilience, on-demand use, and measured use\nBenefits, challenges, and risks of contemporary cloud computing platforms and cloud services\nRoles of cloud resource administrator and cloud service owner\nRoles of cloud service and cloud service consumer\nHow to understand the Software as a Service (SaaS) cloud delivery model\nHow to understand the Platform as a Service (PaaS) cloud delivery model\nHow to understand the Infrastructure as a Service (IaaS) cloud delivery model\nHow to combine cloud delivery models\nPublic, private, hybrid, and community cloud deployment models\nBusiness cost metrics and formulas to compare and calculate costs of cloud and on-premise solutions\nFormulas to calculate and qualify SLA service quality characteristics Cloud computing mechanisms that establish architectural building blocks\nVirtual servers, containers, ready-to-use environments, failover systems, and pay-per-use monitors\nAutomated scaling monitors, multi-device agents, and resource replication\nHow to understand how cloud computing mechanisms support cloud characteristics\nIntroduction to containerization, container hosting, and logical Pod-type containers\nComparison between containerization and virtualization\nCloud balancing and cloud bursting architectures\nCommon risks, threats, and vulnerabilities of cloud-based services and cloud-hosted solutions\nCloud security mechanisms used to counter threats and attacks\nHow to understand cloud-based security groups and hardened virtual server images\nMeans of implementing cloud services (including web services and REST services)\nBenefits and challenges of cloud storage, cloud storage services, technologies, and approaches\nNon-relational (NoSQL) storage compared to relational storage\nCloud service testing considerations and types of tests Business and technological factors of predictive AI\nBenefits of predictive AI\nCommon risks and challenges of using predictive AI\nCategories of business problems addressed by AI\nTypes of predictive AI\nCommon learning approaches of predictive AI\nHow to understand learning and training of predictive AI models\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning\nHeuristic learning, semi-supervised learning, reinforcement learning\nCommon functional designs of predictive AI, computer vision, pattern recognition\nRobotics, natural language processing (NLP)\nSpeech recognition, natural language understanding (NLU)\nHow to understand AI models and neural networks Business and technological factors of generative AI\nBenefits of generative AI\nCommon risks and challenges of using generative AI\nCategories of business problems addressed by generative AI\nHow to understand models, algorithms, and neural networks\nTypes of generative AI\nTraining of generative models and how to understand the training cycle\nHow to understand Generative Adversarial Networks (GANs)\nHow to understand Variational Autoencoders (VAEs)\nHow to understand Transformers\nSteps to build AI systems\nBest practices of generative AI Overview of cloud computing related to predictive AI and generative AI\nFundamentals of cloud AI infrastructure\nTypes of cloud infrastructure (GPUs, TPUs) and their applications in AI\nCloud AI services\nExploration of AWS SageMaker, Azure Machine Learning, and Google AI Platform\nLeveraging pre-built AI APIs\nAI data management in the cloud\nAI data storage (object storage, data warehouses, data lakes)\nBuilding and training AI models in the cloud\nTraining models with cloud-based services\nDeployment of AI models in the cloud\nCompliance and data governance in AI\nMonitoring and optimization of AI workloads\nSecurity and privacy considerations\nService meshes and autonomous computing\nCloud computing industry standards organizations",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "7 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/thumbnail_SP_badge_brochure_AI_cloudAIarch_aa2d0240-471a-44d5-b4f7-eaffa348354a.webp",
+"Certificaciones": "Cloud AI Architect",
+"Área": "AI Professional and AI in the Cloud",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Aimed at solution architects who design and integrate artificial intelligence systems in cloud platforms. Focused on distributed architecture, automation, security, performance, and regulatory compliance in the cloud.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of designing and implementing artificial intelligence solutions in cloud environments, integrating scalable services and machine learning technologies to optimize processes, improve products, and enable intelligent capabilities in organizations.",
+"Objetivo general": "Train professionals in design, architecture, and integration of artificial intelligence solutions in the cloud, applying scalable, serverless, secure, and auditable patterns, as well as hybrid/multicloud infrastructures, and prepare them for the official Cloud AI Architect certification",
+"Objetivos específicos": "Master architectural models and patterns for AI in the cloud\nDesign hyper-resilient and secure infrastructures in hybrid or multicloud environments\nApply automation, integration, and practical lab to design real Cloud AI solutions",
+"Contenidos": "Terminology and fundamental concepts of cloud computing\nFundamentals of virtualization\nSpecific characteristics that define a cloud\nHow to understand elasticity, resilience, on-demand use, and measured use\nBenefits, challenges, and risks of contemporary cloud computing platforms and cloud services\nRoles of cloud resource administrator and cloud service owner\nRoles of cloud service and cloud service consumer\nHow to understand the Software as a Service (SaaS) cloud delivery model\nHow to understand the Platform as a Service (PaaS) cloud delivery model\nHow to understand the Infrastructure as a Service (IaaS) cloud delivery model\nHow to combine cloud delivery models\nPublic, private, hybrid, and community cloud deployment models\nBusiness cost metrics and formulas to compare and calculate costs of cloud and on-premise solutions\nFormulas to calculate and qualify SLA service quality characteristics This module explores a variety of topics related to the most important and relevant technologies belonging to contemporary cloud computing platforms. The module content does not go into implementation or programming details, but keeps coverage at a conceptual level, focusing on topics that address cloud service architecture, cloud security threats and technologies, virtualization, and containerization. Cloud computing mechanisms that establish architectural building blocks\nVirtual servers, containers, ready-to-use environments, failover systems, and pay-per-use monitors\nAutomated scaling monitors, multi-device agents, and resource replication\nHow to understand how individual cloud computing mechanisms support cloud characteristics\nIntroduction to containerization, container hosting, and logical Pod-type containers\nComparison between containerization and virtualization\nCloud balancing and cloud bursting architectures\nCommon risks, threats, and vulnerabilities of cloud-based services and cloud-hosted solutions\nCloud security mechanisms used to counter threats and attacks\nHow to understand cloud-based security groups and hardened virtual server images\nMeans of implementing cloud services (including web services and REST services)\nBenefits and challenges of cloud storage, cloud storage services, technologies, and approaches\nNon-relational (NoSQL) storage compared to relational storage\nCloud service testing considerations and types of tests\nService meshes and autonomous computing\nCloud computing industry standards organizations. This module illustrates how predictive AI can be used and applied in a range of business applications and provides essential coverage of predictive AI practices and systems. The module explores common learning approaches and functional areas for which AI systems are used. All content is written in simple and easy-to-understand Spanish. Business and technological factors of predictive AI\nBenefits of predictive AI\nCommon risks and challenges of using predictive AI\nCategories of business problems addressed by AI\nTypes of predictive AI\nCommon learning approaches of predictive AI\nHow to understand learning and training of predictive AI models\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning\nHeuristic learning, semi-supervised learning, reinforcement learning\nCommon functional designs of predictive AI, computer vision, pattern recognition\nRobotics, natural language processing (NLP)\nSpeech recognition, natural language understanding (NLU)\nHow to understand AI models and neural networks. This module explores the application of generative AI in a range of business scenarios and offers fundamental coverage of generative AI concepts, models, best practices, and neural networks, including Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Transformers models. All content is written in simple and easy-to-understand Spanish. Business and technological factors of generative AI\nBenefits of generative AI\nCommon risks and challenges of using generative AI\nCategories of business problems addressed by generative AI\nHow to understand models, algorithms, and neural networks\nTypes of generative AI\nTraining of generative models and how to understand the training cycle\nHow to understand Generative Adversarial Networks (GANs)\nHow to understand Variational Autoencoders (VAEs)\nHow to understand Transformers\nSteps to build AI systems\nBest practices of generative AI. This module focuses on technology, infrastructure, and cloud computing practices specific to establishing and running cloud-based predictive and generative AI solutions. Topics include GPUs and TPUs for AI learning workloads, cloud-based AI services such as AWS SageMaker, Azure Machine Learning, and Google AI Platform for model development, training, and deployment, as well as mechanisms for scaling AI applications in the cloud, data storage, and pipeline options. Overview of cloud computing related to predictive AI and generative AI\nFundamentals of cloud AI infrastructure\nTypes of cloud infrastructure (GPUs, TPUs) and their applications in AI\nCloud AI services\nExploration of AWS SageMaker, Azure Machine Learning, and Google AI Platform\nLeveraging pre-built AI APIs\nAI data management in the cloud\nAI data storage (object storage, data warehouses, data lakes)\nBuilding and training AI models in the cloud\nTraining models with cloud-based services\nDeployment of AI models in the cloud\nCompliance and data governance in AI\nMonitoring and optimization of AI workloads\nSecurity and privacy considerations Advanced AI architecture design principles\nHyper-scalable AI infrastructure\nReal-time data architectures for AI\nMicroservices and service meshes in AI applications\nAdvanced security architectures for AI systems, including zero trust models\nCloud-based AI lifecycle management\nAI-specific resource management and automation\nState and data flow management in AI applications\nDistributed AI systems and patterns for data flow\nMonitoring and observability of AI systems\nDisaster recovery and business continuity\nInteroperability and standardization in AI architecture. This module provides a series of exercises and case-study-based lab problems designed to test your ability to apply your knowledge of the topics covered in previous modules. Completing this lab helps reinforce understanding of previous topics and demonstrates how different practices and technologies can be applied together as part of broader solutions.",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "7 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_dt_spec.webp",
+"Certificaciones": "Digital Transformation Specialist *",
+"Área": "Digital Transformation",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for a wide range of professionals seeking to acquire, deepen, or formalize their knowledge and skills in Digital Transformation, with the aim of leading, designing, or executing strategic digital change initiatives within organizations.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to lead and implement digital transformation initiatives, aligning emerging technologies with strategic business objectives, and promoting innovation, agility, and competitiveness in changing organizational environments.",
+"Objetivo general": "Develop in participants a clear and applied understanding of Digital Transformation from both business and technical perspectives, providing them with key skills in practices, technologies, and models that enable leading and executing successful digitization initiatives, and prepare them for the official Digital Transformation Specialist certification",
+"Objetivos específicos": "Understand the impact and fundamentals of Digital Transformation\nApply digital technologies and practices in real contexts\nPrepare for certification and ensure knowledge retention",
+"Contenidos": "How to understand digital transformation\nBenefits of digital transformation\nChallenges of digital transformation\nTechnological and business factors of digital transformation\nHow to understand customer centricity\nProduct-centered relationships vs. customer-centered relationships\nRelationship value actions and warmth\nCustomer interactions through all channels (omnichannel)\nCustomer journeys and customer data intelligence\nFundamentals of data intelligence\nData origins and data sources\nData collection methods and data usage types\nIntelligent decision-making\nComputer-assisted manual decision-making and conditional automated decision-making\nIntelligent manual decision-making vs. intelligent automated decision-making\nDirect automated decision-making and periodic automated decision-making\nReal-time automated decision-making Fundamentals of distributed solution design\nFundamentals of data ingestion, including File Pull, File Push, API Pull, API Push, and Data Flow\nIntroduction to digital transformation automation technologies\nFundamentals of cloud computing and cloud computing as part of digital transformation solutions\nCommon risks and challenges of cloud computing\nFundamentals of blockchain and blockchain as part of digital transformation solutions\nCommon risks and challenges of blockchain\nFundamentals of the Internet of Things (IoT) and IoT as part of digital transformation solutions\nCommon risks and challenges of IoT\nRobotic process automation (RPA) and RPA as part of digital transformation solutions\nCommon risks and challenges of RPA\nIntroduction to digital transformation data science technologies\nBig Data and data analytics, and Big Data as part of digital transformation solutions\nCommon risks and challenges of Big Data\nFundamentals of Machine Learning and Machine Learning as part of digital transformation solutions\nCommon risks and challenges of Machine Learning\nFundamentals of artificial intelligence (AI) and AI as part of digital transformation solutions\nCommon risks and challenges of AI\nInside a customer-centered digital transformation solution (a comprehensive, step-by-step exploration)\nHow to relate individual digital transformation technologies to solution processing\nTracking how data intelligence is collected and used in a digital transformation solution",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/thumbnail_SP_badge_brochure_DT_techarch.png",
+"Certificaciones": "Digital Transformation Technology Professional *",
+"Área": "Digital Transformation",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Aimed at technical professionals who wish to acquire or strengthen their competencies in enabling technologies for digital transformation, with a practical and updated vision of modern architectures, digital platforms, system integration, automation, and more, in the context of constantly evolving organizational environments.\nThe course is especially recommended for: Digital Transformation Technology Engineers, Digital Transformation Technology Developers, Digital Transformation Technology Infrastructure Specialists, Digital Transformation Technology Integration Specialists, Digital Transformation Technology Platform Specialists,",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to evaluate, select, and integrate emerging technologies within digital transformation strategies, driving innovation, operational efficiency, and adaptation to change in modern organizations.",
+"Objetivo general": "Equip participants with essential theoretical and practical knowledge in the main technologies that drive Digital Transformation (cloud, blockchain, IoT), so they can design and apply comprehensive technological solutions that respond to the challenges of the current digital environment, also preparing them for the official Digital Transformation Technology Professional certification exam",
+"Objetivos específicos": "Understand and apply cloud infrastructures\nIncorporate disruptive technologies like blockchain and IoT\nPrepare scalable, secure, and efficient digital solutions",
+"Contenidos": "How to understand digital transformation\nBenefits of digital transformation\nChallenges of digital transformation\nTechnological and business factors of digital transformation\nHow to understand customer centricity\nProduct-centered relationships vs. customer-centered relationships\nRelationship value actions and warmth\nCustomer interactions through all channels (omnichannel)\nCustomer journeys and customer data intelligence\nFundamentals of data intelligence\nData origins and data sources\nData collection methods and data usage types\nIntelligent decision-making\nComputer-assisted manual decision-making and conditional automated decision-making\nIntelligent manual decision-making vs. intelligent automated decision-making\nDirect automated decision-making and periodic automated decision-making\nReal-time automated decision-making Fundamentals of distributed solution design\nFundamentals of data ingestion, including File Pull, File Push, API Pull, API Push, and Data Flow\nIntroduction to digital transformation automation technologies\nFundamentals of cloud computing and cloud computing as part of digital transformation solutions\nCommon risks and challenges of cloud computing\nFundamentals of blockchain and blockchain as part of digital transformation solutions\nCommon risks and challenges of blockchain\nFundamentals of the Internet of Things (IoT) and IoT as part of digital transformation solutions\nCommon risks and challenges of IoT\nRobotic process automation (RPA) and RPA as part of digital transformation solutions\nCommon risks and challenges of RPA\nIntroduction to digital transformation data science technologies\nBig Data and data analytics, and Big Data as part of digital transformation solutions\nCommon risks and challenges of Big Data\nFundamentals of Machine Learning and Machine Learning as part of digital transformation solutions\nCommon risks and challenges of Machine Learning\nFundamentals of artificial intelligence (AI) and AI as part of digital transformation solutions\nCommon risks and challenges of AI\nInside a customer-centered digital transformation solution (a comprehensive, step-by-step exploration)\nHow to relate individual digital transformation technologies to solution processing\nTracking how data intelligence is collected and used in a digital transformation solution Terminology and fundamental concepts of cloud computing\nFundamentals of virtualization\nSpecific characteristics that define a cloud\nHow to understand Elasticity, Resilience, On-demand Use, and Measured Use\nBenefits, challenges, and risks of cloud computing platforms and contemporary cloud services\nHow to understand the Software as a Service (SaaS) cloud delivery model\nHow to understand the Platform as a Service (PaaS) cloud delivery model\nHow to understand the Infrastructure as a Service (IaaS) cloud delivery model\nCloud computing mechanisms that establish architectural building blocks\nVirtual servers, Containers, Ready-to-use environments, Failover systems, and Pay-per-use monitors\nAutomated scaling monitors, Multi-device agents, and Resource replication\nHow to understand how individual cloud computing mechanisms support cloud characteristics\nIntroduction to containerization, container hosting, and logical Pod-type containers\nComparison between containerization and virtualization\nCloud balancing and cloud bursting architectures Benefits and challenges of Blockchain\nTechnological and business factors of Blockchain\nHow to understand the decentralized model of Blockchain\nBlockchain value propositions\nHow Blockchain can be used in different industries\nBlockchain applications, networks, and distributed ledger\nHow the distributed ledger can relate to the relational database\nFundamental components of Blockchain architecture\nTransactions, records, and record groups\nBlocks, chains, and block headers\nBlockchain users, full nodes, and partial nodes\nHow to understand the lifecycle of records and blocks, step by step\nHow to understand how the Merkle tree works, step by step\nHow to understand how consensus works, step by step\nConsensus algorithms (PoW, PoS, PoA, DPoS, LPoS, PoI, PoET, PoC, PoB, Round Robin)\nPublic vs. private Blockchains / Permissionless vs. Permissioned\nCoins, tokens, smart contracts\nFundamentals of cryptographic Hashing and cryptography\nOn-chain, off-chain, and cross-chain activity\nCommon Blockchain metrics How to understand things, connectivity, data, processing, commands, and business analytics\nTechnological and business factors of IoT, benefits and challenges\nMiniaturization and nanotechnology\nIoT connectivity and real-time contextual data\nIoT business domains (personal, home, enterprise, services, mobile)\nIoT vs. Internet\nResource-constrained devices and narrow bandwidth networks (LPWANs)\nActive and passive devices (including RFID)\nTelemetry and command data\nSensors (mechanical, resistive, optical, range, and MEMS)\nMicrocontrollers, Firmware, and power sources\nIoT Gateways and common Gateway functions\nIntroduction to edge computing and fog computing\nIoT platforms and common platform functions\nIoT architecture layers and action modeling\nKey IoT architectural design considerations\nRadio transport (licensed vs. unlicensed, high band vs. low band)\nIoT messaging with REST, HTTP, and Constrained Application Protocol (CoAp)\nProperties and limitations of REST with IoT and CoAp\nHTTP resource identifiers, media types, and methods with IoT and CoAps\nIoT publish-subscribe and MQ telemetry transport (MQTT)\nNon-binary data serialization for IoT with JSON\nBinary data serialization for IoT with Protocol Buffers",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_dt_techarch.webp",
+"Certificaciones": "Digital Transformation Technology Architect *",
+"Área": "Digital Transformation",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals with experience or interest in the design, planning, and evolution of technological architectures within the context of digital transformation. Provides a solid foundation for understanding and implementing modern technological solutions that enable innovation, scalability, and business agility.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to design comprehensive technological architectures that enable digital transformation, aligning innovative solutions like artificial intelligence, cloud, automation, and IoT with business strategic objectives.",
+"Objetivo general": "Train participants in the advanced design and architecture of key technologies within Digital Transformation, delving into cloud infrastructures, IoT, blockchain, and microservices, to develop comprehensive and robust solutions in digital organizations, while preparing them for certification as Digital Transformation Technology Architect",
+"Objetivos específicos": "Analyze emerging technologies and their interoperability in depth\nDesign scalable, secure, and maintainable technological architectures\nPractice through labs and integrative exercises",
+"Contenidos": "How to understand digital transformation\nBenefits of digital transformation\nChallenges of digital transformation\nTechnological and business factors of digital transformation\nHow to understand customer centricity\nProduct-centered relationships vs. customer-centered relationships\nRelationship value actions and warmth\nCustomer interactions through all channels (omnichannel)\nCustomer journeys and customer data intelligence\nFundamentals of data intelligence\nData origins and data sources\nData collection methods and data usage types\nIntelligent decision-making\nComputer-assisted manual decision-making and conditional automated decision-making\nIntelligent manual decision-making vs. intelligent automated decision-making\nDirect automated decision-making and periodic automated decision-making\nReal-time automated decision-making Fundamentals of distributed solution design\nFundamentals of data ingestion, including File Pull, File Push, API Pull, API Push, and Data Flow\nIntroduction to digital transformation automation technologies\nFundamentals of cloud computing and cloud computing as part of digital transformation solutions\nCommon risks and challenges of cloud computing\nFundamentals of blockchain and blockchain as part of digital transformation solutions\nCommon risks and challenges of blockchain\nFundamentals of the Internet of Things (IoT) and IoT as part of digital transformation solutions\nCommon risks and challenges of IoT\nRobotic process automation (RPA) and RPA as part of digital transformation solutions\nCommon risks and challenges of RPA\nIntroduction to digital transformation data science technologies\nBig Data and data analytics, and Big Data as part of digital transformation solutions\nCommon risks and challenges of Big Data\nFundamentals of Machine Learning and Machine Learning as part of digital transformation solutions\nCommon risks and challenges of Machine Learning\nFundamentals of artificial intelligence (AI) and AI as part of digital transformation solutions\nCommon risks and challenges of AI\nInside a customer-centered digital transformation solution (a comprehensive, step-by-step exploration)\nHow to relate individual digital transformation technologies to solution processing\nTracking how data intelligence is collected and used in a digital transformation solution Terminology and fundamental concepts of cloud computing\nFundamentals of virtualization\nSpecific characteristics that define a cloud\nHow to understand Elasticity, Resilience, On-demand Use, and Measured Use\nBenefits, challenges, and risks of cloud computing platforms and contemporary cloud services\nHow to understand the Software as a Service (SaaS) cloud delivery model\nHow to understand the Platform as a Service (PaaS) cloud delivery model\nHow to understand the Infrastructure as a Service (IaaS) cloud delivery model\nCloud computing mechanisms that establish architectural building blocks\nVirtual servers, Containers, Ready-to-use environments, Failover systems, and Pay-per-use monitors\nAutomated scaling monitors, Multi-device agents, and Resource replication\nHow to understand how individual cloud computing mechanisms support cloud characteristics\nIntroduction to containerization, container hosting, and logical Pod-type containers\nComparison between containerization and virtualization\nCloud balancing and cloud bursting architectures. This module provides a clear, end-to-end comprehension of how blockchain works. It breaks down blockchain technology and architecture into easy-to-understand concepts, terms, and basic components. Industry factors and blockchain impacts are explained, followed by simple Spanish descriptions of each main part of the blockchain system and step-by-step descriptions of how these parts work together. Benefits and challenges of Blockchain\nTechnological and business factors of Blockchain\nHow to understand the decentralized model of Blockchain\nBlockchain value propositions\nHow Blockchain can be used in different industries\nBlockchain applications, networks, and distributed ledger\nHow the distributed ledger can relate to the relational database\nFundamental components of Blockchain architecture\nTransactions, records, and record groups\nBlocks, chains, and block headers\nBlockchain users, full nodes, and partial nodes\nHow to understand the lifecycle of records and blocks, step by step\nHow to understand how the Merkle tree works, step by step\nHow to understand how consensus works, step by step\nConsensus algorithms (PoW, PoS, PoA, DPoS, LPoS, PoI, PoET, PoC, PoB, Round Robin)\nPublic vs. private Blockchains / Permissionless vs. Permissioned\nCoins, tokens, smart contracts\nFundamentals of cryptographic Hashing and cryptography\nOn-chain, off-chain, and cross-chain activity\nCommon Blockchain metrics. This module covers the basics of the Internet of Things (IoT) field from technical and business aspects. It covers use cases, fundamental concepts, models, and IoT technologies in simple Spanish, along with introductory coverage of IoT architecture and IoT messaging with REST, HTTP, and CoAp. How to understand things, connectivity, data, processing, commands, and business analytics\nTechnological and business factors of IoT, benefits and challenges\nMiniaturization and nanotechnology\nIoT connectivity and real-time contextual data\nIoT business domains (personal, home, enterprise, services, mobile)\nIoT vs. Internet\nResource-constrained devices and narrow bandwidth networks (LPWANs)\nActive and passive devices (including RFID)\nTelemetry and command data\nSensors (mechanical, resistive, optical, range, and MEMS)\nMicrocontrollers, Firmware, and power sources\nIoT Gateways and common Gateway functions\nIntroduction to edge computing and fog computing\nIoT platforms and common platform functions\nIoT architecture layers and action modeling\nKey IoT architectural design considerations\nRadio transport (licensed vs. unlicensed, high band vs. low band)\nIoT messaging with REST, HTTP, and Constrained Application Protocol (CoAp)\nProperties and limitations of REST with IoT and CoAp\nHTTP resource identifiers, media types, and methods with IoT and CoAps\nIoT publish-subscribe and MQ telemetry transport (MQTT)\nNon-binary data serialization for IoT with JSON\nBinary data serialization for IoT with Protocol Buffers. This module offers a technical analysis of the internal functioning and mechanics of fundamental cloud computing platforms. Public and private cloud environments are dissected into concrete component building blocks (called “patterns”) that individually represent sets of features, functions, and/or artifacts from the platforms, and are collectively applied to establish distinct technology architecture layers. How to understand the technology architecture of private clouds and public clouds\nHow to understand the technology architecture of IaaS, PaaS, and SaaS environments\nHow to understand the technology architecture of elastic, resilient, multitenant, and containerized environments\nAutomated administration and centralized remote administration\nContainer Sidecar and Container Chain\nSelf-provisioning and platform provisioning\nEnriched containers and logical Pod-type containers\nBare-Metal provisioning and Resource management\nMultiple containers in a single node and Multi-path resource access\nUsage monitoring and Broad access\nReal-time resource availability and Pay-as-You-Go\nShared resources and Resource pooling\nRapid provisioning and Resource reservation\nNon-disruptive service relocation and Service state management\nWorkload distribution and Dynamic scalability\nElastic resource capacity and Elastic network capacity\nStorage service gateway and Live storage migration\nLUN storage and LUN migration\nDynamic failure detection and recovery and Zero downtime\nLoad balancing for service instances\nVirtual switches with load balancing and Persistent virtual network configurations\nDynamic data normalization and Synchronized operational state\nIntra-storage device vertical scaling and Inter-storage device vertical scaling\nStorage workload management and Storage maintenance window\nDirect I/O access and Direct LUN access\nCloud balancing and Redundant physical connection for virtual servers\nCloud bursting, including Burst In and Burst Out for private/public clouds. This module delves into blockchain technology architecture and the internal workings of blockchains through the exploration of a series of key design patterns, techniques, and architectural models, along with common technological mechanisms used to customize and optimize blockchain application designs in order to support business requirements compliance. Common Blockchain technology mechanisms and artifacts\nNode monitor, automated node implementer, node location monitor\nConsensus processor, block creator, identity federator\nHashing engine, chaining engine, identity verifier, wallet\nNode repository, ledger replicator, live node migrator\nBlockchain integrity and validation design patterns\nSingleton block, side chain, block validation consensus\nScalability and reliability design patterns of Blockchain\nAuto-scaling nodes, guaranteed minimum full nodes\nGeo scaling, block size update\nBlockchain security and privacy design patterns\nForced on-chain transactions, federated chain\nUser data protection\nBlockchain service design patterns\nTransaction record labels\nLight node, node task abstraction. This module provides a deep dive into key areas of technology architecture and technologies that enable IoT, breaking down IoT environments into individual basic components through design patterns and their associated implementation mechanisms. Layered architectural models are covered, along with design techniques and feature sets that span telemetry data processing, control logic positioning, performance optimization, as well as scalability and reliability concerns. IoT device components (including sensor, actuator, modem, control logic, etc.)\nIoT platforms, Gateways, and publish-subscribe systems\nDevice shadows and device shadow records\nTrusted platform module (TPM) and truncated exponential backoff algorithm\nFundamental functional distribution patterns\nAutonomous controller device model, intermediate controller model\nIntermediate multi-gateway controller model, recipient device controller model\nTelemetry processing patterns\nMinimized data, canonical data format\nTelemetry modeling, intermediate metadata provisioning\nInformation transduction and encoding\nPerformance optimization patterns\nObservation messages, traffic quality transport profile\nReconnection requirement regulation, device workload regulation\nSecurity, reliability, and utility patterns\nRadio transport encryption, firmware integrity attestation\nMessage accounting, multimodal communication\nNetwork-based positioning and triangulation.",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_dt_datascipro.webp",
+"Certificaciones": "Digital Transformation Data Science Professional *",
+"Área": "Digital Transformation",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Aimed at professionals who wish to acquire or deepen their competencies in using data science as a key driver of digital transformation. Provides an applied, strategic, and technical vision of advanced data analysis, visualization, artificial intelligence, and big data in contexts of innovation and organizational change.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to apply data science principles in digital transformation initiatives, using advanced analytical techniques to extract value from data, optimize processes, and support strategic decisions in digital business environments.",
+"Objetivo general": "Train participants in essential concepts, techniques, and models of data science, big data, machine learning, and artificial intelligence, with a practical focus oriented to digital transformation, preparing them to design, implement, and evaluate robust analytical solutions, as well as to obtain the official Digital Transformation Data Science Professional certification",
+"Objetivos específicos": "Acquire solid fundamentals in data science applied to digital environments\nDevelop skills in machine learning and artificial intelligence\nIntegrate technical knowledge with best analysis practices",
+"Contenidos": "How to understand digital transformation\nBenefits of digital transformation\nChallenges of digital transformation\nTechnological and business factors of digital transformation\nHow to understand customer centricity\nProduct-centered relationships vs. customer-centered relationships\nRelationship value actions and warmth\nCustomer interactions through all channels (omnichannel)\nCustomer journeys and customer data intelligence\nFundamentals of data intelligence\nData origins and data sources\nData collection methods and data usage types\nIntelligent decision-making\nComputer-assisted manual decision-making and conditional automated decision-making\nIntelligent manual decision-making vs. intelligent automated decision-making\nDirect automated decision-making and periodic automated decision-making\nReal-time automated decision-making Fundamentals of distributed solution design\nFundamentals of data ingestion, including File Pull, File Push, API Pull, API Push, and Data Flow\nIntroduction to digital transformation automation technologies\nFundamentals of cloud computing and cloud computing as part of digital transformation solutions\nCommon risks and challenges of cloud computing\nFundamentals of blockchain and blockchain as part of digital transformation solutions\nCommon risks and challenges of blockchain\nFundamentals of the Internet of Things (IoT) and IoT as part of digital transformation solutions\nCommon risks and challenges of IoT\nRobotic process automation (RPA) and RPA as part of digital transformation solutions\nCommon risks and challenges of RPA\nIntroduction to digital transformation data science technologies\nBig Data and data analytics, and Big Data as part of digital transformation solutions\nCommon risks and challenges of Big Data\nFundamentals of Machine Learning and Machine Learning as part of digital transformation solutions\nCommon risks and challenges of Machine Learning\nFundamentals of artificial intelligence (AI) and AI as part of digital transformation solutions\nCommon risks and challenges of AI\nInside a customer-centered digital transformation solution (a comprehensive, step-by-step exploration)\nHow to relate individual digital transformation technologies to solution processing\nTracking how data intelligence is collected and used in a digital transformation solution. This module of fundamentals provides an overview of essential Big Data science topics and explores several of the most relevant contemporary analysis practices, technologies, and tools for Big Data environments. Topics include common analysis and analytics features offered by Big Data solutions, as well as an exploration of the Big Data analysis lifecycle. How to understand Big Data\nFundamental terminology and concepts\nBusiness and technological factors of Big Data\nCharacteristics of data in Big Data environments\nTypes of datasets in Big Data environments\nFundamental analysis and analytics\nBusiness intelligence and Big Data\nData visualization and Big Data\nBig Data analysis lifecycle\nA/B tests, Correlation, Regression\nTime series analysis, Heat maps\nNetwork analysis, spatial data analysis\nClassification, clustering\nFiltering (including collaborative filtering and content-based filtering)\nSentiment analysis, text analytics. This module provides an easy-to-understand overview of Machine Learning for anyone interested in how it works, what it can and cannot do, and how it is commonly used in support of business goals. The module covers common types of algorithms and also explains how Machine Learning systems work behind the scenes. The basic module materials are accompanied by an informative supplement that covers various common algorithms and practices. Technological and business factors of Machine Learning\nBenefits and challenges of Machine Learning\nMachine Learning usage scenarios\nDatasets, structured, unstructured, and semi-structured data\nModels, algorithms, learning, and model training\nHow Machine Learning works\nTraining data collection and preprocessing\nAlgorithm and model selection\nModel training and deployment of trained models\nMachine Learning algorithms and practices\nSupervised learning, classification, decision tree\nRegression, ensemble methods, dimension reduction\nUnsupervised learning and clustering\nSemi-supervised and reinforcement learning\nMachine Learning best practices\nHow Machine Learning systems work\nCommon Machine Learning mechanisms\nHow mechanisms are used in model training\nMachine Learning and Deep Learning, Artificial intelligence (AI) Business and technological factors of predictive AI\nBenefits of predictive AI\nCommon risks and challenges of using predictive AI\nCategories of business problems addressed by AI\nTypes of predictive AI\nCommon learning approaches of predictive AI\nHow to understand learning and training of predictive AI models\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning\nHeuristic learning, semi-supervised learning, reinforcement learning\nCommon functional designs of predictive AI, computer vision, pattern recognition\nRobotics, natural language processing (NLP)\nSpeech recognition, natural language understanding (NLU)\nHow to understand AI models and neural networks. This module explores the application of generative AI in a range of business scenarios and offers fundamental coverage of generative AI concepts, models, best practices, and neural networks, including Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Transformers. All content is written in simple and easy-to-understand Spanish. Business and technological factors of generative AI\nBenefits of generative AI\nCommon risks and challenges of using generative AI\nCategories of business problems addressed by generative AI\nHow to understand models, algorithms, and neural networks\nTypes of generative AI\nTraining of generative models and how to understand the training cycle\nHow to understand Generative Adversarial Networks (GANs)\nHow to understand Variational Autoencoders (VAEs)\nHow to understand Transformers\nSteps to build AI systems\nBest practices of generative AI",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_dt_datasci.webp",
+"Certificaciones": "Digital Transformation Data Scientist *",
+"Área": "Digital Transformation",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to master the advanced use of massive data to discover patterns, generate predictive models, and build solutions based on data intelligence.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to extract strategic value from data in digital transformation environments, applying data science techniques, advanced analytics, and machine learning to drive innovation, automation, and data-based decision-making within organizations.",
+"Objetivo general": "Train professionals in advanced data science techniques, Big Data analysis, machine learning, and artificial intelligence, enabling the design, implementation, and management of complex, innovative analytical solutions aligned with business digital transformation, and prepare them to obtain the official Digital Transformation Data Scientist certification",
+"Objetivos específicos": "Master advanced algorithms and data modeling techniques\nImplement analytical workflows in Big Data environments\nApply models to real processes and prepare for advanced certification",
+"Contenidos": "How to understand digital transformation\nBenefits of digital transformation\nChallenges of digital transformation\nTechnological and business factors of digital transformation\nHow to understand customer centricity\nProduct-centered relationships vs. customer-centered relationships\nRelationship value actions and warmth\nCustomer interactions through all channels (omnichannel)\nCustomer journeys and customer data intelligence\nFundamentals of data intelligence\nData origins and data sources\nData collection methods and data usage types\nIntelligent decision-making\nComputer-assisted manual decision-making and conditional automated decision-making\nIntelligent manual decision-making vs. intelligent automated decision-making\nDirect automated decision-making and periodic automated decision-making\nReal-time automated decision-making Fundamentals of distributed solution design\nFundamentals of data ingestion, including File Pull, File Push, API Pull, API Push, and Data Flow\nIntroduction to digital transformation automation technologies\nFundamentals of cloud computing and cloud computing as part of digital transformation solutions\nCommon risks and challenges of cloud computing\nFundamentals of blockchain and blockchain as part of digital transformation solutions\nCommon risks and challenges of blockchain\nFundamentals of the Internet of Things (IoT) and IoT as part of digital transformation solutions\nCommon risks and challenges of IoT\nRobotic process automation (RPA) and RPA as part of digital transformation solutions\nCommon risks and challenges of RPA\nIntroduction to digital transformation data science technologies\nBig Data and data analytics, and Big Data as part of digital transformation solutions\nCommon risks and challenges of Big Data\nFundamentals of Machine Learning and Machine Learning as part of digital transformation solutions\nCommon risks and challenges of Machine Learning\nFundamentals of artificial intelligence (AI) and AI as part of digital transformation solutions\nCommon risks and challenges of AI\nInside a customer-centered digital transformation solution (a comprehensive, step-by-step exploration)\nHow to relate individual digital transformation technologies to solution processing\nTracking how data intelligence is collected and used in a digital transformation solution How to understand Big Data\nFundamental terminology and concepts\nBusiness and technological factors of Big Data\nCharacteristics of data in Big Data environments\nTypes of datasets in Big Data environments\nFundamental analysis and analytics\nBusiness intelligence and Big Data\nData visualization and Big Data\nBig Data analysis lifecycle\nA/B tests, Correlation, Regression\nTime series analysis, Heat maps\nNetwork analysis, spatial data analysis\nClassification, clustering\nFiltering (including collaborative filtering and content-based filtering)\nSentiment analysis, text analytics Technological and business factors of Machine Learning\nBenefits and challenges of Machine Learning\nMachine Learning usage scenarios\nDatasets, structured, unstructured, and semi-structured data\nModels, algorithms, learning, and model training\nHow Machine Learning works\nTraining data collection and preprocessing\nAlgorithm and model selection\nModel training and deployment of trained models\nMachine Learning algorithms and practices\nSupervised learning, classification, decision tree\nRegression, ensemble methods, dimension reduction\nUnsupervised learning and clustering\nSemi-supervised and reinforcement learning\nMachine Learning best practices\nHow Machine Learning systems work\nCommon Machine Learning mechanisms\nHow mechanisms are used in model training\nMachine Learning and Deep Learning, Artificial intelligence (AI) Business and technological factors of predictive AI\nBenefits of predictive AI\nCommon risks and challenges of using predictive AI\nCategories of business problems addressed by AI\nTypes of predictive AI\nCommon learning approaches of predictive AI\nHow to understand learning and training of predictive AI models\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning\nHeuristic learning, semi-supervised learning, reinforcement learning\nCommon functional designs of predictive AI, computer vision, pattern recognition\nRobotics, natural language processing (NLP)\nSpeech recognition, natural language understanding (NLU)\nHow to understand AI models and neural networks. This module explores the application of generative AI in a range of business scenarios and offers fundamental coverage of generative AI concepts, models, best practices, and neural networks, including Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Transformers. All content is written in simple and easy-to-understand Spanish. Business and technological factors of generative AI\nBenefits of generative AI\nCommon risks and challenges of using generative AI\nCategories of business problems addressed by generative AI\nHow to understand models, algorithms, and neural networks\nTypes of generative AI\nTraining of generative models and how to understand the training cycle\nHow to understand Generative Adversarial Networks (GANs)\nHow to understand Variational Autoencoders (VAEs)\nHow to understand Transformers\nSteps to build AI systems\nBest practices of generative AI. This module provides an in-depth view of the essential and advanced thematic areas related to unique and exclusive data science and analysis techniques for Big Data, with emphasis on how analysis and analytics should be carried out individually and collectively to support particular features, requirements, and challenges associated with Big Data datasets. Exploratory data analysis, essential statistics, including variable categories and relevant mathematics\nStatistical analysis, including descriptive, inferential, covariance, hypothesis testing, etc.\nMeasures of variation or dispersion, interquartile range and outliers, Z score, etc.\nProbability, frequency, statistical estimators, confidence interval, etc.\nVariables and basic mathematical notations, statistical measures and statistical inference\nConfirmatory data analysis (CDA)\nData discretization, Binning and clustering\nVisualization techniques, including bar graph, line graph, histogram, frequency polygons, etc.\nLinear regression prediction, mean squared error and R2 determination coefficient, etc.\nNumeric summaries, modeling, model evaluation, model fitting and model overfitting\nStatistical models, model evaluation measures\nCross-validation, bias variance, confusion matrix and F score\nAssociation rules and apriori algorithm\nData reduction, feature dimension selection\nFeature extraction, data discretization (Binning and clustering)\nAdvanced statistical techniques\nParametric vs. non-parametric, clustering vs. non-clustering\nDistance-based, supervised vs. semi-supervised\nLinear regression and logistic regression for Big Data\nLogistic regressions, Naïve Bayes, Laplace smoothing, etc.\nDecision trees for Big Data\nTree pruning, feature splitting, one rule algorithm (1R)\nPattern identification, association rules, apriori algorithm\nTime series analysis, trend, seasonality\nK nearest neighbors (kNN), K-means\nText analytics for Big Data and outlier detection for Big Data\nStatistical techniques, distance-based, supervised and semi-supervised. This module delves into the wide variety of algorithms, methods, and models of contemporary Machine Learning practices to explore how a series of different business problems can be solved using and combining proven Machine Learning techniques. Data exploration patterns\nCentral tendency calculation, variability calculation\nAssociativity calculation, graphic summary calculation\nData reduction patterns\nFeature selection, feature extraction\nData manipulation patterns\nFeature imputation, feature encoding\nFeature discretization, feature standardization\nSupervised learning patterns\nNumeric prediction, category prediction\nUnsupervised learning patterns\nCategory discovery, pattern discovery\nModel evaluation patterns, benchmark modeling\nTraining performance evaluation, prediction performance evaluation\nModel optimization patterns\nEnsemble learning, frequent model retraining\nLightweight model implementation, incremental model learning Ethical guardians and Results translators\nPre-trained language models (PLMs) and Transfer learning\nNoise injection, Temperature adjustment, and Random sparks\nHow to work with Generative Adversarial Networks (GANs)\nHow to work with Variational Autoencoders (VAEs)\nHow to work with Transformers\nHow to work with Conditional Generative Adversarial Networks (cGANs)\nHow to work with Recurrent Neural Networks (RNNs) and Long/short-term memory (LSTM)\nLarge language models (LLMs) and Natural language processing (NLP)\nModel evaluation and Training performance evaluation\nBenchmark modeling and Model optimization\nOverfitting prevention",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/thumbnail_badge-brochure_DT_V2_IApro.png",
+"Certificaciones": "Digital Transformation Security Professional ",
+"Área": "Digital Transformation",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for technical professionals and strategists who seek to acquire or reinforce key competencies in cybersecurity applied to digital transformation environments. Offers a comprehensive understanding of risks, frameworks, technologies, and best practices necessary to protect digital assets, systems, data, and processes in innovation and continuous change contexts.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to evaluate, design, and implement cybersecurity strategies within digital transformation initiatives, protecting data, infrastructures, and digital services from emerging risks and complying with standards and regulatory frameworks.",
+"Objetivo general": "Train professionals with a solid understanding of cyber threats, contemporary cybersecurity technologies, and blockchain technologies, as well as modern controls and countermeasures applicable to transformed digital environments, preparing participants to obtain the official Digital Transformation Security Professional certification.",
+"Objetivos específicos": "Identify and mitigate threats in digital environments\nImplement modern security technologies and controls\nDevelop comprehensive digital security strategies",
+"Contenidos": "How to understand digital transformation\nBenefits of digital transformation\nChallenges of digital transformation\nTechnological and business factors of digital transformation\nHow to understand customer centricity\nProduct-centered relationships vs. customer-centered relationships\nRelationship value actions and warmth\nCustomer interactions through all channels (omnichannel)\nCustomer journeys and customer data intelligence\nFundamentals of data intelligence\nData origins and data sources\nData collection methods and data usage types\nIntelligent decision-making\nComputer-assisted manual decision-making and conditional automated decision-making\nIntelligent manual decision-making vs. intelligent automated decision-making\nDirect automated decision-making and periodic automated decision-making\nReal-time automated decision-making. This module delves into digital transformation automation environments through the exploration of key contemporary technologies used to build digital transformation automation solutions, including AI, RPA, IoT, Machine Learning, Blockchain, Cloud Computing, and Big Data. Fundamentals of distributed solution design\nFundamentals of data ingestion, including File Pull, File Push, API Pull, API Push, and Data Flow\nIntroduction to digital transformation automation technologies\nFundamentals of cloud computing and cloud computing as part of digital transformation solutions\nCommon risks and challenges of cloud computing\nFundamentals of blockchain and blockchain as part of digital transformation solutions\nCommon risks and challenges of blockchain\nFundamentals of the Internet of Things (IoT) and IoT as part of digital transformation solutions\nCommon risks and challenges of IoT\nRobotic process automation (RPA) and RPA as part of digital transformation solutions\nCommon risks and challenges of RPA\nIntroduction to digital transformation data science technologies\nBig Data and data analytics, and Big Data as part of digital transformation solutions\nCommon risks and challenges of Big Data\nFundamentals of Machine Learning and Machine Learning as part of digital transformation solutions\nCommon risks and challenges of Machine Learning\nFundamentals of artificial intelligence (AI) and AI as part of digital transformation solutions\nCommon risks and challenges of AI\nInside a customer-centered digital transformation solution (a comprehensive, step-by-step exploration)\nHow to relate individual digital transformation technologies to solution processing\nTracking how data intelligence is collected and used in a digital transformation solution. Benefits and challenges of Blockchain\nTechnological and business factors of Blockchain\nHow to understand the decentralized model of Blockchain\nBlockchain value propositions\nHow Blockchain can be used in different industries\nBlockchain applications, networks, and distributed ledger\nHow the distributed ledger can relate to the relational database\nFundamental components of Blockchain architecture\nTransactions, records, and record groups\nBlocks, chains, and block headers\nBlockchain users, full nodes, and partial nodes\nHow to understand the lifecycle of records and blocks, step by step\nHow to understand how the Merkle tree works, step by step\nHow to understand how consensus works, step by step\nConsensus algorithms (PoW, PoS, PoA, DPoS, LPoS, PoI, PoET, PoC, PoB, Round Robin)\nPublic vs. private Blockchains / Permissionless vs. Permissioned\nCoins, tokens, smart contracts\nFundamentals of cryptographic Hashing and cryptography\nOn-chain, off-chain, and cross-chain activity\nCommon Blockchain metrics. History of asset protection\nBusiness and technological factors of cybersecurity\nObjectives and benefits of cybersecurity\nRisks and challenges of adopting cybersecurity\nProtection characteristics and cybersecurity functions\nCommon cyber threat terminology\nComponents of cybersecurity frameworks\nDigital risk assessment and management\nCommon industry standards and cybersecurity frameworks\nCybersecurity and Machine Learning\nCybersecurity and Artificial Intelligence\nResilience metrics, risk assessment, and cybersecurity effectiveness.",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_dt_securspec.webp",
+"Certificaciones": "Digital Transformation Security Specialist ",
+"Área": "Digital Transformation",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Oriented for professionals who wish to specialize in the technical, regulatory, and strategic aspects of security in digital transformation environments. The program offers advanced training in network, application, information protection, and regulatory compliance, all within the context of modern digital platforms, distributed architectures, and interconnected ecosystems.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of identifying, designing, and applying cybersecurity strategies adapted to digital transformation environments, protecting data, infrastructures, and digital processes from emerging risks and complying with key standards and regulatory frameworks.",
+"Objetivo general": "Train professionals in advanced cybersecurity and cryptographic governance techniques, including the use of blockchain as immutable storage, to protect data and digital assets in digital transformation contexts, preparing them to pass the official Digital Transformation Security Specialist exam",
+"Objetivos específicos": "Apply advanced cybersecurity concepts and control frameworks\nDesign security solutions with blockchain to ensure integrity and traceability\nIntegrate robust security controls in digital transformation systems",
+"Contenidos": "How to understand digital transformation\nBenefits of digital transformation\nChallenges of digital transformation\nTechnological and business factors of digital transformation\nHow to understand customer centricity\nProduct-centered relationships vs. customer-centered relationships\nRelationship value actions and warmth\nCustomer interactions through all channels (omnichannel)\nCustomer journeys and customer data intelligence\nFundamentals of data intelligence\nData origins and data sources\nData collection methods and data usage types\nIntelligent decision-making\nComputer-assisted manual decision-making and conditional automated decision-making\nIntelligent manual decision-making vs. intelligent automated decision-making\nDirect automated decision-making and periodic automated decision-making\nReal-time automated decision-making Fundamentals of distributed solution design\nFundamentals of data ingestion, including File Pull, File Push, API Pull, API Push, and Data Flow\nIntroduction to digital transformation automation technologies\nFundamentals of cloud computing and cloud computing as part of digital transformation solutions\nCommon risks and challenges of cloud computing\nFundamentals of blockchain and blockchain as part of digital transformation solutions\nCommon risks and challenges of blockchain\nFundamentals of the Internet of Things (IoT) and IoT as part of digital transformation solutions\nCommon risks and challenges of IoT\nRobotic process automation (RPA) and RPA as part of digital transformation solutions\nCommon risks and challenges of RPA\nIntroduction to digital transformation data science technologies\nBig Data and data analytics, and Big Data as part of digital transformation solutions\nCommon risks and challenges of Big Data\nFundamentals of Machine Learning and Machine Learning as part of digital transformation solutions\nCommon risks and challenges of Machine Learning\nFundamentals of artificial intelligence (AI) and AI as part of digital transformation solutions\nCommon risks and challenges of AI\nInside a customer-centered digital transformation solution (a comprehensive, step-by-step exploration)\nHow to relate individual digital transformation technologies to solution processing\nTracking how data intelligence is collected and used in a digital transformation solution Benefits and challenges of Blockchain\nTechnological and business factors of Blockchain\nHow to understand the decentralized model of Blockchain\nBlockchain value propositions\nHow Blockchain can be used in different industries\nBlockchain applications, networks, and distributed ledger\nHow the distributed ledger can relate to the relational database\nFundamental components of Blockchain architecture\nTransactions, records, and record groups\nBlocks, chains, and block headers\nBlockchain users, full nodes, and partial nodes\nHow to understand the lifecycle of records and blocks, step by step\nHow to understand how the Merkle tree works, step by step\nHow to understand how consensus works, step by step\nConsensus algorithms (PoW, PoS, PoA, DPoS, LPoS, PoI, PoET, PoC, PoB, Round Robin)\nPublic vs. private Blockchains / Permissionless vs. Permissioned\nCoins, tokens, smart contracts\nFundamentals of cryptographic Hashing and cryptography\nOn-chain, off-chain, and cross-chain activity\nCommon Blockchain metrics Common Blockchain technology mechanisms and artifacts\nNode monitor, automated node implementer, node location monitor\nConsensus processor, block creator, identity federator\nHashing engine, chaining engine, identity verifier, wallet\nNode repository, ledger replicator, live node migrator\nBlockchain integrity and validation design patterns\nSingleton block, side chain, block validation consensus\nScalability and reliability design patterns of Blockchain\nAuto-scaling nodes, guaranteed minimum full nodes\nGeo scaling, block size update\nBlockchain security and privacy design patterns\nForced on-chain transactions, federated chain\nUser data protection\nBlockchain service design patterns\nTransaction record labels\nLight node, node task abstraction History of asset protection\nBusiness and technological factors of cybersecurity\nObjectives and benefits of cybersecurity\nRisks and challenges of adopting cybersecurity\nProtection characteristics and cybersecurity functions\nCommon cyber threat terminology\nComponents of cybersecurity frameworks\nDigital risk assessment and management\nCommon industry standards and cybersecurity frameworks\nCybersecurity and Machine Learning\nCybersecurity and Artificial Intelligence\nResilience metrics, risk assessment, and cybersecurity effectiveness 15 Cybersecurity mechanisms (including Honeypots, Biometric scanners, and Intrusion detection systems, malicious code analysis, and user behavior analysis)\n9 Cybersecurity monitoring mechanisms (including Malware monitors, Network intrusion monitors, and Data loss prevention monitors)\n13 Cybersecurity processes (including Attack surface reduction, Continuous vulnerability management, and Network monitoring and defense)\nInternal threat detection and Incident response management\nCyber threat intelligence and Cyberattack motivations\n13 Common cyber threats and cyberattacks (including Botnets, Tunneling, Remote code execution, and 8 types of Malware)\nInternal threats, Social engineering, and Phishing\nAdvanced persistent threats (APTs)",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_ng_do.webp",
+"Certificaciones": "DevOps Specialist ",
+"Área": "New Generation IT",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to acquire or consolidate technical and practical skills in the DevOps field, a key approach to accelerate software delivery, automate processes, improve collaboration between development and operations teams, and ensure quality in modern digital environments.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to design, apply, and optimize DevOps environments, integrating automation practices, continuous delivery, and collaboration between teams, to accelerate the software development lifecycle and improve operational quality in business environments.",
+"Objetivo general": "Train participants to understand and apply the complete DevOps process—including practices, processes, metrics, and models—to accelerate software delivery and achieve business objectives, through an official certification that validates these competencies",
+"Objetivos específicos": "Master the stages, techniques, and DevOps cycle models\nManage metrics and monitoring to improve quality and efficiency\nApply DevOps in a real context through practical lab",
+"Contenidos": "Business factors of DevOps\nIT roles in DevOps projects\nGoals and benefits of adopting DevOps\nInteroperability and transparent collaboration\nFast delivery, responsive scalability, and increased reliability\nImpacts and challenges of adopting DevOps\nAutomation, measurement, and unified metrics\nDevOps platform and toolchain\nThe 20 most common DevOps tools, repositories, and systems\nDevOps lifecycle and stages\nDelivery Pipeline, Feedback Loop, and Dark Launching\nContinuous integration (CI) and continuous delivery (CD)\nAutomated builds and automated tests\nContinuous deployment and automated release management\nDependency management, infrastructure resource staging, and compliance verification\nIntroduction to IaC, PaC, and CaC How to understand coded definitions\nInfrastructure as code (IaC) and configuration modules\nContinuous testing and collaborative version control\nImmutable infrastructure and self-documented resources\nConfiguration as code (CaC) and continuous software release\nTraceable configuration changes and configuration state knowledge\nProgrammatic versions and automated configuration tests\nPolicy as code (PaC) and policy systems\nAutomated policy application and compliance tests\nThe 17 common DevOps metrics\nContinuous monitoring\nThe 8 common DevOps monitors\nHow to measure DevOps, how to relate metrics to monitors\nHow to relate metrics and monitors to pipeline stages\nDevOps with microservices and containers\nDevOps with cloud computing and pay-per-use monitoring\nCI, CD, continuous deployment with microservices and cloud computing\nIaC, CaC, PaC with microservices and cloud computing",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_Certified_ng_bc_4e30f0e5-3202-4400-bfa6-2d74025ca4d1.webp",
+"Certificaciones": "Blockchain Architect ",
+"Área": "New Generation IT",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Oriented to technical professionals and specialists who wish to acquire or strengthen their experience in the design, modeling, and implementation of blockchain-based solutions. Provides an in-depth vision of blockchain architecture components, business use cases, integration with existing systems, security, and distributed network governance.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to design secure and scalable blockchain solution architectures, selecting platforms, consensus models, and appropriate components to implement distributed networks that meet business needs in different sectors.",
+"Objetivo general": "Train professionals to understand and apply the concepts, models, and architecture of both public and private blockchain solutions, including immutable storage and consensus mechanisms, preparing for the exam and obtaining the official Blockchain Architect certification",
+"Objetivos específicos": "Understand the technical fundamentals of blockchain\nDesign advanced blockchain solutions and architectural patterns\nDevelop practical capacity through lab",
+"Contenidos": "Benefits and challenges of Blockchain\nTechnological and business factors of Blockchain\nHow to understand the decentralized model of Blockchain\nBlockchain value propositions\nHow Blockchain can be used in different industries\nBlockchain applications, networks, and distributed ledger\nHow the distributed ledger can relate to the relational database\nFundamental components of Blockchain architecture\nTransactions, records, and record groups\nBlocks, chains, and block headers\nBlockchain users, full nodes, and partial nodes\nHow to understand the lifecycle of records and blocks, step by step\nHow to understand how the Merkle tree works, step by step\nHow to understand how consensus works, step by step\nConsensus algorithms (PoW, PoS, PoA, DPoS, LPoS, PoI, PoET, PoC, PoB, Round Robin)\nPublic vs. private Blockchains / Permissionless vs. Permissioned\nCoins, tokens, smart contracts\nFundamentals of cryptographic Hashing and cryptography\nOn-chain, off-chain, and cross-chain activity\nCommon Blockchain metrics Common Blockchain technology mechanisms and artifacts\nNode monitor, automated node implementer, node location monitor\nConsensus processor, block creator, identity federator\nHashing engine, chaining engine, identity verifier, wallet\nNode repository, ledger replicator, live node migrator\nBlockchain integrity and validation design patterns\nSingleton block, side chain, block validation consensus\nScalability and reliability design patterns of Blockchain\nAuto-scaling nodes, guaranteed minimum full nodes\nGeo scaling, block size update\nBlockchain security and privacy design patterns\nForced on-chain transactions, federated chain\nUser data protection\nBlockchain service design patterns\nTransaction record labels\nLight node, node task abstraction",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_ng_iot.webp",
+"Certificaciones": "IoT Architect ",
+"Área": "New Generation IT",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for technical professionals and specialists who wish to acquire a solid mastery in the design and implementation of Internet of Things (IoT) architectures, ranging from connected devices to integration with platforms, networks, business systems, and cloud services. The program combines strategic, technical, and security aspects to build scalable, interoperable, and secure IoT solutions.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to design, plan, and implement scalable and secure IoT architectures, integrating devices, networks, and platforms to enable intelligent solutions that optimize processes and generate value in different sectors.",
+"Objetivo general": "Train professionals capable of understanding, designing, and architecting complete Internet of Things (IoT) solutions, mastering both technical aspects (devices, protocols, layered architecture, telemetry) and business aspects, and prepare them to obtain the official IoT Architect certification through the corresponding certification exam",
+"Objetivos específicos": "Master IoT business models and fundamentals\nDesign scalable and reliable technological architectures\nApply knowledge in real scenarios through labs",
+"Contenidos": "How to understand things, connectivity, data, processing, commands, and business analytics\nTechnological and business factors of IoT, benefits and challenges\nMiniaturization and nanotechnology\nIoT connectivity and real-time contextual data\nIoT business domains (personal, home, enterprise, services, mobile)\nIoT vs. Internet\nResource-constrained devices and narrow bandwidth networks (LPWANs)\nActive and passive devices (including RFID)\nTelemetry and command data\nSensors (mechanical, resistive, optical, range, and MEMS)\nMicrocontrollers, Firmware, and power sources\nIoT Gateways and common Gateway functions\nIntroduction to edge computing and fog computing\nIoT platforms and common platform functions\nIoT architecture layers and action modeling\nKey IoT architectural design considerations\nRadio transport (licensed vs. unlicensed, high band vs. low band)\nIoT messaging with REST, HTTP, and Constrained Application Protocol (CoAp)\nProperties and limitations of REST with IoT and CoAp\nHTTP resource identifiers, media types, and methods with IoT and CoAps\nIoT publish-subscribe and MQ telemetry transport (MQTT)\nNon-binary data serialization for IoT with JSON\nBinary data serialization for IoT with Protocol Buffers IoT device components (including sensor, actuator, modem, control logic, etc.)\nIoT platforms, Gateways, and publish-subscribe systems\nDevice shadows and device shadow records\nTrusted platform module (TPM) and truncated exponential backoff algorithm\nFundamental functional distribution patterns\nAutonomous controller device model, intermediate controller model\nIntermediate multi-gateway controller model, recipient device controller model\nTelemetry processing patterns\nMinimized data, canonical data format\nTelemetry modeling, intermediate metadata provisioning\nInformation transduction and encoding\nPerformance optimization patterns\nObservation messages, traffic quality transport profile\nReconnection requirement regulation, device workload regulation\nSecurity, reliability, and utility patterns\nRadio transport encryption, firmware integrity attestation\nMessage accounting, multimodal communication\nNetwork-based positioning and triangulation",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/images (4).jpeg",
+"Certificaciones": "Cybersecurity Specialist ",
+"Área": "New Generation IT",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for technical professionals and aspirants who wish to specialize in the design, implementation, and management of strategies and solutions for cybersecurity in modern digital environments. The program addresses active and passive defense techniques, compliance frameworks, system, network, and data protection, as well as effective response to threats and vulnerabilities.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to identify, analyze, and mitigate information security risks, implementing key practices and technologies to protect infrastructures, data, and applications from cyber threats.",
+"Objetivo general": "Train professionals to identify, analyze, and defend against major cyber threats through advanced cybersecurity technologies and practices, as well as investigate suspicious activities and strengthen digital assets, preparing participants to successfully pass the official Cybersecurity Specialist exam from Arcitura",
+"Objetivos específicos": "Recognize and mitigate cyber threats\nEmploy defense technologies and practices\nInvestigate and analyze suspicious activity",
+"Contenidos": "History of asset protection\nBusiness and technological factors of cybersecurity\nObjectives and benefits of cybersecurity\nRisks and challenges of adopting cybersecurity\nProtection characteristics and cybersecurity functions\nCommon cyber threat terminology\nComponents of cybersecurity frameworks\nDigital risk assessment and management\nCommon industry standards and cybersecurity frameworks\nCybersecurity and Machine Learning\nCybersecurity and Artificial Intelligence\nResilience metrics, risk assessment, and cybersecurity effectiveness 15 Cybersecurity mechanisms (including Honeypots, Biometric scanners, and Intrusion detection systems, malicious code analysis, and user behavior analysis)\n9 Cybersecurity monitoring mechanisms (including Malware monitors, Network intrusion monitors, and Data loss prevention monitors)\n13 Cybersecurity processes (including Attack surface reduction, Continuous vulnerability management, and Network monitoring and defense)\nInternal threat detection and Incident response management\nCyber threat intelligence and Cyberattack motivations\n13 Common cyber threats and cyberattacks (including Botnets, Tunneling, Remote code execution, and 8 types of Malware)\nInternal threats, Social engineering, and Phishing\nAdvanced persistent threats (APTs)",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_Certified_ng_rpa_6e14448c-2832-483b-8032-560fa1979126.webp",
+"Certificaciones": "RPA Specialist ",
+"Área": "New Generation IT",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals who seek to acquire or deepen their knowledge in Robotic Process Automation (RPA), understanding how to identify, design, develop, and implement intelligent automation solutions that optimize business processes, increase operational efficiency, and reduce human errors.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of designing, developing, and implementing robotic process automation (RPA) solutions that optimize repetitive tasks, improve operational efficiency, and reduce errors in business environments.",
+"Objetivo general": "Train professionals in the design, development, and implementation of RPA bots and business automation models, integrating artificial intelligence where appropriate, to establish intelligent automation environments, and prepare them to pass the official RPA Specialist exam from Arcitura",
+"Objetivos específicos": "Understand fundamentals and RPA bot architecture\nApply RPA design and development practices\nIntegrate AI in RPA solutions for intelligent automation",
+"Contenidos": "How to understand robotic process automation\nBusiness and technological factors of RPA\nObjectives and benefits of RPA\nRisks and challenges of RPA\nFront-end and back-end integration\nRPA bot components and runners\nRPA architecture layers and models\nRPA lifecycle\nFront-end integration with RPA bots\nBack-end integration with RPA drivers and APIs\nAutomated data capture\nAutomated routing\nAutomated web search\nAutomated data search and retrieval\nAutomated digitization\nAutomated user acceptance test use scenario Introduction to intelligent automation and hyperautomation\nBusiness and technological factors of intelligent automation\nObjectives and benefits of intelligent automation\nRisks and challenges of intelligent automation\nComponents of intelligent automation solutions\nIntelligent automation and business process management\nIntroduction to artificial intelligence\nHow to understand autonomous decision-making\nDirect autonomous decision-making\nPeriodic autonomous decision-making\nReal-time autonomous decision-making\nData capture with intelligent automation\nRouting with intelligent automation\nWeb search with intelligent automation\nData search and retrieval with intelligent automation\nDigitization with intelligent automation\nUser acceptance test use scenario with intelligent automation",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/twitter_thumb_201604_image.png",
+"Certificaciones": "Digital Business Technology Professional ",
+"Área": "New Generation IT",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to acquire a comprehensive and strategic understanding of how digital technologies can transform business models, processes, operations, and value propositions in organizations. The program offers an applied vision of the convergence between technology, innovation, and business management in the context of digital transformation.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to apply key digital technologies that drive business transformation, integrating innovative solutions to optimize processes, improve customer experience, and support the organization's digital strategy.",
+"Objetivo general": "Equip participants with a solid understanding of the purpose, benefits, and challenges associated with adopting business automation technologies and data science in digital environments, and prepare them to obtain the official Digital Business Technology Professional certification, validated through a standardized exam",
+"Objetivos específicos": "Understand the role of automation and data science in business transformation\nEvaluate opportunities and challenges when adopting business digital technologies\nApply key concepts to justify and integrate digital solutions",
+"Contenidos": "Introduction to Cloud Computing\nTechnological and business factors of Cloud Computing\nGoals and benefits of Cloud Computing\nRisks and challenges of Cloud Computing\nIntroduction to Robotic Process Automation (RPA)\nTechnological and business factors of RPA\nGoals and benefits of RPA\nRisks and challenges of RPA\nIntroduction to the Internet of Things (IoT)\nTechnological and business factors of IoT\nGoals and benefits of IoT\nRisks and challenges of IoT Introduction to Big Data\nTechnological and business factors of Big Data\nGoals and benefits of Big Data\nRisks and challenges of Big Data\nIntroduction to Machine Learning\nTechnological and business factors of Machine Learning\nGoals and benefits of Machine Learning\nRisks and challenges of Machine Learning\nIntroduction to Artificial Intelligence (AI)\nTechnological and business factors of AI\nGoals and benefits of AI Introduction to Digital Transformation\nTechnological and business factors of Digital Transformation\nGoals and benefits of Digital Transformation\nRisks and challenges of Digital Transformation\nIntroduction to Blockchain\nTechnological and business factors of Blockchain\nGoals and benefits of Blockchain\nRisks and challenges of Blockchain\nIntroduction to Cybersecurity\nTechnological and business factors of Cybersecurity\nGoals and benefits of Cybersecurity\nRisks and challenges of Cybersecurity\nRisks and challenges of AI",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/image (1).png",
+"Certificaciones": "Containerization Architect ",
+"Área": "New Generation IT",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Oriented to technical professionals who wish to specialize in the architecture, design, implementation, and management of container-based solutions, with a focus on scalability, security, automation, and orchestration in cloud and DevOps environments.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of designing, implementing, and managing containerization architectures, using containers and orchestrators to optimize deployment, scalability, and maintenance of applications in modern environments.",
+"Objetivo general": "Train participants in a deep understanding of containerization architecture, including the internal functioning of containers, engines, templates, and advanced management, preparing them to design, deploy, and secure container-based solutions and, finally, obtain the official Containerization Architect certification",
+"Objetivos específicos": "Master container fundamentals and technology\nDesign secure and scalable container architectures\nExecute real scenarios through lab",
+"Contenidos": "Brief history of containerization\nBasics of operating systems and virtualization\nContainers vs. virtual machines and server virtualization\nTechnological and business factors of containerization\nBenefits, risks, and technical and business challenges of using containers\nEngines, build files, and container images\nPods, hosts, and container networks\nFundamentals of scalability and container availability\nContainer instances, container clusters, and host clusters\nContainer base images, custom container images, and image immutability\nImage registry, package repository, and packages\nContainerization mechanisms\nContainer orchestrator, deployment optimizer, container scheduler\nMulti-container deployments\nSidecar container, adapter container, ambassador container\nServer, client, registry, Docker objects, and Docker Swarm\nKubernetes Pod, kubelet, kube-proxy, container runtime, cluster, Kubernetes control plane",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_ds_scipro.webp",
+"Certificaciones": "Big Data Science Professional ",
+"Área": "Data Science",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Oriented to professionals who wish to acquire a comprehensive and applied training in the analysis, processing, modeling, and visualization of large volumes of data. Through a combination of theory, tools, and use cases, participants will develop key skills to turn massive data into useful knowledge for strategic decision-making.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of analyzing, interpreting, and modeling large volumes of data, using advanced data science techniques and Big Data tools to extract valuable information that supports strategic decision-making.",
+"Objetivo general": "Train in essential fundamentals of data science applied to Big Data environments, equipping professionals with knowledge in analysis, techniques, and Big Data technologies, to solve complex problems and obtain the official Big Data Science Professional certification from Arcitura",
+"Objetivos específicos": "Understand the concepts, models, and mechanisms of Big Data\nDevelop skills in large-scale data analysis and analytics\nUse practical tools and complete applied labs",
+"Contenidos": "How to understand Big Data\nFundamental terminology and concepts of Big Data\nBusiness and technological factors of Big Data\nTraditional business technologies related to Big Data\nOLTP, OLAP, ETL, and digital data warehouses in relation to Big Data\nCharacteristics of data in Big Data environments\nTypes of datasets in Big Data environments\nStructured, unstructured, and semi-structured data\nData veracity and metadata\nFundamentals of analysis and analytics\nQuantitative and qualitative analysis\nTypes of Machine Learning\nDescriptive and diagnostic analytics\nPredictive and prescriptive analytics\nBusiness intelligence (BI) and Big Data\nData visualization and Big Data\nConsiderations on Big Data planning and adoption Big Data analysis lifecycle (from Business case evaluation to Data analysis and visualization)\nA/B tests and Correlation\nRegression and Heat maps\nTime series analysis\nNetwork analysis and Spatial data analysis\nClassification and Clustering\nFiltering, including Collaborative filtering and Content-based filtering\nClusters and Batch and transactional processing workloads\nSentiment analysis and Text analytics\nHow Cloud Computing relates to Big Data\nFoundational technological mechanisms of Big Data\nStorage devices and Big Data processing engines\nResource managers, Data transfer engines, and Query engines\nAnalytical engines, Workflow engines, Coordination engines",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_ds_sci.webp",
+"Certificaciones": "Big Data Scientist ",
+"Área": "Data Science",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to specialize in the advanced use of massive data to discover patterns, generate predictive models, and build solutions based on data intelligence. Focuses on analytical, mathematical, statistical, and programming skills applied to complex Big Data contexts.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to analyze and model large volumes of data, applying advanced techniques of statistics, machine learning, and visualization to extract valuable insights that support strategic decisions.",
+"Objetivo general": "Train professionals in the domain of advanced analysis and data science techniques on large volumes of information, combining statistical models, machine learning, and visualization, to generate solid insights and support strategic decision-making, preparing participants to obtain the official Big Data Scientist certification from Arcitura",
+"Objetivos específicos": "Apply advanced statistical analysis and machine learning techniques\nImplement analytical workflows in Big Data environments\nCommunicate findings and results with business impact",
+"Contenidos": "How to understand Big Data\nFundamental terminology and concepts of Big Data\nBusiness and technological factors of Big Data\nTraditional business technologies related to Big Data\nOLTP, OLAP, ETL, and digital data warehouses in relation to Big Data\nCharacteristics of data in Big Data environments\nTypes of datasets in Big Data environments\nStructured, unstructured, and semi-structured data\nData veracity and metadata\nFundamentals of analysis and analytics\nQuantitative and qualitative analysis\nTypes of Machine Learning\nDescriptive and diagnostic analytics\nPredictive and prescriptive analytics\nBusiness intelligence (BI) and Big Data\nData visualization and Big Data\nConsiderations on Big Data planning and adoption Big Data analysis lifecycle (from Business case evaluation to Data analysis and visualization)\nA/B tests and Correlation\nRegression and Heat maps\nTime series analysis\nNetwork analysis and Spatial data analysis\nClassification and Clustering\nFiltering, including Collaborative filtering and Content-based filtering\nClusters and Batch and transactional processing workloads\nSentiment analysis and Text analytics\nHow Cloud Computing relates to Big Data\nFoundational technological mechanisms of Big Data\nStorage devices and Big Data processing engines\nResource managers, Data transfer engines, and Query engines\nAnalytical engines, Workflow engines, Coordination engines Data science, data mining, and data modeling\nCategories of Big Data datasets\nHigh volume, high velocity, high variety, high veracity, high value datasets\nExploratory data analysis (EDA)\nEDA numeric summaries, rules, and data reduction\nTypes of EDA analysis, including univariate, bivariate, and multivariate\nEssential statistics, including variable categories and relevant mathematics\nStatistical analysis, including descriptive, inferential, covariance, hypothesis testing, etc.\nMeasures of variation or dispersion, interquartile range and outliers, Z score, etc.\nProbability, frequency, statistical estimators, confidence interval, etc.\nData manipulation and Machine Learning\nVariables and basic mathematical notations\nStatistical measures and statistical inference\nConfirmatory data analysis (CDA)\nCDA hypothesis testing, null hypothesis, alternative hypothesis, statistical significance, etc.\nDistributions and data processing techniques\nData discretization, Binning and clustering\nVisualization techniques, including bar graph, line graph, histogram, frequency polygons, etc.\nLinear regression prediction, mean squared error and R2 determination coefficient, etc.\nK-means clustering, clustering distortion, missing feature values, etc.\nNumeric summaries Modeling, model evaluation, model fitting, and model overfitting\nStatistical models, model evaluation measures\nCross-validation, bias-variance, confusion matrix and F score\nMachine Learning algorithms and pattern identification\nAssociation rules and apriori algorithm\nData reduction, feature dimension selection\nData extraction, data discretization (Binning and clustering)\nAdvanced statistical techniques\nParametric vs. non-parametric, clustering vs. non-clustering\nDistance-based, supervised vs. semi-supervised\nLinear regression and logistic regression for Big Data\nClassification rules for Big Data\nLogistic regressions, Naïve Bayes, Laplace smoothing, etc.\nDecision trees for Big Data\nTree pruning, feature splitting, one rule algorithm (1R)\nPattern identification, association rules, apriori algorithm\nTime series analysis, trend, seasonality\nK nearest neighbors (kNN), K-means\nText analytics for Big Data\nBag of words, term frequency, inverse document frequency, cosine distance, etc.\nOutlier detection for Big Data\nStatistical techniques, distance-based, supervised and semi-supervised",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_ds_consult.webp",
+"Certificaciones": "Data Science Consultant ",
+"Área": "Data Science",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Oriented to professionals seeking to integrate technical data science knowledge with strategic consulting and business analysis skills. Focuses on forming profiles capable of translating data into actionable recommendations, aligned with business and digital transformation objectives.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to advise on the application of data science techniques, from data collection and analysis to result interpretation, helping organizations make data-based decisions and implement effective analytical solutions.",
+"Objetivo general": "Prepare professionals to advise organizations on the adoption and strategic application of data science, combining technical, methodological, and business knowledge, to design analysis solutions that drive data-based decision-making and achieve the official Data Science Consultant certification from Arcitura.",
+"Objetivos específicos": "Evaluate and design data science solutions aligned with business objectives\nIntegrate methodologies and best practices in data science project implementation\nCommunicate findings and recommendations clearly and effectively to stakeholders",
+"Contenidos": "How to understand Big Data\nFundamental terminology and concepts of Big Data\nBusiness and technological factors of Big Data\nTraditional business technologies related to Big Data\nOLTP, OLAP, ETL, and digital data warehouses in relation to Big Data\nCharacteristics of data in Big Data environments\nTypes of datasets in Big Data environments\nStructured, unstructured, and semi-structured data\nData veracity and metadata\nFundamentals of analysis and analytics\nQuantitative and qualitative analysis\nTypes of Machine Learning\nDescriptive and diagnostic analytics\nPredictive and prescriptive analytics\nBusiness intelligence (BI) and Big Data\nData visualization and Big Data\nConsiderations on Big Data planning and adoption Big Data analysis lifecycle (from Business case evaluation to Data analysis and visualization)\nA/B tests and Correlation\nRegression and Heat maps\nTime series analysis\nNetwork analysis and Spatial data analysis\nClassification and Clustering\nFiltering, including Collaborative filtering and Content-based filtering\nClusters and Batch and transactional processing workloads\nSentiment analysis and Text analytics\nHow Cloud Computing relates to Big Data\nFoundational technological mechanisms of Big Data\nStorage devices and Big Data processing engines\nResource managers, Data transfer engines, and Query engines\nAnalytical engines, Workflow engines, Coordination engines Technological and business factors of Machine Learning\nBenefits and challenges of Machine Learning\nMachine Learning usage scenarios\nDatasets, structured, unstructured, and semi-structured data\nModels, algorithms, learning, and model training\nHow Machine Learning works\nTraining data collection and preprocessing\nAlgorithm and model selection\nModel training and deployment of trained models\nMachine Learning algorithms and practices\nSupervised learning, classification, decision tree\nRegression, ensemble methods, dimension reduction\nUnsupervised learning and clustering\nSemi-supervised and reinforcement learning\nMachine Learning best practices\nHow Machine Learning systems work\nCommon Machine Learning mechanisms\nHow mechanisms are used in model training\nMachine Learning and Deep Learning, Artificial intelligence (AI) Business and technological factors of predictive and generative AI\nBenefits of predictive and generative AI\nCommon risks and challenges of using predictive and generative AI\nCategories of business problems addressed by predictive and generative AI\nTypes of predictive AI and generative AI\nHow to understand models, algorithms, and neural networks\nHow to understand model training\nStep-by-step training cycle process\nSupervised learning, unsupervised learning, continuous learning",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_ds_ml.webp",
+"Certificaciones": "Machine Learning Specialist ",
+"Área": "Data Science",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals who seek to master the techniques, tools, and fundamental methodologies of machine learning applied to real-world problems. Focuses on the creation, implementation, evaluation, and optimization of predictive models through a practical and scalable approach.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of developing, training, and optimizing machine learning models, applying advanced techniques and using specialized tools to solve complex problems and generate value from data.",
+"Objetivo general": "Train professionals in the fundamentals and advanced techniques of Machine Learning, including selection, training, evaluation, and optimization of models, to develop intelligent solutions that solve complex problems and achieve the official Machine Learning Specialist certification from Arcitura.",
+"Objetivos específicos": "Understand the basic principles and algorithms of Machine Learning\nImplement and evaluate Machine Learning models\nIntegrate Machine Learning into practical solutions",
+"Contenidos": "Technological and business factors of Machine Learning\nBenefits and challenges of Machine Learning\nMachine Learning usage scenarios\nDatasets, structured, unstructured, and semi-structured data\nModels, algorithms, learning, and model training\nHow Machine Learning works\nTraining data collection and preprocessing\nAlgorithm and model selection\nModel training and deployment of trained models\nMachine Learning algorithms and practices\nSupervised learning, classification, decision tree\nRegression, ensemble methods, dimension reduction\nUnsupervised learning and clustering\nSemi-supervised and reinforcement learning\nMachine Learning best practices\nHow Machine Learning systems work\nCommon Machine Learning mechanisms\nHow mechanisms are used in model training\nMachine Learning and Deep Learning, Artificial intelligence (AI) Data exploration patterns\nCentral tendency calculation, variability calculation\nAssociativity calculation, graphic summary calculation\nData reduction patterns\nFeature selection, feature extraction\nData manipulation patterns\nFeature imputation, feature encoding\nFeature discretization, feature standardization\nSupervised learning patterns\nNumeric prediction, category prediction\nUnsupervised learning patterns\nCategory discovery, pattern discovery\nModel evaluation patterns, benchmark modeling\nTraining performance evaluation, prediction performance evaluation\nModel optimization patterns\nEnsemble learning, frequent model retraining\nLightweight model implementation, incremental model learning",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_ds_eng.webp",
+"Certificaciones": "Big Data Engineer ",
+"Área": "Data Science",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to develop strong technical skills in the design, construction, maintenance, and optimization of infrastructures and processes that manage large volumes of data. Focuses on tools, architectures, and distributed processing flows, as well as key aspects of integration, security, and performance in Big Data environments.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of designing, building, and managing Big Data solutions, implementing technologies and architectures that allow the efficient processing of large volumes of data to support advanced analysis and decision-making.",
+"Objetivo general": "Train professionals capable of designing, building, and maintaining efficient infrastructures and pipelines for the processing and storage of large volumes of data, using modern Big Data technologies and architectures, and prepare them to obtain the official Big Data Engineer certification from Arcitura.",
+"Objetivos específicos": "Design scalable and efficient Big Data architectures\nImplement data pipelines and ingestion and transformation processes\nOptimize and secure Big Data infrastructure",
+"Contenidos": "How to understand Big Data\nFundamental terminology and concepts of Big Data\nBusiness and technological factors of Big Data\nTraditional business technologies related to Big Data\nOLTP, OLAP, ETL, and digital data warehouses in relation to Big Data\nCharacteristics of data in Big Data environments\nTypes of datasets in Big Data environments\nStructured, unstructured, and semi-structured data\nData veracity and metadata\nFundamentals of analysis and analytics\nQuantitative and qualitative analysis\nTypes of Machine Learning\nDescriptive and diagnostic analytics\nPredictive and prescriptive analytics\nBusiness intelligence (BI) and Big Data\nData visualization and Big Data\nConsiderations on Big Data planning and adoption Big Data analysis lifecycle (from Business case evaluation to Data analysis and visualization)\nA/B tests and Correlation\nRegression and Heat maps\nTime series analysis\nNetwork analysis and Spatial data analysis\nClassification and Clustering\nFiltering, including Collaborative filtering and Content-based filtering\nClusters and Batch and transactional processing workloads\nSentiment analysis and Text analytics\nHow Cloud Computing relates to Big Data\nFoundational technological mechanisms of Big Data\nStorage devices and Big Data processing engines\nResource managers, Data transfer engines, and Query engines\nAnalytical engines, Workflow engines, Coordination engines Techniques and challenges of Big Data engineering\nBig Data storage, including sharding, replication, CAP theorem, ACID, and BASE\nMaster-slave, peer-to-peer replication, combination between replication and sharding\nBig Data storage requirements, scalability, redundancy, and availability\nFast access, long-term storage, schema-less storage, and cost-effective storage\nDisk storage, including distributed file systems and databases\nIntroduction to NoSQL and NewSQL\nNoSQL rationale and features\nNoSQL database types, including key-value, document, column-family, and graph databases\nBig Data processing engines\nDistributed/parallel data processing, schema-less data processing\nMulti-workload support, linear scalability, and fault tolerance\nBig Data processing requirements, including batch modes, Cluster, and real-time\nMapReduce for Big Data processing, including mapping, combining, splitting, shuffling, sorting, and reducing\nMapReduce algorithm design\nTask parallelism, data parallelism Advanced Big Data engineering mechanisms\nSerialization and compression engines\nIn-memory storage devices\nIn-memory data grids and in-memory databases\nRead-Through, Read-Ahead, Write-Through, and Write-Behind integration approaches\nPolyglot persistence\nExplanation, problems, and recommendations\nReal-time Big Data processing\nSpeed consistency volume (SCV)\nEvent stream processing (ESP)\nComplex event processing (CEP)\nThe SCV principle\nGeneral real-time Big Data processing and MapReduce\nAdvanced MapReduce algorithm designs\nMassively synchronous parallel processing engine (BSP)\nBSP vs. MapReduce\nMassively synchronous parallel BSP\nGraph data and graph data processing using BSP (Supersteps)\nBig Data pipelines, including definition and stages\nBig Data with Extraction-load-transformation (ELT)\nCharacteristics of Big Data solutions, design considerations, and design process",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_Certified_ds_arch_74d8a9ad-eb9b-428b-8e75-f787ef117125.webp",
+"Certificaciones": "Big Data Architect ",
+"Área": "Data Science",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals seeking to lead the design of robust, scalable Big Data architectures aligned with strategic business objectives. Provides a comprehensive vision of how to structure distributed data platforms, integrate emerging technologies, ensure security, and enable advanced analytical capabilities in complex environments.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to design and manage efficient and scalable Big Data architectures, integrating technologies and platforms to process, store, and analyze large volumes of data that drive strategic decision-making.",
+"Objetivo general": "Train professionals to design and lead comprehensive Big Data architectures that support the storage, processing, and analysis of large volumes of data, ensuring scalability, security, and alignment with business strategic objectives, preparing participants for the official Big Data Architect certification from Arcitura.",
+"Objetivos específicos": "Design robust and scalable Big Data architectures\nIntegrate Big Data technologies and platforms\nEnsure security, governance, and regulatory compliance in Big Data environments",
+"Contenidos": "How to understand Big Data\nFundamental terminology and concepts of Big Data\nBusiness and technological factors of Big Data\nTraditional business technologies related to Big Data\nOLTP, OLAP, ETL, and digital data warehouses in relation to Big Data\nCharacteristics of data in Big Data environments\nTypes of datasets in Big Data environments\nStructured, unstructured, and semi-structured data\nData veracity and metadata\nFundamentals of analysis and analytics\nQuantitative and qualitative analysis\nTypes of Machine Learning\nDescriptive and diagnostic analytics\nPredictive and prescriptive analytics\nBusiness intelligence (BI) and Big Data\nData visualization and Big Data\nConsiderations on Big Data planning and adoption Big Data analysis lifecycle (from Business case evaluation to Data analysis and visualization)\nA/B tests and Correlation\nRegression and Heat maps\nTime series analysis\nNetwork analysis and Spatial data analysis\nClassification and Clustering\nFiltering, including Collaborative filtering and Content-based filtering\nClusters and Batch and transactional processing workloads\nSentiment analysis and Text analytics\nHow Cloud Computing relates to Big Data\nFoundational technological mechanisms of Big Data\nStorage devices and Big Data processing engines\nResource managers, Data transfer engines, and Query engines\nAnalytical engines, Workflow engines, Coordination engines Security engines, group managers, and data governance managers\nVisualization engines and productivity portals\nMachine-level data processing architectural models\nAll-shared and nothing-shared architectures\nLogical Big Data analytics architecture\nData sources and data acquisition layers\nStorage, processing, and batch layers\nReal-time processing, including event flow and complex flow processing\nEnterprise data warehouse approaches and Big Data integration (including series and parallel)\nPoly Source, including relational, stream, and file-based sources\nPoly Storage, including automatic data replication and data size reduction\nRandom access storage, including high binary volume, tabular, linked, hierarchical, and data sharding\nBatch processing on a large scale, complex decomposition, and abstraction processing\nPoly Sink, including relational Sink, file-based Sink, and automated dataset execution\nBig Data device and data virtualization\nArchitectural environments, including ETL\nAnalytics engines and application enrichment\nCloud computing and Big Data architectural considerations\nCloud delivery and deployment models for hosting Big Data solutions Enterprise data warehouses and Big Data\nOperational data storage, data markets, and analytical databases\nArchitectural layers of Big Data solutions\nBig Data architecture, maintenance, and governance\nBig Data security architecture\nSeries, parallel, devices, and virtualization approaches\nBig Data and cloud-based storage and data processing\nCanonical data and large-scale graph processing\nReal-time access storage and direct data access\nAnalytical sandbox and confidential data storage\nBatch data processing and dataset denormalization\nOnline data repository and Big Data warehouse architecture\nOperational data storage and indirect data access\nIntegrated access and centralized dataset governance\nEvent flow processing and complex event processing\nFan-in input, fan-out input, and high-speed real-time processing\nData output, data visualization, and data utilization\nData manipulation, data processing, and data analysis processing\nBig Data solution design patterns and composite architectural patterns\nLambda architecture, layers, characteristics, and benefits",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_Certified_cc_consult_c1f41d7c-af70-4d67-90db-df4eca0517bf.webp",
+"Certificaciones": "Cloud Technology Professional",
+"Área": "Cloud Computing",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Aimed at professionals who wish to acquire or consolidate solid technical knowledge on cloud computing technologies, their implementation models, fundamental principles, key services, and operational and security best practices. The program prepares participants to perform effectively in hybrid, public, or private cloud environments, with a deep understanding of the ecosystem and its tools.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to understand and apply key cloud technologies and services, facilitating the design, implementation, and management of efficient, secure, and scalable solutions in cloud environments.",
+"Objetivo general": "Train professionals with solid knowledge in cloud technologies, services, and architectures, capable of implementing and managing efficient and secure cloud solutions, preparing them to obtain the official Cloud Technology Professional certification from Arcitura.",
+"Objetivos específicos": "Understand the fundamentals and service models of cloud computing\nImplement and administer services and resources in cloud environments\nEnsure security, scalability, and efficiency in cloud solutions",
+"Contenidos": "Terminology and fundamental concepts of cloud computing\nFundamentals of virtualization\nSpecific characteristics that define a cloud\nHow to understand elasticity, resilience, on-demand use, and measured use\nBenefits, challenges, and risks of contemporary cloud computing platforms and cloud services\nRoles of cloud resource administrator and cloud service owner\nRoles of cloud service and cloud service consumer\nHow to understand the Software as a Service (SaaS) cloud delivery model\nHow to understand the Platform as a Service (PaaS) cloud delivery model\nHow to understand the Infrastructure as a Service (IaaS) cloud delivery model\nHow to combine cloud delivery models\nPublic, private, hybrid, and community cloud deployment models\nBusiness cost metrics and formulas to compare and calculate costs of cloud and on-premise solutions\nFormulas to calculate and qualify SLA service quality characteristics Cloud computing mechanisms that establish architectural building blocks\nVirtual servers, containers, ready-to-use environments, failover systems, and pay-per-use monitors\nAutomated scaling monitors, multi-device agents, and resource replication\nHow to understand how cloud computing mechanisms support cloud characteristics\nIntroduction to containerization, container hosting, and logical Pod-type containers\nComparison between Containerization and Virtualization\nCloud balancing and cloud bursting architectures\nCommon risks, threats, and vulnerabilities of cloud-based services and cloud-hosted solutions\nCloud security mechanisms used to counter threats and attacks\nHow to understand cloud-based security groups and hardened virtual server images\nMeans of implementing cloud services (including web services and REST services)\nBenefits and challenges of cloud storage, cloud storage services, technologies, and approaches\nNon-relational (NoSQL) storage compared to relational storage\nCloud service testing considerations and types of tests\nService meshes and autonomous computing\nCloud computing industry standards organizations",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_cc_consult.webp",
+"Certificaciones": "Cloud Computing Consultant ",
+"Área": "Cloud Computing",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals seeking to specialize in technical and strategic consulting related to adoption, architecture, migration, security, and cost management in cloud computing environments. Provides the skills necessary to evaluate, plan, and guide transformation projects to the cloud, optimizing resources and ensuring alignment with business objectives.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to advise on the planning, design, and implementation of cloud solutions, optimizing resources, costs, and security to meet business needs efficiently and scalably.",
+"Objetivo general": "Prepare professionals to advise and guide organizations in the adoption, planning, and strategic management of cloud computing solutions, ensuring alignment with business objectives and resource optimization, aiming to obtain the official Cloud Computing Consultant certification from Arcitura.",
+"Objetivos específicos": "Evaluate needs and opportunities for cloud adoption\nDesign cloud strategies and architectures aligned with business objectives\nManage change and ensure governance in cloud projects",
+"Contenidos": "Terminology and fundamental concepts of cloud computing\nFundamentals of virtualization\nSpecific characteristics that define a cloud\nHow to understand elasticity, resilience, on-demand use, and measured use\nBenefits, challenges, and risks of contemporary cloud computing platforms and cloud services\nRoles of cloud resource administrator and cloud service owner\nRoles of cloud service and cloud service consumer\nHow to understand the Software as a Service (SaaS) cloud delivery model\nHow to understand the Platform as a Service (PaaS) cloud delivery model\nHow to understand the Infrastructure as a Service (IaaS) cloud delivery model\nHow to combine cloud delivery models\nPublic, private, hybrid, and community cloud deployment models\nBusiness cost metrics and formulas to compare and calculate costs of cloud and on-premise solutions\nFormulas to calculate and qualify SLA service quality characteristics Cloud computing mechanisms that establish architectural building blocks\nVirtual servers, containers, ready-to-use environments, failover systems, and pay-per-use monitors\nAutomated scaling monitors, multi-device agents, and resource replication\nHow to understand how cloud computing mechanisms support cloud characteristics\nIntroduction to containerization, container hosting, and logical Pod-type containers\nComparison between Containerization and Virtualization\nCloud balancing and cloud bursting architectures\nCommon risks, threats, and vulnerabilities of cloud-based services and cloud-hosted solutions\nCloud security mechanisms used to counter threats and attacks\nHow to understand cloud-based security groups and hardened virtual server images\nMeans of implementing cloud services (including web services and REST services)\nBenefits and challenges of cloud storage, cloud storage services, technologies, and approaches\nNon-relational (NoSQL) storage compared to relational storage\nCloud service testing considerations and types of tests\nService meshes and autonomous computing\nCloud computing industry standards organizations How to understand the technology architecture of private clouds and public clouds\nHow to understand the technology architecture of SaaS, PaaS, and IaaS environments\nAutomated administration and centralized remote administration\nContainer Sidecar and Container Chain\nSelf-provisioning and platform provisioning\nMonitoring usage and Broad access\nReal-time resource availability and Pay-as-You-Go\nShared resources and Resource pooling\nRapid provisioning and Resource reservation\nNon-disruptive service relocation and Service state management\nWorkload distribution and Dynamic scalability Fundamentals of cloud security\nCommon cloud security mechanisms\nCloud security threats\nCloud security threat categorization methodology\nIdentification and treatment of common threats\nCloud network security patterns and support mechanisms\nHow to secure network connections and cloud authentication Gateways\nCollaborative monitoring and logging\nIndependent cloud auditing\nCloud identity patterns and access management and support mechanisms\nHow to federate and enable secure interoperability between cloud consumers\nTrust assurance patterns and support mechanisms\nTrust certification and Reliability establishment",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_cc_arch.webp",
+"Certificaciones": "Cloud Architect ",
+"Área": "Cloud Computing",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to specialize in the design, planning, and supervision of scalable, secure cloud architectures aligned with organizational strategic objectives. Participants will develop skills to integrate cloud technologies, manage hybrid and multicloud infrastructures, and create innovative solutions that support business digital transformation.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to design, implement, and manage secure, scalable, and efficient cloud architectures, integrating cloud services to optimize technological infrastructure and support digital transformation in organizations.",
+"Objetivo general": "Train professionals to design robust, scalable, and secure cloud computing architectures, integrating cloud technologies and services that meet business needs, preparing participants to obtain the official Cloud Architect certification from Arcitura.",
+"Objetivos específicos": "Design scalable and resilient cloud solutions\nIntegrate appropriate cloud services and technologies\nEnsure security and compliance in cloud environments",
+"Contenidos": "Terminology and fundamental concepts of cloud computing\nFundamentals of virtualization\nSpecific characteristics that define a cloud\nHow to understand elasticity, resilience, on-demand use, and measured use\nBenefits, challenges, and risks of contemporary cloud computing platforms and cloud services\nRoles of cloud resource administrator and cloud service owner\nRoles of cloud service and cloud service consumer\nHow to understand the Software as a Service (SaaS) cloud delivery model\nHow to understand the Platform as a Service (PaaS) cloud delivery model\nHow to understand the Infrastructure as a Service (IaaS) cloud delivery model\nHow to combine cloud delivery models\nPublic, private, hybrid, and community cloud deployment models\nBusiness cost metrics and formulas to compare and calculate costs of cloud and on-premise solutions\nFormulas to calculate and qualify SLA service quality characteristics Cloud computing mechanisms that establish architectural building blocks\nVirtual servers, containers, ready-to-use environments, failover systems, and pay-per-use monitors\nAutomated scaling monitors, multi-device agents, and resource replication\nHow to understand how cloud computing mechanisms support cloud characteristics\nIntroduction to containerization, container hosting, and logical Pod-type containers\nComparison between Containerization and Virtualization\nCloud balancing and cloud bursting architectures\nCommon risks, threats, and vulnerabilities of cloud-based services and cloud-hosted solutions\nCloud security mechanisms used to counter threats and attacks\nHow to understand cloud-based security groups and hardened virtual server images\nMeans of implementing cloud services (including web services and REST services)\nBenefits and challenges of cloud storage, cloud storage services, technologies, and approaches\nNon-relational (NoSQL) storage compared to relational storage\nCloud service testing considerations and types of tests\nService meshes and autonomous computing\nCloud computing industry standards organizations How to understand the technology architecture of private clouds and public clouds\nHow to understand the technology architecture of SaaS, PaaS, and IaaS environments\nAutomated administration and centralized remote administration\nContainer Sidecar and Container Chain\nSelf-provisioning and platform provisioning\nEnriched containers and logical Pod-type containers\nBare-Metal provisioning and Resource management\nMultiple containers in a single node and Multi-path resource access\nUsage monitoring and Broad access\nReal-time resource availability and Pay-as-You-Go\nShared resources and Resource pooling\nRapid provisioning and Resource reservation\nNon-disruptive service relocation and Service state management\nWorkload distribution and Dynamic scalability How to understand the technology architecture of elasticity, resilience, multitenancy, and containerized environments\nElastic resource capacity and Elastic network capacity\nMulti-container isolation control and Volatile container configuration\nServerless deployment and Elastic disk provisioning\nLeader node election and Micro Scatter-Gather\nHypervisor clustering and Redundant storage\nStorage service gateway and Live storage migration\nLUN storage and LUN migration\nDynamic failure detection and recovery and Zero downtime\nLoad balancing for service instances\nVirtual switches with load balancing and Persistent virtual network configurations\nDynamic data normalization and Synchronized operational state\nIntra-storage device vertical scaling and Inter-storage device vertical scaling\nStorage workload management and Storage maintenance window\nDirect I/O access and Direct LUN access\nCloud balancing and Redundant physical connection for virtual servers\nCloud bursting, including Burst In and Burst Out for private/public clouds",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_Certified_cc_secur_f3b1cb79-6885-4799-886a-3e4d1ffc914a.webp",
+"Certificaciones": "Cloud Security Specialist ",
+"Área": "Cloud Computing",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Oriented to professionals who wish to specialize in the protection, management, and compliance of security in cloud computing environments, including public, private, and hybrid clouds. Participants will learn to identify risks, implement effective controls, and ensure the confidentiality, integrity, and availability of data and services in the cloud, aligned with international standards and regulations.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of designing, implementing, and managing cybersecurity strategies in cloud environments, protecting data, applications, and infrastructures from threats and ensuring regulatory compliance.",
+"Objetivo general": "Train specialists capable of designing, implementing, and maintaining effective security strategies in cloud computing environments, addressing risks, regulatory compliance, and best practices to protect data, infrastructures, and cloud services, in order to obtain the official Cloud Security Specialist certification from Arcitura.",
+"Objetivos específicos": "Identify threats and vulnerabilities in cloud environments\nApply security controls and regulatory compliance in the cloud\nDesign secure and resilient cloud architectures",
+"Contenidos": "Terminology and fundamental concepts of cloud computing\nFundamentals of virtualization\nSpecific characteristics that define a cloud\nHow to understand elasticity, resilience, on-demand use, and measured use\nBenefits, challenges, and risks of contemporary cloud computing platforms and cloud services\nRoles of cloud resource administrator and cloud service owner\nRoles of cloud service and cloud service consumer\nHow to understand the Software as a Service (SaaS) cloud delivery model\nHow to understand the Platform as a Service (PaaS) cloud delivery model\nHow to understand the Infrastructure as a Service (IaaS) cloud delivery model\nHow to combine cloud delivery models\nPublic, private, hybrid, and community cloud deployment models\nBusiness cost metrics and formulas to compare and calculate costs of cloud and on-premise solutions\nFormulas to calculate and qualify SLA service quality characteristics Cloud computing mechanisms that establish architectural building blocks\nVirtual servers, containers, ready-to-use environments, failover systems, and pay-per-use monitors\nAutomated scaling monitors, multi-device agents, and resource replication\nHow to understand how cloud computing mechanisms support cloud characteristics\nIntroduction to containerization, container hosting, and logical Pod-type containers\nComparison between Containerization and Virtualization\nCloud balancing and cloud bursting architectures\nCommon risks, threats, and vulnerabilities of cloud-based services and cloud-hosted solutions\nCloud security mechanisms used to counter threats and attacks\nHow to understand cloud-based security groups and hardened virtual server images\nMeans of implementing cloud services (including web services and REST services)\nBenefits and challenges of cloud storage, cloud storage services, technologies, and approaches\nNon-relational (NoSQL) storage compared to relational storage\nCloud service testing considerations and types of tests\nService meshes and autonomous computing\nCloud computing industry standards organizations Fundamentals of cloud security\nCommon cloud security mechanisms\nCloud security threats\nCloud security threat categorization methodology\nIdentification and treatment of common threats\nCloud network security patterns and support mechanisms\nHow to secure network connections and cloud authentication Gateways\nCollaborative monitoring and logging\nIndependent cloud auditing\nCloud identity patterns and access management and support mechanisms\nHow to federate and enable secure interoperability between cloud consumers\nTrust assurance patterns and support mechanisms\nTrust certification and Reliability establishment Cloud service security patterns and support mechanisms\nVirtual machine platform protection patterns\nConsiderations for establishing secure ephemeral perimeters\nTrusted cloud resource groups and cloud resource access control\nPermanent protection against access loss to data\nProtection against cloud data breach\nIsolated trust boundary\nAttack lifecycle and security lifecycle\nProactive migration vs. incident response\nThreats, vulnerabilities, and exploitation impacts\nThreat modeling, threats, and mitigations",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/thumbnail_cert_SOA_professional1.png",
+"Certificaciones": "Microservice Professional ",
+"Área": "Service Technology",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to specialize in the design, development, implementation, and deployment of architectures based on microservices. Participants will learn to build modular, scalable, and resilient systems that allow continuous and efficient delivery, using current best practices and tools to manage independent but integrated services.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of designing, developing, and managing architectures based on microservices, promoting scalability, resilience, and flexibility in distributed and modern applications.",
+"Objetivo general": "Train professionals in the design, development, deployment, and management of architectures based on microservices, fostering the creation of scalable, flexible, and easily maintainable applications, preparing them to obtain the official Microservice Professional certification from Arcitura.",
+"Objetivos específicos": "Understand the principles and patterns of microservices architecture\nImplement microservices using technologies and tools\nManage orchestration, monitoring, and security in microservices environments",
+"Contenidos": "Technological and business factors for SOA, services, and microservices\nStrategic goals and benefits of service-oriented computing\nSimple introduction to services and microservices\nFundamental characteristics of service-oriented architecture\nHow to understand service orientation as a design paradigm, including the four pillars of service orientation\nIntroduction to service layers, service models, and service compositions\nService inventories, service layers, and service API management and governance\nIntroduction to common service technologies, including API Gateways, virtualization, containerization\nIntroduction to cloud computing and cloud services\nAdoption impacts, including considerations for governance, infrastructure, performance, and standardization",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_Certified_soa_prodesign_933f97e7-cb79-427a-8628-45d32551a7b0.webp",
+"Certificaciones": "SOA Professional ",
+"Área": "Service Technology",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Oriented to professionals who wish to specialize in the design, development, implementation, and management of service-oriented architectures (SOA). Participants will learn to build IT ecosystems based on reusable, interoperable, and scalable services that facilitate integration and alignment of business processes with information technologies.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of designing, implementing, and managing service-oriented architectures (SOA), facilitating efficient and flexible integration of applications and systems in complex business environments.",
+"Objetivo general": "Train professionals in the fundamentals, design, and implementation of Service-Oriented Architecture (SOA), enabling the creation of flexible and reusable business solutions that improve integration and organizational agility, aiming to obtain the official SOA Professional certification from Arcitura.",
+"Objetivos específicos": "Understand the principles and key components of SOA\nDesign and model reusable and scalable SOA services\nImplement and manage integrated SOA solutions",
+"Contenidos": "Technological and business factors for SOA, services, and microservices\nStrategic goals and benefits of service-oriented computing\nSimple introduction to services and microservices\nFundamental characteristics of service-oriented architecture\nHow to understand service orientation as a design paradigm, including the four pillars of service orientation\nIntroduction to service layers, service models, and service compositions\nService inventories, service layers, and service API management and governance\nIntroduction to common service technologies, including API Gateways, virtualization, containerization\nIntroduction to cloud computing and cloud services\nAdoption impacts, including considerations for governance, infrastructure, performance, and standardization Fundamentals of application design with SOA\nService orientation vs. silo-based design\nService-oriented application design with microservices\nHow to understand services and service capabilities\nHow to understand the functional context of microservices\nComplex service composition design, runtime composition roles and responsibilities\nComposition with microservices\nDistinctive characteristics of the SOA model\nThe eight service orientation design principles\nContract-first design, standardized service contracts, and uniform contracts\nLoose service coupling and coupling types, service abstraction and information hiding\nService reusability and agnostic design, service autonomy and runtime control\nStateless services and state deferral, discoverability and interpretability of the service\nGuidelines for REST service design\nGuidelines for Web service design\nGuidelines for microservice design",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/hero_SP_Certified_soa_analyst.webp",
+"Certificaciones": "SOA Analyst ",
+"Área": "Service Technology",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to develop competencies in functional, technical, and strategic analysis within service-oriented architectures (SOA). Trains analysts capable of identifying, modeling, and aligning technological services with business processes, facilitating integration, reuse, and optimization of services in modern business environments.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of analyzing, designing, and supervising solutions based on Service-Oriented Architecture (SOA), facilitating the efficient integration of systems and services to improve agility and flexibility in business.",
+"Objetivo general": "Train professionals to analyze, evaluate, and define business and technical requirements in Service-Oriented Architecture (SOA) projects, facilitating alignment between business needs and technological solutions, in order to obtain the official SOA Analyst certification from Arcitura.",
+"Objetivos específicos": "Identify and document business requirements for SOA projects\nEvaluate the feasibility and benefits of SOA adoption\nCollaborate in the definition and design of SOA solutions aligned with business objectives",
+"Contenidos": "Technological and business factors for SOA, services, and microservices\nStrategic goals and benefits of service-oriented computing\nSimple introduction to services and microservices\nFundamental characteristics of service-oriented architecture\nHow to understand service orientation as a design paradigm, including the four pillars of service orientation\nIntroduction to service layers, service models, and service compositions\nService inventories, service layers, and service API management and governance\nIntroduction to common service technologies, including API Gateways, virtualization, containerization\nIntroduction to cloud computing and cloud services\nAdoption impacts, including considerations for governance, infrastructure, performance, and standardization Fundamentals of application design with SOA\nService orientation vs. silo-based design\nService-oriented application design with microservices\nHow to understand services and service capabilities\nHow to understand the functional context of microservices\nComplex service composition design, runtime composition roles and responsibilities\nComposition with microservices\nDistinctive characteristics of the SOA model\nThe eight service orientation design principles\nContract-first design, standardized service contracts, and uniform contracts\nLoose service coupling and coupling types, service abstraction and information hiding\nService reusability and agnostic design, service autonomy and runtime control\nStateless services and state deferral, discoverability and interpretability of the service\nGuidelines for REST service design\nGuidelines for Web service design\nGuidelines for microservice design Introduction to SOA analysis\nRoles of service analysts, service architects, and service custodians\nService granularities, capacity, data, and constraints\nService models and service layer abstraction\nBusiness and utility services\nAgnostic and non-agnostic services\nBases for service inventory definition\nDomain and enterprise service inventories\nService normalization and logic centralization\nFundamentals of service modeling\nService modeling and separation of concerns\nFunctional decomposition and service encapsulation\nEntity, utility, and task abstraction\nMicrotask abstraction for microservice modeling\nComposition and recomposition\nService API modeling\nService decomposition, Proxy capacity, and Decomposed capacity\nEndpoint redirection, Light endpoint, and Entity linking SOA lifecycle and project stages\nSOA adoption planning and service profiles\nService-oriented analysis and service modeling\nAnalysis and modeling with REST services and microservices\nResource identification and REST composition modeling\nREST service modeling as microservices\nService contract uniform modeling and REST capacity granularity\nHow to understand resources vs. entities\nAnalysis and modeling with Web services and microservices\nUtility and entity Web service modeling\nWeb service modeling as microservices\nModeling with BPMN and DMN\nBPMN process modeling for service modeling\nModeling decisions with DMN",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/twitter_thumb_201604_badge_soacp_arch.png",
+"Certificaciones": "SOA Architect ",
+"Área": "Service Technology",
+"Ente Certificador": "Arcitura",
+"Dirigido a / Perfil de entrada": "Aimed at professionals seeking to acquire or strengthen advanced skills in the design, implementation, and management of architectures based on microservices. Provides key knowledge on how to structure distributed, scalable, and resilient solutions, aligned with modern business needs and digital transformation environments.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of designing, implementing, and managing architectures based on microservices, promoting scalability, resilience, and efficiency in the development of distributed applications.",
+"Objetivo general": "Train specialized professionals to design, plan, and lead architectures based on microservices, promoting scalable, resilient, and easily maintainable solutions, preparing them to obtain the official Microservice Architect certification from Arcitura.",
+"Objetivos específicos": "Design robust and scalable microservices architectures\nSelect and integrate technologies and tools for microservices\nImplement security, monitoring, and governance strategies",
+"Contenidos": "Technological and business factors for SOA, services, and microservices\nStrategic goals and benefits of service-oriented computing\nSimple introduction to services and microservices\nFundamental characteristics of service-oriented architecture\nHow to understand service orientation as a design paradigm, including the four pillars of service orientation\nIntroduction to service layers, service models, and service compositions\nService inventories, service layers, and service API management and governance\nIntroduction to common service technologies, including API Gateways, virtualization, containerization\nIntroduction to cloud computing and cloud services\nAdoption impacts, including considerations for governance, infrastructure, performance, and standardization Comparison of service implementation means\nService roles and service agents\nMessage exchange patterns and service activities\nBasic XML concepts, XML schema, JSON, and JSON schema\nHTTP methods, response, codes, and headers\nBasic REST service concepts, including properties and limitations\nREST services, contracts, resources, and messaging\nHypermedia and Late Binding\nBasic WSDL and SOAP concepts\nWS- technologies\nWeb service contracts, messaging, and records\nCloud computing concepts\nVertical and horizontal scaling\nMultitenancy, elasticity, and resilience\nOn-demand use, ubiquitous access, and measured use\nPublic, private, and hybrid clouds\nIaaS, PaaS, and SaaS Introduction to microservices architecture\nCommon microservices design challenges\nMicroservices granularity design\nMicroservices design guide principles\nIntroduction to containerization\nContainerization vs. virtualization\nFundamental container architecture elements\nContainerization engines, build files, images, and networks\nAutomation, microservices registry, and monitoring\nMicroservices instance registry\nScaling technology, basic scalability types and mechanisms\nTechnological factors for cloud-based microservices deployments\nMicrotask abstraction and microtask segregation\nEnriched containers and logical Pod containers\nDevOps practices and benefits\nDevOps stages and toolchains\nDomain-driven design and microservices Microservices composition and service composition\nAutonomous stateless proxy service\nIsolated shared database\nMicroservices layers and isolation levels\nPredefined data view\nMicroservices instance records\nWorkload distribution and service load balancing\nSynchronized inter-instance events\nEvent-oriented messaging for microservices\nAtomic event processing and attached events\nCentralized isolated state database\nContainer chain\nSingle-node multi-containers\nMulti-container isolation control\nVolatile container configuration\nServerless microservices deployment\nDynamic scalability model\nMicro Scatter-Gather compositions\nLeader node election for microservices instances\nRedundant microservices implementations\nMicroservices composition autonomy\nSidecar containers\nMicroservices ambassadors\nLog aggregation for microservices\nDistributed diagnostics for microservices",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "1 attempt with possibility of a second attempt. (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual + official platform to view videos related to the topic and review what was seen in class"
+},
+{
+"course_image": "assets/courses/scrum_studies.jpg",
+"Certificaciones": "Scrum Master Professional Certification",
+"Área": " Scrum Certifications",
+"Ente Certificador": "Scrum Study",
+"Dirigido a / Perfil de entrada": "Aimed at professionals who seek to acquire solid knowledge of the Scrum methodology, develop agile facilitation skills, and lead teams towards efficient and collaborative deliveries in agile project environments.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to facilitate and lead Scrum teams, apply Scrum practices and roles effectively, and promote an agile culture that improves collaboration, productivity, and continuous value delivery in projects.",
+"Objetivo general": "Prepare professionals to lead agile teams through the effective implementation of the Scrum framework, facilitating collaboration, continuous improvement, and value delivery in projects, in order to obtain the official Scrum Master Professional certification from SCRUM STUDY.",
+"Objetivos específicos": "Understand in depth the principles and roles of the Scrum framework\nFacilitate the implementation and adoption of Scrum in teams and organizations\nManage Scrum events and artifacts to optimize value delivery",
+"Contenidos": "Agile Overview\n\nScrum Overview\n\nScrum Roles\n\nScrum Phases\n\nScrum Scalability",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Note: If with the Scrum Study organization, the modality is live virtual + official platform to view videos with the complete course; if with the Certiprof organization, it is only live virtual modality (Synchronous modality)"
+},
+{
+"course_image": "assets/courses/scrum_studies.jpg",
+"Certificaciones": "Scrum Product Owner Certified (SPOCTM)",
+"Área": " Scrum Certifications",
+"Ente Certificador": "Scrum Study",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to lead product vision within agile teams, effectively manage the backlog, maximize value delivered to the customer, and connect business objectives with team deliverables.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to effectively manage the Product Owner role, prioritizing the backlog, maximizing product value, and facilitating communication between stakeholders and the Scrum team to ensure successful deliveries aligned with customer needs.",
+"Objetivo general": "Train professionals to perform effectively in the Product Owner role within Scrum teams, ensuring maximum business value delivery through strategic Product Backlog management, with the purpose of obtaining the official Scrum Product Owner Professional Certification from SCRUMstudy.",
+"Objetivos específicos": "Understand the responsibilities and key competencies of the Product Owner\nEffectively manage the Product Backlog and requirement prioritization\nCollaborate with teams and stakeholders to ensure continuous value delivery",
+"Contenidos": "Agile Overview\n\nScrum Overview\n\nInitiation\n\nPlanning and Estimation\n\nImplementation\n\nReview and Retrospective\n\nRelease",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Note: If with the Scrum Study organization, the modality is live virtual + official platform to view videos with the complete course; if with the Certiprof organization, it is only live virtual modality (Synchronous modality)"
+},
+{
+"course_image": "assets/courses/scrum_studies.jpg",
+"Certificaciones": "Scrum Developer Professional Certification",
+"Área": " Scrum Certifications",
+"Ente Certificador": "Scrum Study",
+"Dirigido a / Perfil de entrada": "Aimed at professionals who are active members of agile development teams and who seek to acquire, reinforce, or certify their knowledge and skills to collaborate effectively under the Scrum framework.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to develop products using Scrum effectively, collaborating with the Scrum team to deliver high-quality software increments in short cycles, applying agile practices and responding to changes flexibly.",
+"Objetivo general": "Train developers to work effectively within a Scrum team, applying agile development practices, continuous delivery, and constant improvement, in order to obtain the official Scrum Developer Professional Certification from SCRUMstudy.",
+"Objetivos específicos": "Understand the developer's role in a Scrum team\nApply agile technical practices to deliver functional product increments\nCollaborate actively in Scrum events and with other team roles",
+"Contenidos": "Introduction to Scrum\n\nOrganization\n\nBusiness Justification\n\nQuality\n\nChange\n\nRisks\n\nIntroduction to Scrum project phases\n\nInitiation\n\nPlanning and Estimation\n\nImplementation\n\nReview and Retrospective\n\nRelease\n\nScrum Scalability",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Note: If with the Scrum Study organization, the modality is live virtual + official platform to view videos with the complete course; if with the Certiprof organization, it is only live virtual modality (Synchronous modality)"
+},
+{
+"course_image": "assets/courses/Certiprof_Kanban_Essentials_badge_600x600_c3848653-e883-4198-b27b-976b4216c07c.webp",
+"Certificaciones": "Kanban Essentials Professional Certification",
+"Área": "Kanban",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to acquire solid and practical knowledge on Kanban, an agile methodology for visual workflow management that drives efficiency, continuous improvement, and timely delivery of results.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to understand and apply the basic principles of Kanban, optimizing workflow and improving efficiency in project and process management, facilitating continuous value delivery in teams and organizations.",
+"Objetivo general": "Provide professionals with fundamental knowledge on the Kanban approach to work management, allowing them to visualize flows, limit work in progress, and optimize continuous value delivery, with the purpose of obtaining the official Kanban Essentials Professional Certification from Certiprof",
+"Objetivos específicos": "Understand the principles and basic practices of the Kanban method\nApply Kanban boards for effective task and project management\nPromote efficiency and continuous delivery in agile teams",
+"Contenidos": "The Agile Manifesto\n\nIntroduction to JIT and Pull Systems\n\nIntroduction to the Kanban Method\n\nValues, Agendas, and Principles\n\nDynamics: Values, Agendas, and Principles\n\nPull and Push Systems\n\nLittle's Law\n\nDesign your First Kanban Board\n\nDesign your Board\n\nDynamics: Multitasking\n\nDynamics: Resource Efficiency vs Flow\n\nService Classes\n\nDesign Your Kanban Cards\n\nCadences\n\nRoles in Kanban\n\nPredictability and Metrics\n\nStart Using Kanban in Organizations\n\nThe Collaboration Culture in Kanban\n\nDynamics: Kanban Cakes\n\nHow to Scale Kanban\n\nScrum and Kanban\n\nLiterature",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/gempages_487642277401854988-82fda9e2-7ec5-48c9-a351-1cff036eac82.png",
+"Certificaciones": "Agile Leader Professional Certification",
+"Área": "Agile Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to develop advanced competencies in agile leadership, focusing on facilitating cultural and organizational transformation towards agile methodologies, driving effective and sustainable change in their teams and companies.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of leading teams and organizations through agile principles, promoting a culture of collaboration, adaptability, and continuous improvement that drives innovation and sustainable success in dynamic environments.",
+"Objetivo general": "Develop competencies and agile leadership skills so that participants think, act, and lead effectively in dynamic contexts, generating personal, team, and organizational value through an agile mindset",
+"Objetivos específicos": "Understand the fundamentals and philosophy of agility\nIdentify and develop key agile leadership competencies\nAdopt tools and mechanisms to drive agile teams",
+"Contenidos": "Module 1. Agility\n\nModule 2. Leadership\n\nModule 3. Agile Leadership\n\nModule 4. Agile Leader Skills\n\nModule 5. Agile Teams\n\nModule 6. Organizational Agility\n\nBibliography",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/agile-coach-professional-certificate-certiprof.jpg",
+"Certificaciones": "Agile Coach Professional Certification",
+"Área": "Agile Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to strengthen or start a career as Agile Coach, leading the cultural and organizational evolution towards agile frameworks, fostering collaboration, self-organization, and continuous value delivery.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to lead and facilitate the adoption of agile methodologies in teams and organizations, promoting a culture of continuous improvement, effective collaboration, and sustainable value delivery.",
+"Objetivo general": "Guide people and organizations in their change process—from the current state to a more adaptive and efficient one—using an agile coaching approach to generate sustainable results, improve communication, and strengthen organizational culture",
+"Objetivos específicos": "Develop a strategic vision of agility and coaching\nFoster continuous learning and introspection\nApply pedagogical tools to transfer knowledge effectively",
+"Contenidos": "Coaching Overview\n\nFacilitation and Teaching as Agile Coach\n\nKey Agile Coach Concepts\n\nThe Agile Coach DNA (Manoel Pimentel)\n\nAgile Coaching Process Overview\n\nGeneral Considerations of the Process\n\nAgile Coaching Metrics\n\nTechniques and Tools Enabling the Process\n\nComplementary Annex",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Certiprof_Business_Agility_badge480x480.webp",
+"Certificaciones": "Business Agility Professional Certification",
+"Área": "Agile Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Oriented to professionals who seek to develop and strengthen skills to lead and facilitate business agility, understanding how to adapt strategies, processes, and organizational culture to respond quickly and effectively to environmental changes.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of driving organizational agility, applying Business Agility principles and practices that allow responding effectively to market changes, fostering innovation, and improving collaboration in teams and processes.",
+"Objetivo general": "Understand the importance of developing agility in organizations to achieve success in an unpredictable business environment and respond effectively to market changes",
+"Objetivos específicos": "Understand rapid market changes and respond to them\nAdapt to any business area\nPlace the customer at the center of the 12 agility domains",
+"Contenidos": "Introduction to Business Agility\n\nThe Customer\n\nRelationships\n\nLeadership\n\nIndividuals\n\nOperations\n\nThe Experience",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/agile-hr-professional-certified-certiprof.jpg",
+"Certificaciones": "Agile HR Certified Professional",
+"Área": "Agile Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Designed for professionals who wish to deepen the strategic role of the Human Resources area within agile environments and organizations in transformation. Aimed at individuals committed to driving cultural, organizational, and leadership change necessary to enable Business Agility.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to apply agile principles in human talent management, driving a flexible, collaborative, and people-centered organizational culture. They will be able to adapt HR processes such as recruitment, evaluation, development, and leadership to the agile approach, contributing continuous value to the business.",
+"Objetivo general": "Prepare the Human Resources area to face new organizational challenges, optimize processes, and adopt an agile mindset that satisfies both business needs and those of collaborators .",
+"Objetivos específicos": "Incorporate modern agility principles into talent management\nDevelop new practices to turn HR into a strategic business partner\nRedesign people-centered processes using Agile@Scale tools",
+"Contenidos": "Module 1: Agility as Mindset\n\nModule 2: Agile Culture in HR\n\nModule 3: Agile Planning\n\nModule 4: Talent Attraction\n\nModule 5: Training and Development\n\nModule 6: Performance and Compensation",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/user-stories-foundations-certificate-certiprof.jpg",
+"Certificaciones": "User Stories Foundations Certificate",
+"Área": "Agile Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Aimed at professionals and students who wish to acquire a solid understanding of how to define, structure, and manage user stories as a key tool in agile software development, who wish to improve their ability to understand functional and non-functional requirements from the end-user's perspective, interested in strengthening their communication with development teams and their ability to write clear, precise, and value-oriented user stories. and interested in understanding more deeply the client's objectives and acceptance criteria defined in user stories",
+"Perfil de salida": "Upon completing the certification, the participant will be able to draft effective user stories, define clear acceptance criteria, and improve communication between technical and business teams, contributing to agile planning and the delivery of higher quality software, focused on user needs.",
+"Objetivo general": "Provide participants with the fundamental knowledge and practical skills necessary to draft, analyze, and manage effective user stories, promoting fluid communication between technical and non-technical teams, and contributing to the development of solutions aligned with user needs in agile environments.",
+"Objetivos específicos": "Understand the purpose, structure, and key components of a user story\nApply best practices in drafting and refining user stories\nRelate user stories to the agile project lifecycle, especially in frameworks like Scrum or Kanban, to facilitate planning, prioritization, and continuous value delivery.",
+"Contenidos": "Introduction\n\nUser Stories: A New Order in Requirements\n\nThe Magic of User Stories\n\nWhat a User Story Looks Like\n\nHistory of User Stories\n\nModes of User Story Representation\n\nHighly Effective User Stories (INVEST) I\n\nFrom Epics to User Stories\n\nHighly Effective User Stories (INVEST) II",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/CertiProf_Links_BMCEPC™.jpg",
+"Certificaciones": "Business Model Canvas Professional Certificate",
+"Área": "Agile Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Aimed at professionals interested in understanding, designing, and optimizing business models using a visual, practical, and strategic tool. The course is oriented to profiles with interest in business innovation, development of effective value propositions, and continuous improvement of their operations.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to analyze, design, and improve business models using the Business Model Canvas, identifying innovation opportunities and aligning the value proposition with market needs. They will be prepared to apply this tool strategically in entrepreneurship, management, consulting, and marketing environments.",
+"Objetivo general": "Provide participants with the knowledge and skills fundamental to understand, design, and analyze business models using the Business Model Canvas as a strategic tool, facilitating value creation, business decision-making, and innovation in products or services.",
+"Objetivos específicos": "Understand the nine blocks that make up the Business Model Canvas and their interrelation to clearly and structuredly represent any business model.\nApply the Business Model Canvas in the design, evaluation, and improvement of business models, both in startups and established organizations, focusing on the value proposition and customer segmentation.\nDevelop practical skills to use the canvas as a collaborative tool",
+"Contenidos": "Business Model - Concepts / Fundamentals\n\nIntroduction to Business Model Canvas\n\nBusiness Model Canvas - Blocks\n\nBusiness Model Canvas – Revenue Streams and Cost Structure\n\nBusiness Model Canvas: Recap of Building Blocks\n\nBusiness Model Patterns\n\nBusiness Model Canvas - Sequence\n\nBusiness Model Examples\n\nBlue Ocean Strategy\n\nLean Startup\n\nLean Canvas\n\nBusiness Model Strategy\n\nAdditional Techniques and Tools",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/design-thinkin-professional-certificate-certiprof.webp",
+"Certificaciones": "Design Thinking Professional Certificate ",
+"Área": "Creative Frameworks",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Professionals leading or wishing to lead co-creation, ideation, and problem-solving sessions, and who seek to structure their practice with proven methodologies like Design Thinking, as well as promote innovation, digital transformation, or product and service development, advise companies on implementing improvement, organizational change, or experience design processes.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to apply the Design Thinking approach to solve problems creatively and user-centered, using practical tools for design, prototyping, and validation. They will be prepared to drive innovation in teams, projects, and organizations, aligning user needs with viable and effective solutions.",
+"Objetivo general": "Develop in participants a comprehensive understanding of the Design Thinking approach, its phases, tools, and principles, in order to apply this methodology to solve complex problems centered on the user, foster innovation, and generate viable, desirable, and feasible solutions in various professional contexts.",
+"Objetivos específicos": "Understand the fundamentals, principles, and stages of the Design Thinking process,\nDevelop practical skills for using key Design Thinking tools,\nApply the Design Thinking approach in real or simulated projects, strengthening the ability to solve problems iteratively",
+"Contenidos": "Introduction\n\nDigital Age\n\nBenefits of this Certification\n\nConnections with Design Thinking\n\nKey Definitions\n\nDesign Thinking\n\nDesign Thinking Phases\n\nEmpathy\n\nDefine\n\nIdeation\n\nPrototype\n\nEvaluate\n\nCertification",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/blob (2).png",
+"Certificaciones": "Design Sprint Certification",
+"Área": "Creative Frameworks",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Product development teams seeking to accelerate iteration and idea validation.\nEntrepreneurs who want to validate product concepts quickly and effectively.\nProduct managers interested in implementing agile product development processes.\nDesign professionals seeking to integrate agile methods into their daily work.\nBusiness consultants who want to offer agile innovation and design services to their clients.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to plan and facilitate a complete Design Sprint, applying a structured methodology to solve complex problems and test solutions in just five days. They will be prepared to drive innovation, validate ideas with real users, and accelerate decision-making in product, business, or service projects.",
+"Objetivo general": "Provide participants with the knowledge and tools necessary to understand, plan, and execute a Design Sprint effectively, in order to solve strategic challenges, generate innovative ideas, and validate solutions in a short period of time.",
+"Objetivos específicos": "Understand the structure, principles, and phases of the Design Sprint, from challenge definition to prototype validation with real users.\nApply practical tools for facilitating each stage of the process, including problem mapping, ideation, decision, prototyping, and testing.\nDevelop skills to lead or participate in multidisciplinary Design Sprints",
+"Contenidos": "Introduction\n\nModule 01 Introduction\n\nModule 02 Introduction to Design Sprint\n\nModule 03 Design Sprint 2.0",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/image (3).png",
+"Certificaciones": "DevOps Essentials Professional Certification",
+"Área": "DevOps",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Software engineers who wish to improve collaboration between development and operations teams.\nSystem administrators seeking to optimize development and deployment processes.\nIT managers who want to implement DevOps practices in their organizations.\nOperations professionals interested in infrastructure process automation.\nDevelopers who want to improve software quality and accelerate delivery cycles.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to understand and apply the fundamental principles of DevOps, facilitating collaboration between development and operations teams, driving automation and continuous delivery to improve efficiency and software quality in agile environments.",
+"Objetivo general": "Provide participants with an essential understanding of the DevOps approach, its principles, practices, and benefits, to facilitate automation, integration, and continuous improvement in the software development lifecycle.",
+"Objetivos específicos": "Understand the culture and principles underlying DevOps, and how these impact organizational transformation.\nKnow the essential DevOps practices, including continuous integration (CI), continuous delivery (CD), infrastructure as code (IaC), and process automation.\nRecognize the benefits of implementing DevOps in organizations",
+"Contenidos": "What is DevOps?\n\nHistory\n\nPurpose of DevOps\n\nBenefits\n\nWorkshop\n\nDevOps and Agile\n\nMultifunctional Teams\n\nQuality and Automation\n\nContinuous Integration / Continuous Delivery Pipeline (CI/CD)\n\nCI/CD Tools\n\nPerformance Metrics\n\nSystem Thinking\n\nFeedback\n\nTools for Supporting DevOps Culture\n\nGartner DevOps Model\n\nDevOps Checklist and DevOps Report Status",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Certiprof_Devops_Foundation_badge480x480.webp",
+"Certificaciones": "DevOps Foundation Professional Certification",
+"Área": "DevOps",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Technology students interested in understanding the fundamental principles of DevOps.\nIT professionals seeking to improve collaboration between development and operations teams.\nProject managers who wish to implement DevOps practices in their projects.\nDevelopers who want to learn about agile development best practices.\nSystem administrators seeking to optimize software delivery.",
+"Perfil de salida": "Upon completing the certification, the participant will understand the fundamental principles and practices of DevOps, and will be capable of fostering collaboration between development and operations teams, driving automation and continuous delivery to improve efficiency, quality, and collaboration in software projects.",
+"Objetivo general": "Provide participants with a solid understanding of the basic concepts of DevOps, its benefits, and key practices, to facilitate effective integration and collaboration between development and operations in agile environments.",
+"Objetivos específicos": "Understand the culture and principles underlying DevOps, and their impact on organizational transformation.\nKnow the essential practices of DevOps, including continuous integration, continuous delivery, automation, and monitoring.\nIdentify the benefits and challenges of implementing DevOps",
+"Contenidos": "DevOps Foundation Professional Certification v072023\n\nPart 1: What is DevOps and why is it necessary?\n\nWhat is DevOps in practice?\n\nPart 2: Origins and History of DevOps\n\nAgile Adoption Report 2021 by CertiProf\n\nLet's understand the Origin...\n\nPart 3: DevOps Pillars\n\nDevOps Precursors\n\nDevOps Principles\n\nTopologies for DevOps Teams\n\nSummary: DevOps – Guiding Principles\n\nPart 4: Key DevOps Concepts\n\nIT Value Chain\n\nKey DevOps Concepts Bimodal SoR and SoC\n\nOverview of DevOps Roadmap\n\nAgile Development\n\nVersion Control\n\nDeployment Pipelines\n\nContinuous Integration and Continuous Delivery\n\nContinuous Testing\n\nCloud Computing\n\nInfrastructure as Code\n\nPart 5: Technical Practices, Tools, and Key Metrics to Help Your Teams\n\nAutomate Processes\n\nKey DevOps Practices\n\nDevOps Tools - Examples\n\nMetrics - Software Delivery and Operation Metrics\n\nPart 6: Discover where and how to Start with DevOps in your Organization\n\nAdoption - Begin Scaling Agile Principles to the Next Level: End-to-End Processes with all IT Groups\n\nPart 7: Continuous Improvement and Learning Culture in the organization\n\nCulture - Changing your Culture to Support DevOps\n\nCulture - Improving Collaboratively, Evolving Experimentally\n\nSelf-Assessment - Measuring DevOps Maturity\n\nPart 8: Next Steps in your Journey to the World of DevOps\n\nSuggested Practical Workshops",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/twitter_thumb_201604_image (1).png",
+"Certificaciones": "DevOps Advanced Professional Certification",
+"Área": "DevOps",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "DevOps professionals with experience seeking to improve their skills.\nDevelopment and operations teams wishing to implement advanced DevOps practices.\nTeam leaders interested in optimizing delivery processes.\nIT managers seeking to improve software efficiency and quality.\nSoftware engineers who want to lead digital transformation in their organizations.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to design, implement, and optimize advanced DevOps practices, driving automation, continuous integration, and continuous deployment to improve efficiency, quality, and collaboration in software projects.",
+"Objetivo general": "Train participants in mastering advanced DevOps techniques and tools to effectively manage the software lifecycle, promoting collaborative culture and rapid and reliable product delivery.",
+"Objetivos específicos": "Deepen the implementation of continuous integration and delivery pipelines (CI/CD) using advanced tools and methodologies.\nApply automation and monitoring practices in production and development environments to ensure application stability and scalability.\nFoster advanced DevOps culture",
+"Contenidos": "Module 1 - DevOps Pillars and Principles\n\nModule 2 - DevOps Principles - 3 Ways of DevOps\n\nModule 3 - The technical practices of the first way: Flow\n\nModule 4 - The technical practices of the second way: feedback\n\nModule 5 - The technical practices of the third way: Continuous learning and experimentation\n\nModule 6 - Integrating Change Management, Information Security, and Compliance",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Certiprof_Devops_culture_Practitioner_badge_600x600_1b6c52b3-145d-4123-975a-49a7fbc10d76_1440x1440.webp",
+"Certificaciones": "DevOps Culture Practitioner Certification",
+"Área": "DevOps",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Team leaders interested in promoting a culture of collaboration and continuous improvement.\nHuman resources managers seeking to understand how organizational culture impacts DevOps adoption.\nDevOps professionals who wish to lead cultural change in their organizations.\nBusiness consultants who want to help companies adopt a DevOps culture.\nDevelopment and operations teams seeking to improve collaboration and efficiency.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of fostering and applying an effective DevOps culture within organizations, promoting collaboration, communication, and continuous improvement between development and operations teams to optimize software delivery.",
+"Objetivo general": "Provide participants with the competencies necessary to understand and cultivate a solid DevOps culture, facilitating integration and collaboration between teams, driving organizational agility and continuous improvement in software projects.",
+"Objetivos específicos": "Understand the fundamental principles and values of DevOps culture, and its impact on organizational transformation.\nIdentify practices and behaviors that foster effective collaboration between development, operations, and other related areas.\nImplement strategies to promote continuous improvement and shared responsibility, aligning business objectives with agile and efficient processes.\n",
+"Contenidos": "Compare and contrast the objectives of development, operations, and business. Explain how DevOps Culture can help address dysfunction in objective misalignment • Discuss the power of cross-training, T-shaped skills, and collaboration between Dev, Ops, Security, and Business • Explain the principles and practices that include continuous integration, continuous delivery, “Shifting Security Left”, and the three ways of DevOps • Describe the importance of security culture in DevOps • Develop the ability to detect DevOps adoption anti-patterns",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/yello_belt.jpg",
+"Certificaciones": "Lean Six Sigma Yellow Belt Professional Certification",
+"Área": "Lean Six Sigma",
+"Ente Certificador": "International Lean Six Sigma Institute",
+"Dirigido a / Perfil de entrada": "Continuous Improvement Team Member\nProcess Analyst\nImprovement Project Assistant\nProfessionals interested in knowing or having knowledge in Lean Six Sigma Yellow Belt\nPeople who want to change their professional direction towards Lean Six Sigma Yellow Belt",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of actively participating in Lean Six Sigma projects, identifying quality problems, applying basic tools for continuous improvement, and contributing to process optimization in their organization.",
+"Objetivo general": "Provide participants with the fundamental knowledge of Lean Six Sigma so they can support process improvement initiatives through the application of basic tools and techniques that promote efficiency and quality.",
+"Objetivos específicos": "Understand the basic principles of Lean and Six Sigma, as well as their impact on continuous process improvement.\nApply Lean Six Sigma tools and methodologies at the Yellow Belt level, such as process mapping, root cause analysis, and variability control.\nParticipate effectively in improvement project teams, collaborating in the identification and resolution of problems to optimize quality and reduce waste.\n",
+"Contenidos": "",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "8 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam or Project",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/green_belt.jpg",
+"Certificaciones": "Lean Six Sigma Green Belt Professional Certification",
+"Área": "Lean Six Sigma",
+"Ente Certificador": "International Lean Six Sigma Institute",
+"Dirigido a / Perfil de entrada": "Leader of Improvement Projects\nContinuous Improvement Specialist\nQuality Analyst\nProfessionals interested in knowing or having knowledge in Lean Six Sigma Green Belt\nPeople who want to change their professional direction towards Lean Six Sigma Green Belt",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of leading and executing continuous improvement projects using Lean Six Sigma tools, applying the DMAIC approach to reduce waste, optimize processes, and improve quality in different organizational environments.",
+"Objetivo general": "Train professionals with practical skills in Lean Six Sigma at the Green Belt level, capable of applying structured methodologies for process improvement, increasing efficiency and customer satisfaction in organizations of any sector.",
+"Objetivos específicos": "Understand the principles, fundamentals, and tools of Lean Six Sigma, with emphasis on the DMAIC cycle structure (Define, Measure, Analyze, Improve, and Control).\nApply statistical and data analysis techniques to identify root causes of problems and opportunities for improvement in processes.\nManage and implement improvement projects leading work teams, aligning initiatives with the organization's strategic objectives.\n",
+"Contenidos": "",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "15 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam or Project",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/black_belt.jpg",
+"Certificaciones": "Lean Six Sigma Black Belt Professional Certification",
+"Área": "Lean Six Sigma",
+"Ente Certificador": "International Lean Six Sigma Institute",
+"Dirigido a / Perfil de entrada": "Leader of Strategic Improvement Projects\nContinuous Improvement Programs Manager\nProcess Optimization Specialist\nProfessionals interested in knowing or having knowledge in Lean Six Sigma Black Belt\nPeople who want to change their professional direction towards Lean Six Sigma Black Belt",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of leading high-impact continuous improvement projects, applying advanced Lean Six Sigma methodologies at a strategic level and using analytical tools to reduce variability, optimize processes, and generate sustainable value in the organization.",
+"Objetivo general": "Train professionals capable of designing, directing, and managing organizational improvement projects through advanced use of Lean Six Sigma tools, driving operational efficiency, service quality, and customer satisfaction.",
+"Objetivos específicos": "Apply the DMAIC approach (Define, Measure, Analyze, Improve, and Control) to solve complex and systemic problems in business processes.\nUse advanced statistical and analytical tools to identify root causes of problems, evaluate performance, and validate sustainable improvements.\nLead multifunctional teams in improvement projects, managing change, aligning strategic objectives, and promoting a culture of operational excellence.",
+"Contenidos": "",
+"Vigencia Certificación": "Does not expire",
+"Cantidad de horas de capacitación": "19 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam or Project",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/ISO_9001_Lead_Auditor (1).webp",
+"Certificaciones": "ISO 9001:2015 Lead Auditor",
+"Área": "ISO 9001 Quality Management",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Quality professionals interested in leading management system audits.\nQuality consultants seeking to improve their auditing skills.\nQuality managers who wish to implement and maintain ISO 9001:2015 quality management systems.\nInternal auditors seeking to advance their careers as lead auditors.\nContinuous improvement professionals interested in ensuring compliance with quality standards.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of planning, conducting, and reporting audits of quality management systems based on the ISO 9001:2015 standard, ensuring compliance with requirements and fostering continuous improvement in organizations.",
+"Objetivo general": "Train competent professionals to conduct quality audits under ISO 9001:2015, applying principles, techniques, and best practices aligned with international standards.",
+"Objetivos específicos": "Understand the structure and key requirements of the ISO 9001:2015 standard and its process-based and risk management approach.\nDevelop skills to lead internal and external audits, including planning, execution, documentation, and follow-up of findings.\nPromote continuous improvement of the quality management system, identifying optimization opportunities and ensuring regulatory compliance.",
+"Contenidos": "Phase 1: Fundamentals of a QMS\n\nProcess Management\n\nISO 9001:2015 Requirements - Quality Management System\n\nChapter 4: Organizational Context\n\nChapter 5: Leadership\n\nChapter 6: Planning\n\nChapter 7: Support\n\nChapter 8: Operation\n\nChapter 9: Performance Evaluation\n\nChapter 10: Improvement\n\nPhase 2. Design and Implementation of a QMS\n\nPhase 3. QMS Risk Management\n\nPhase 4. Internal Audits with Emphasis on Lead Auditor Competencies\n\nPrepare Audit Conclusions\n\nAuditor Skills and Workshops",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Certiprof_Iso_20000_Foundation_badge480x480.webp",
+"Certificaciones": "ISO/IEC 20000 Foundation",
+"Área": "ISO 20000 IT Service Management",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "IT professionals interested in understanding the basic principles of IT service management.\nIT service managers seeking to implement and maintain IT service management systems.\nIT consultants who wish to help organizations comply with the ISO/IEC 20000 standard.\nInternal IT auditors seeking to understand the requirements of the ISO/IEC 20000 standard.\nTechnology students interested in IT service management.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of understanding the fundamentals of IT service management according to ISO/IEC 20000, supporting preparation and response to disruptions to ensure continuous operation of an organization.",
+"Objetivo general": "Provide participants with essential knowledge on the ISO/IEC 20000 standard to implement, maintain, and improve an IT Service Management System (ITSMS).",
+"Objetivos específicos": "Know the structure and key requirements of the ISO/IEC 20000 standard and its practical application.\nIdentify risks and assess impacts that may affect operational continuity of an organization.\nRecognize the benefits of an ITSMS, including improved resilience and organizational recovery capacity.",
+"Contenidos": "Introduction and Background\n\nWhat is an ITSMS?\n\nTerms and Definitions (See Annex)\nStandard Structure\n\nOrganizational Context\n\nLeadership\n\nPlanning\n\nSupport\n\nOperation\n\nPerformance Evaluation\n\nImprovement\nAnnex: Terms and Definitions",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/gempages_487642277401854988-fa4f880e-b59f-42f5-b394-0f3cd26a081a.png",
+"Certificaciones": "ISO/IEC 20000 Lead Auditor",
+"Área": "ISO 20000 IT Service Management",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Audit professionals interested in leading IT service management audits.\nInternal IT auditors seeking to advance their careers as lead auditors.\nIT consultants who wish to offer external audit services for ISO/IEC 20000.\nIT service managers seeking to improve IT service management in their organizations.\nExternal IT auditors seeking to evaluate compliance with the ISO/IEC 20000 standard.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of planning, conducting, and reporting audits of the IT Service Management System (ITSMS) according to the ISO/IEC 20000 standard, ensuring compliance and continuous improvement of the resilience of IT services.",
+"Objetivo general": "Train lead auditors with the knowledge and skills to evaluate the implementation of IT service management systems, in accordance with the requirements of the ISO/IEC 20000 standard.",
+"Objetivos específicos": "Interpret the requirements of ISO/IEC 20000 and their application in different types of organizations.\nDevelop competencies to prepare, conduct, and report internal and external audits of IT services.\nEvaluate findings, issue reports, and propose improvement actions, promoting the effectiveness and maturity of the audited system.",
+"Contenidos": "Introduction and Background\n\nWhat is an ITSMS?\n\nTerms and Definitions (See Annex)\nStandard Structure\n\nOrganizational Context\n\nLeadership\n\nPlanning\n\nSupport\n\nOperation\n\nPerformance Evaluation\n\nImprovement\nAnnex: Terms and Definitions\n\nISO 19011 Audit Module",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Certiprof_Iso_22301_Foundation_badge480x480.webp",
+"Certificaciones": "ISO 22301 Foundation",
+"Área": "ISO 22301 Business Continuity Management",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Business continuity professionals interested in understanding the basic principles of business continuity management.\nBusiness continuity managers seeking to implement and maintain business continuity management systems.\nBusiness continuity consultants who wish to help organizations comply with the ISO 22301 standard.\nInternal business continuity auditors seeking to understand the requirements of the ISO 22301 standard.\nManagement students interested in business continuity management.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of understanding the fundamentals of business continuity management according to the ISO 22301 standard, supporting preparation and response to disruptions to ensure continuous operation of an organization.",
+"Objetivo general": "Provide participants with essential knowledge on the ISO 22301 standard to implement, maintain, and improve a Business Continuity Management System (BCMS).\n",
+"Objetivos específicos": "Know the structure and key requirements of the ISO 22301 standard and its practical application.\nIdentify risks and assess impacts that may affect operational continuity of an organization.\nRecognize the benefits of a BCMS, including improved resilience and organizational recovery capacity.",
+"Contenidos": "1. Introduction and Background\n2. Terms and Definitions (See Annex)\n3. Standard Structure\n4. Organizational Context\n5. Leadership\n6. Planning\n7. Support\n8. Operation\n9. Performance Evaluation\n10. Improvement\nAnnex 1: Terms and Definitions",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/twitter_thumb_201604_image (2).png",
+"Certificaciones": "ISO 22301 Lead Auditor",
+"Área": "ISO 22301 Business Continuity Management",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Audit professionals interested in leading conformity audits with ISO 22301.\nInternal business continuity auditors seeking to advance their careers as lead auditors.\nBusiness continuity consultants who wish to offer external audit services for ISO 22301.\nBusiness continuity managers seeking to improve business continuity management in their organizations.\nExternal business continuity auditors seeking to evaluate compliance with the ISO 22301 standard.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of planning, directing, and executing audits of the Business Continuity Management System (BCMS) according to the ISO 22301 standard, ensuring compliance and continuous improvement of organizational resilience.",
+"Objetivo general": "Train lead auditors with the knowledge and skills to evaluate and verify the effective implementation of business continuity management systems, in accordance with the requirements of the ISO 22301 standard.",
+"Objetivos específicos": "Interpret the requirements of ISO 22301 and their application in different types of organizations.\nDevelop competencies to prepare, conduct, and report internal and external continuity audits.\nEvaluate risks, controls, and documented evidence, ensuring conformity and continuous improvement of the audited system.",
+"Contenidos": "1. Introduction and Background\n2. Terms and Definitions (See Annex)\n3. Standard Structure\n4. Organizational Context\n5. Leadership\n6. Planning\n7. Support\n8. Operation\n9. Performance Evaluation\n10. Improvement\nAnnex 1: Terms and Definitions. This module provides a series of exercises and case-study-based lab problems designed to test your ability to apply your knowledge of the topics covered in previous modules. Completing this lab helps reinforce understanding of previous topics and demonstrates how different practices and technologies can be applied together as part of broader solutions.",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Certiprof_Iso_27001_Foundation_badge480x480.webp",
+"Certificaciones": "ISO/IEC 27001:2022 Foundation",
+"Área": "ISO 27001 Information Security Management",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Information security professionals interested in understanding the basic principles of information security management.\nInformation security managers seeking to implement and maintain information security management systems.\nInformation security consultants who wish to help organizations comply with the ISO/IEC 27001:2022 standard.\nInternal information security auditors seeking to understand the requirements of the ISO/IEC 27001:2022 standard.\nTechnology students interested in information security management.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to understand and apply the fundamentals of the information security management system according to the ISO/IEC 27001:2022 standard, contributing to protect the confidentiality, integrity, and availability of information in their organization.",
+"Objetivo general": "Provide participants with essential knowledge on the ISO/IEC 27001:2022 standard to implement and maintain an effective information security management system.",
+"Objetivos específicos": "Understand the requirements and structure of the ISO/IEC 27001:2022 standard.\nIdentify the necessary controls and processes to manage information security risks.\nApply basic concepts to support the implementation and internal audit of the information management system.",
+"Contenidos": "1. Introduction and Background\n2. Terms and Definitions (See Annex)\n3. Standard Structure\n4. Organizational Context\n5. Leadership\n6. Planning\n7. Support\n8. Operation\n9. Performance Evaluation\n10. Improvement\nAnnex 1: Terms and Definitions. 11. ISO 19011 Audit Module ",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Certiprof_ISO_27001_Internal_Auditor_Badge_600x600_69daab6d-412f-4711-8c37-33cba4618dba.webp",
+"Certificaciones": "ISO/IEC 27001:2022 Internal Auditor",
+"Área": "ISO 27001 Information Security Management",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Internal information security auditors seeking to evaluate compliance with the ISO/IEC 27001:2022 standard.\nInformation security professionals interested in improving information security management in their organizations.\nInformation security consultants who wish to offer internal audit services for ISO/IEC 27001:2022.\nInformation security managers seeking to improve the quality and efficiency of their information security management systems.\nTechnology students interested in internal auditing of information management systems.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to plan, execute, and report internal audits of the Information Security Management System (ISMS) according to the ISO/IEC 27001:2022 standard, ensuring compliance and continuous improvement.",
+"Objetivo general": "Train participants to carry out effective internal audits of the ISMS, identifying risks and opportunities to ensure information security.",
+"Objetivos específicos": "Understand the requirements and structure of the ISO/IEC 27001:2022 standard.\nApply techniques and methods of internal auditing according to international standards.\nPrepare clear reports that facilitate continuous improvement of the ISMS.",
+"Contenidos": "1. Introduction and background\n2. Key Concepts\n3. Terms and Definitions (See supplement N°1 Glossary 27001)\n4. Organizational Context\n5. Leadership\n6. Planning\n7. Support\n8. Operation\n9. Performance Evaluation\n10. Improvement\nAnnex 1: Terms and Definitions",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Certiprof_ISO_27001_Lead_Auditor_badge480x480_898be9c2-0608-4005-b08a-fbf07c6f4967.png",
+"Certificaciones": "ISO/IEC 27001:2022 Lead Auditor",
+"Área": "ISO 27001 Information Security Management",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Audit professionals interested in leading conformity audits with ISO/IEC 27001:2022.\nInternal information security auditors seeking to advance their careers as lead auditors.\nInformation security consultants who wish to offer external audit services for ISO/IEC 27001:2022.\nInformation security managers seeking to improve information security management in their organizations.\nExternal information security auditors seeking to evaluate compliance with the ISO/IEC 27001:2022 standard.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to plan and conduct effective audits of the information security management system (ISMS), ensuring compliance with the ISO/IEC 27001:2022 standard to improve the protection of information assets.",
+"Objetivo general": "Train participants to audit information security management systems according to ISO/IEC 27001:2022, identifying non-conformities and opportunities for improvement that ensure the integrity, confidentiality, and availability of information.\n",
+"Objetivos específicos": "Understand the requirements of ISO/IEC 27001:2022 and the risk-based audit process.\nPlan and execute internal and external audits of the ISMS efficiently and objectively.\nPrepare clear and effective reports that reflect findings, non-conformities, and recommendations for continuous improvement.\n",
+"Contenidos": "Introduction\n\nKey Concepts\n\nTerms and Definitions\n\nOrganizational Context\n\nLeadership\n\nPlanning\n\nSupport\n\nOperation\n\nPerformance Evaluation\n\nImprovement\nAnnex A: Normative",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/image (5).png",
+"Certificaciones": "ISO 27001 Lead Implementer",
+"Área": "ISO 27001 Information Security Management",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Information security professionals interested in leading the implementation of an information security management system.\nInformation security managers seeking to implement and maintain information security management systems.\nInformation security consultants who wish to help organizations implement the ISO 27001 standard.\nInternal information security auditors seeking to understand the implementation requirements of the ISO 27001 standard.\nTechnology students interested in information security implementation.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to plan, implement, and manage an Information Security Management System (ISMS) according to the ISO 27001 standard, ensuring effective protection of information assets in the organization.",
+"Objetivo general": "Train participants to lead the implementation of an ISMS based on ISO 27001, aligning security controls with business objectives and international best practices.\n",
+"Objetivos específicos": "Understand the requirements of the ISO 27001 standard and its application in an effective ISMS.\nDesign and execute an ISMS implementation plan, including risk assessment and appropriate controls.\nMonitor and maintain the ISMS, ensuring its continuous improvement and regulatory compliance.\n",
+"Contenidos": "1. Introduction to Management Systems\n2. Planning the Implementation of an ISMS\n3. General Steps in Implementation\n4. Organizational Context: Interpret the Requirements of ISO/IEC 27001:2022\n5. Leadership: Interpret the ISO/IEC 27001:2022 Requirements\n6. Planning: Interpret the Requirements of ISO/IEC 27001:2022\n7. Support: Interpret the Requirements of ISO/IEC 27001:2022\n8. Operation: Interpret the Requirements of ISO/IEC 27001:2022\n9. Performance Evaluation: Interpret the Requirements of ISO/IEC 27001:2022\n10. Improvement: Interpret the Requirements of ISO/IEC 27001:2022",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/image (6).png",
+"Certificaciones": "Help Desk Professional Certification",
+"Área": "Business & IT Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Technical support professionals who wish to improve their customer service skills.\nHelp desk personnel seeking to better understand support processes and tools.\nInformatics students interested in working in the help desk area.\nIT managers who wish to improve the efficiency and quality of help desk service in their organizations.\nTechnical support professionals seeking to advance their careers in the IT area.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of providing efficient technical support, managing incidents, and resolving technological problems, ensuring user satisfaction and operational continuity.",
+"Objetivo general": "Train professionals capable of offering quality technical support, effectively managing requests and incidents to ensure the optimal functioning of systems and technological services.\n",
+"Objetivos específicos": "Identify and resolve common technical problems in hardware, software, and networks.\nApply best practices and customer service protocols in technical support environments.\nUse tools and techniques for efficient ticket management and incident follow-up.\n",
+"Contenidos": "Acronyms and Key Concepts\nKey Concepts\nHelp Desk or Service Desk Governance\nWorkshop Recommended\nLeadership\nFinancial, Commercial Management, and Continuous Improvement of the Help Desk\nProject Management from the Help Desk\nWorkshop Recommended\nFinancial, Commercial Management, and Continuous Improvement of the Help Desk\nProject Management from the Help Desk\nWorkshop Recommended\nService Management\nService Quality\nWorkshop Recommended\nWorkshop Recommended\nReports and Reporting\nContinuous Improvement\nHelp Desk Maturity Level",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/image (7).png",
+"Certificaciones": "Service Desk Leader Professional Certification",
+"Área": "Business & IT Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Help desk team leaders seeking to improve service efficiency and quality.\nIT managers who wish to implement best management practices in the help desk service.\nTechnical support professionals who wish to advance their careers as leaders in the IT area.\nIT consultants who wish to offer help desk improvement services to their clients.\nInformatics students interested in leading technical support teams.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to lead help desk teams (Service Desk) efficiently, optimizing processes and ensuring quality attention for effective management of incidents and requests.",
+"Objetivo general": "Train leaders capable of managing and improving Service Desk operations, promoting user satisfaction and business continuity through effective practices and agile leadership.\n",
+"Objetivos específicos": "Implement best practices and processes for Service Desk operation.\nManage teams and resources to maximize performance and collaboration.\nMonitor and improve service quality and user experience.\n",
+"Contenidos": "Acronyms and Key Concepts\nService Desk Governance\nManagement & Leadership in the Service Desk\nFinancial and Commercial Management of the Service Desk\nProject Management from the Service Desk\nWorld Standards and Practices\nTrends in a Service Desk\nHow AI, ML, Cybersecurity, Data Protection and Big Data Relate to Service Desk\nForms and Operational Models of Outsourcing Service\nIT Service Management\nService Quality\nReports and Reporting\nContinuous Improvement",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Certiprof_Business_Intelligence_Analyst_badge480x480.webp",
+"Certificaciones": "Business Intelligence Analyst Professional Certification",
+"Área": "Business & IT Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Data analysts interested in turning data into meaningful information for business decision-making.\nBusiness managers seeking to optimize processes and improve operational efficiency.\nBusiness consultants who wish to offer data analysis services to their clients.\nData analysis students who wish to specialize in business intelligence.\nMarketing professionals who wish to use data to tell compelling stories.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to analyze business data, generate clear reports, and support strategic decision-making through the use of business intelligence tools and techniques.",
+"Objetivo general": "Train participants to interpret and transform data into useful information, facilitating analysis and visualization that drive evidence-based decisions.",
+"Objetivos específicos": "Understand key concepts and tools of Business Intelligence for collecting and processing data.\nDevelop skills in creating dashboards and reports that facilitate data interpretation.\nApply analysis techniques to identify trends and opportunities that improve business performance.\n",
+"Contenidos": "Introduction\nBusiness Intelligence Analyst\nGartner\nPower BI\nQlik Sense",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/blob (3).png",
+"Certificaciones": "Inventory Management Analyst Professional Certification",
+"Área": "Business & IT Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Inventory analysts interested in optimizing inventory flow and reducing costs.\nWarehouse managers seeking to improve inventory management in their operations.\nInventory management consultants who wish to offer inventory optimization services to their clients.\nLogistics students interested in efficient inventory management.\nPurchasing professionals who wish to improve inventory management in their organizations.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to efficiently manage inventories, optimizing stock levels, improving accuracy, and supporting the supply chain to increase productivity and reduce costs.",
+"Objetivo general": "Provide participants with key knowledge and skills to administer and analyze inventories effectively, ensuring optimal product availability and minimizing waste.\n",
+"Objetivos específicos": "Understand the fundamental concepts of inventory management and their impact on the supply chain.\nApply techniques and tools for inventory control and analysis, improving operational precision and efficiency.\nImplement strategies to optimize stock levels, reducing costs and avoiding shortages or excesses.\n",
+"Contenidos": "Applied Statistics\nBasic Concepts\nDigital Management Tools",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/twitter_thumb_201604_image (3).png",
+"Certificaciones": "Data Storytelling Professional Certification",
+"Área": "Business & IT Certifications",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Data analysis professionals interested in effectively communicating insights through stories.\nBusiness managers seeking to improve data-based information communication.\nData consultants who wish to help organizations tell stories with their data.\nData analysis students who wish to develop data communication skills.\nMarketing professionals who wish to use data to tell compelling stories.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to create effective narratives based on data, facilitating clear and persuasive communication of complex information to support decision-making in business environments.",
+"Objetivo general": "Develop skills to transform data into understandable and compelling stories that drive understanding and action from diverse audiences.",
+"Objetivos específicos": "Identify key techniques to interpret and visualize data in an attractive and clear way.\nApply storytelling methods to structure data-based messages that generate impact.\nCommunicate findings and recommendations using narratives that facilitate effective decision-making.\n",
+"Contenidos": "Chapter 1. Chapter 2. Chapter 3. Chapter 4. Chapter 5. Chapter 6. Chapter 7. Visualizations 1 Chapter 8. Visualizations 2. Polishing the Scenes of your Data Story ",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/CertiProf-Artificial-Intelligence-Content-Co-Creator.png",
+"Certificaciones": "Artificial Intelligence Professional Certificate",
+"Área": "New Technologies",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Technology professionals interested in understanding the fundamentals of artificial intelligence.\nProduct managers who wish to integrate artificial intelligence into their products and services.\nTechnology consultants who wish to offer artificial intelligence services to their clients.\nInformatics students interested in specializing in artificial intelligence.\nBusiness professionals seeking to understand how artificial intelligence can improve their operations.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to understand and apply key concepts of artificial intelligence, design basic AI solutions, and use fundamental tools to automate processes and improve decision-making in various sectors.",
+"Objetivo general": "Provide participants with essential knowledge and practical skills to understand and apply basic artificial intelligence techniques in business and technological contexts.",
+"Objetivos específicos": "Know the fundamentals and types of artificial intelligence, including machine learning and deep learning.\nApply basic AI techniques to solve simple problems and automate tasks.\nFamiliarize with common tools and platforms used in artificial intelligence projects.\n",
+"Contenidos": "Machine Learning Fundamentals\nI.1 Key Points\nI.2 Introduction K-Nearest Neighbors\nI.3 Model Performance Evaluation\nI.4 Multivariate K-Nearest Neighbors Method\nI.5 Hyperparameter Optimization\nI.6 Cross-Validation\nI.7 Guided Project: Car Price Prediction\nII Calculation for Machine Learning\nIII Linear Algebra for Machine Learning\nIV Linear Regression for Machine Learning\nV Machine Learning in Python\nVI Decision Tree",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/gempages_487642277401854988-05af6f12-46f2-433b-b62d-868c6ab1c082.png",
+"Certificaciones": "Artificial Intelligence Expert Certificate",
+"Área": "New Technologies",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Technology professionals interested in specializing in specific areas of artificial intelligence.\nTechnology consultants who wish to offer specialized artificial intelligence services.\nArtificial intelligence researchers who wish to advance their careers.\nBusiness professionals seeking to implement advanced artificial intelligence solutions in their organizations.",
+"Perfil de salida": "Upon completing the certification, the participant will be capable of designing, implementing, and managing solutions based on artificial intelligence, applying key techniques and tools to solve complex problems and improve processes in various sectors.",
+"Objetivo general": "Provide participants with essential knowledge and practical skills to develop and integrate artificial intelligence technologies in projects and businesses, enhancing innovation and automation.\n",
+"Objetivos específicos": "Understand the fundamentals and key areas of artificial intelligence, including machine learning and data processing.\nApply AI techniques for analysis, modeling, and real problem-solving.\nImplement AI solutions that improve processes, products, and services in different organizational contexts.\n",
+"Contenidos": "I. Deep Learning Fundamentals\nII. Machine Learning Project\nIII. Kaggle Fundamentals\nIV. TensorFlow Concepts\nV. Keras Basics\nVI. References ",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/gempages_487642277401854988-94618944-19b5-4a24-8868-a47d3e4c0b0c.png",
+"Certificaciones": "Blockchain Professional Certification",
+"Área": "New Technologies",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Software developers interested in learning about blockchain technology.\nProject managers seeking to integrate blockchain into their projects.\nTechnology consultants who wish to offer blockchain-related services.\nTechnology students interested in understanding blockchain potential.\nBusiness professionals seeking to understand how blockchain can transform their operations.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to understand and apply key blockchain concepts, design solutions based on this technology, and evaluate its impact on different industries to improve processes and security.",
+"Objetivo general": "Provide participants with essential knowledge on blockchain to implement and manage efficient, secure, and decentralized solutions in business environments.\n",
+"Objetivos específicos": "Understand the architecture and functioning of blockchain, including cryptography, consensus, and smart contracts.\nApply blockchain in practical cases, identifying business opportunities and improving processes.\nEvaluate the benefits and challenges of implementing blockchain in different industrial sectors.\n",
+"Contenidos": "Chapter 1: Business Problems\nChapter 2: What is Blockchain?\nChapter 3: How does Blockchain work?\nChapter 4: Types of Consensus and Blockchain\nChapter 5: Business Data Models\nChapter 6: Smart Contracts – Smart Contracts\nChapter 7: Blockchain and 4.0 Technologies\nChapter 8: Business Use Cases\nChapter 9: Blockchain is an Information Technology",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/image (8).png",
+"Certificaciones": "Big Data Professional Certification",
+"Área": "New Technologies",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Data analysis professionals interested in working with large volumes of data.\nIT managers seeking to implement big data solutions in their organizations.\nTechnology consultants who wish to offer big data analysis services.\nData analysis students who wish to specialize in big data.\nBusiness professionals seeking to leverage the potential of data in their operations.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to manage and analyze large volumes of data, applying Big Data techniques and tools to extract valuable information that supports strategic decision-making in organizations.",
+"Objetivo general": "Train participants in the integral handling of Big Data, from collection and storage to analysis and visualization of data, to drive data-based solutions that generate business value.\n",
+"Objetivos específicos": "Know the fundamental technologies and architectures of Big Data, including Hadoop, Spark, and NoSQL databases.\nApply massive data analysis and processing techniques to identify relevant patterns and trends.\nUse visualization and reporting tools to communicate results effectively to different organizational levels.\n",
+"Contenidos": "Initial Concepts\nData, information, and knowledge\nInformation\nKnowledge\nBig Data Evolution\nData Governance\nBig Data Applications\nBig Data Projects with Business Intelligence (BI)\nThe CRISP-DM methodology. Big Data for Data Mining\nData Analysis\nTechnologies for Big Data\nMassive Data Frameworks",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Cybersecurity-Foundation-Professional-Certificate-CSFPC.png",
+"Certificaciones": "Cyber Security Foundation",
+"Área": "Cybersecurity & ISMS",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "IT professionals interested in understanding basic cybersecurity concepts.\nInformation security managers seeking to improve their organization's security.\nInformation security consultants who wish to offer cybersecurity services.\nTechnology students interested in computer security.\nBusiness professionals seeking to protect their organization's critical information.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to understand the basic concepts of cybersecurity, identify common threats, and apply good practices to protect information and systems in business environments.",
+"Objetivo general": "Provide participants with fundamental knowledge of cybersecurity to recognize risks, vulnerabilities, and defense mechanisms that allow protecting digital assets in organizations.\n\n",
+"Objetivos específicos": "Understand the key principles and basic terminology of cybersecurity.\nIdentify threats, attacks, and common vulnerabilities in systems and networks.\nApply controls and good practices to mitigate risks and strengthen computer security.\n",
+"Contenidos": "Module 0: NIST - Cybersecurity for Small Businesses \nCybersecurity Framework Functions\nModule 1: CyBOK – Cybersecurity Fundamentals\nModule 2: Risk Management\nModule 3: Law and Regulation\nModule 4: Human Factors\nModule 5: Privacy and Online Rights\nModule 6: Malware and Attack Technologies\nModule 7: Adversarial Behavior\nModule 8 : Security Operations and Incident Management\nModule 9: Certification Exam",
+"Vigencia Certificación": "3 years",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Lead-Cybersecurity-Certified-Trainer-LCSCT.png",
+"Certificaciones": "Lead CyberSecurity Professional Certification",
+"Área": "Cybersecurity & ISMS",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Information security professionals interested in leading cybersecurity initiatives.\nInformation security managers seeking to improve their organization's security posture.\nInformation security consultants who wish to offer cybersecurity leadership services.\nTechnology students interested in specializing in cybersecurity.\nIT professionals seeking to advance their careers in the field of information security.",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to lead cybersecurity strategies and teams, designing and implementing policies and controls that protect information and digital assets of the organization from threats and attacks.",
+"Objetivo general": "Develop the competencies to manage and lead cybersecurity projects and teams, ensuring comprehensive protection of technological infrastructure and regulatory compliance.",
+"Objetivos específicos": "Know the main threats and vulnerabilities in cybersecurity and how to mitigate them through effective strategies.\nDesign and supervise policies, processes, and security controls aligned with best practices and international standards.\nCoordinate cybersecurity teams and projects, fostering security culture and response to incidents within the organization.\n",
+"Contenidos": "Fundamentals of Cyberspace and Cybersecurity\nRisk Assessment and Treatment for Internet Security\nCybersecurity – Guidelines for Internet Security ISO 27032:2023\nGuidelines for Internet Security\nCross-References between ISO 27032 and ISO 27002\nRisk Assessment and Treatment for Internet Security ISO 27032",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/image (9).png",
+"Certificaciones": "Innovation Management Professional Certification",
+"Área": "Innovation",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Leader of Lean Manufacturing Improvement Projects\nLean Manufacturing Consultant\nLean Manufacturing Process Analyst\nProfessionals interested in knowing or having knowledge in Lean Manufacturing\nPeople who want to change their professional direction towards Lean Manufacturing",
+"Perfil de salida": "Upon completing the certification, the participant will be prepared to manage and promote innovation processes, identifying opportunities, implementing strategies, and leading teams to generate creative solutions that provide competitive value.",
+"Objetivo general": "Develop in participants the skills to effectively manage innovation within organizations, driving a creative culture oriented to continuous change.\n",
+"Objetivos específicos": "Identify and evaluate innovation opportunities in different business contexts.\nApply methodologies and tools to manage innovative processes, from ideation to implementation.\nFoster leadership and collaboration in multidisciplinary teams to enhance sustainable innovation.\n",
+"Contenidos": "Introduction \nIntroduction to the World of Innovation \nInnovation\nTypes of Innovation\nThemes vs Problems vs Projects\nFrom Theme to Problem\nWorkshop\nWorkshop\nFrom Problem to Project\nDesign Thinking and Visual Thinking\nDesign Thinking Phases\nInnovation Methodologies\nManagement vs Leadership\nCustomer Experience\nLean Startup\nLean Software Development\nAgile and Scrum\nBusiness Model Generation",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/Certiprof_Design_Thinking_badge_600x600_25734a8a-284b-42ac-b379-518a4639ab8f.webp",
+"Certificaciones": "Design Thinking Professional Certification",
+"Área": "Innovation",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Design Process Facilitator\nInnovation Team Leader\nInnovation Consultant\nProfessionals interested in knowing or having knowledge in Design Thinking\nPeople who want to change their professional direction towards Design Thinking",
+"Perfil de salida": "Upon completing the certification, the participant will be able to apply the Design Thinking approach to solve complex problems, generate innovative solutions centered on the user, and facilitate collaborative processes in various contexts.",
+"Objetivo general": "Train participants to use the Design Thinking method, promoting innovation and creative problem-solving centered on the real needs of users.\n",
+"Objetivos específicos": "Understand the phases and key tools of the Design Thinking process.\nApply empathy, ideation, prototyping, and testing techniques to develop effective solutions.\nFacilitate innovation collaborative processes oriented to improve products, services, or experiences.\n",
+"Contenidos": "Content\nIntroduction\nDigital Age\nBenefits of this Certification\nConnections with Design Thinking\nKey Definitions\nDesign Thinking\nDesign Thinking Phases\nEmpathy\nDefine\nIdeation\nPrototype\nEvaluate\nCertification",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+{
+"course_image": "assets/courses/blob (4).png",
+"Certificaciones": "Design Sprint Certification",
+"Área": "Innovation",
+"Ente Certificador": "Certiprof",
+"Dirigido a / Perfil de entrada": "Product development teams seeking to accelerate iteration and idea validation.\nEntrepreneurs who want to validate product concepts quickly and effectively.\nProduct managers interested in implementing agile product development processes.\nDesign professionals seeking to integrate agile methods into their daily work.\nBusiness consultants who want to offer agile innovation and design services to their clients.",
+"Perfil de salida": "Upon completing the certification, the participant will be able to plan and facilitate Design Sprints to solve complex problems, validate ideas quickly, and accelerate innovation in projects.\n",
+"Objetivo general": "Provide the skills necessary to execute Design Sprints that allow solving challenges and validating solutions in a short time.",
+"Objetivos específicos": "Understand the phases and methodology of the Design Sprint.\nApply tools to facilitate each stage of the process.\nLead multidisciplinary teams to accelerate decision-making.\n",
+"Contenidos": "",
+"Vigencia Certificación": "No expira",
+"Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+"Metodología (examen o proyecto)": "Exam",
+"Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The amount will depend on the exam to be repeated)",
+"Modalidad": "Live virtual modality"
+},
+
+
+// Fixed again 
+
+  {
+        "course_image":"assets/courses/hero_SP_Certified_soa_microarch.webp",
+        "Certificaciones": "Microservice Architect *",
+        "Área": "Service_Technology",
+        "Ente Certificador": "Arcitura",
+        "Dirigido a / Perfil de entrada": "Designed for professionals interested in acquiring or strengthening advanced skills in the design, implementation, and management of microservices-based architectures. It provides key knowledge on how to structure distributed, scalable, and resilient solutions, aligned with the needs of modern business and digital transformation environments.",
+        "Perfil de salida": "Upon completion of the certification, the participant will be trained to design, implement, and manage microservices-based architectures, promoting scalability, resilience, and efficiency in the development of distributed applications.",
+        "Objetivo general": "To train specialized professionals in designing, planning, and leading microservices-based architectures, promoting scalable, resilient, and easily maintainable solutions, preparing them to obtain the official Arcitura Microservice Architect certification.",
+        "Objetivos específicos": "Design robust and scalable microservices architectures\nSelect and integrate technologies and tools for microservices\nImplement security, monitoring, and governance strategies",
+        "Contenidos": "Technological and business factors for SOA, services, and microservices\nStrategic goals and benefits of service-oriented computing\nSimple introduction to services and microservices\nFundamental characteristics of service-oriented architecture\nUnderstanding service-orientation as a design paradigm, including the four pillars of service-orientation\nIntroduction to service layers, service models, and service compositions\nService inventories, service layers, and service API management and governance\nIntroduction to common service technologies, including API Gateways, virtualization, containerization\nIntroduction to cloud computing and cloud services\nAdoption impacts, including considerations for governance, infrastructure, performance, and standardization\nComparison of service implementation means\nService roles and service agents\nMessage exchange patterns and service activities\nBasic XML concepts, XML schema, JSON and JSON schema\nHTTP methods, response, codes, and headers\nBasic REST service concepts, including properties and limitations\nREST services, contracts, resources, and messaging\nHypermedia and Late Binding\nBasic WSDL and SOAP concepts\nWS-* technologies\nWeb service contracts, messaging, and registries\nCloud computing concepts\nVertical and horizontal scaling\nMultitenancy, elasticity, and resilience\nOn-demand usage, ubiquitous access, and measured usage\nPublic, private, and hybrid clouds\nIaaS, PaaS and SaaS\nIntroduction to microservices architecture\nCommon microservices design challenges\nMicroservices granularity design\nMicroservices design guiding principles\nIntroduction to containerization\nContainerization vs. virtualization\nFundamental elements of container architecture\nContainerization engines, build files, images, and networks\nMicroservices automation, registry, and monitoring\nMicroservices instance registry\nScaling technology, types, and basic scalability mechanisms\nTechnological factors for cloud-based microservices deployments\nMicro-task abstraction and micro-task segregation\nEnriched containers and logical Pod containers\nDevOps practices and benefits\nDevOps stages and toolchains\nDomain-driven design and microservices\nMicroservices composition and service composition\nAutonomous Proxy service\nShared isolated database\nMicroservices layers and isolation levels\nPredefined data views\nMicroservices instance registries\nWorkload distribution and service load balancing\nSynchronized events between instances\nEvent-driven messaging for microservices\nAtomic event processing and attached events\nCentralized isolated state database\nContainer chain\nSingle-node multi-containers\nMulti-container isolation control\nVolatile container configuration\nServerless microservices deployment\nDynamic scalability model\nMicro Scatter-Gather compositions\nLeader node selection for microservices instances\nRedundant microservices implementations\nMicroservices composition autonomy\nSidecar containers\nMicroservices ambassadors\nLog aggregation for microservices\nDistributed diagnostics for microservices",
+        "Vigencia Certificación": "Does not expire",
+        "Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "1 attempt with possibility of a second attempt. (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual + official platform to watch videos related to the topic and review class content"
+    },
+    {
+        "course_image":"assets/courses/hero_Certified_soa_serviceapi_97c7b4d3-3371-4b74-a413-3c43d178d462.webp",
+        "Certificaciones": "Service API Specialist *",
+        "Área": "Service_Technology",
+        "Ente Certificador": "Arcitura",
+        "Dirigido a / Perfil de entrada": "Aimed at professionals who wish to acquire or strengthen technical and strategic competencies in the design, development, management, and assurance of service APIs, in modern and highly integrated environments.",
+        "Perfil de salida": "Upon completion of the certification, the participant will be prepared to design, develop, and manage efficient and secure service APIs, facilitating integration and communication between applications and systems in modern business environments.",
+        "Objetivo general": "To train professionals in the design, development, implementation, and management of efficient and secure service APIs, which facilitate integration and communication between systems, preparing them to obtain the official Arcitura Service API Specialist certification.",
+        "Objetivos específicos": "Design service APIs following standards and best practices\nImplement and manage secure and efficient APIs\nFacilitate the integration and consumption of APIs in business environments",
+        "Contenidos": "Technological and business factors for SOA, services, and microservices\nStrategic goals and benefits of service-oriented computing\nSimple introduction to services and microservices\nFundamental characteristics of service-oriented architecture\nUnderstanding service-orientation as a design paradigm, including the four pillars of service-orientation\nIntroduction to service layers, service models, and service compositions\nService inventories, service layers, and service API management and governance\nIntroduction to common service technologies, including API Gateways, virtualization, containerization\nIntroduction to cloud computing and cloud services\nAdoption impacts, including considerations for governance, infrastructure, performance, and standardization\nComparison of service implementation means\nService roles and service agents\nMessage exchange patterns and service activities\nBasic XML concepts, XML schema, JSON and JSON schema\nHTTP methods, response, codes, and headers\nBasic REST service concepts, including properties and limitations\nREST services, contracts, resources, and messaging\nHypermedia and Late Binding\nBasic WSDL and SOAP concepts\nWS-* technologies\nWeb service contracts, messaging, and registries\nCloud computing concepts\nVertical and horizontal scaling\nMultitenancy, elasticity, and resilience\nOn-demand usage, ubiquitous access, and measured usage\nPublic, private, and hybrid clouds\nIaaS, PaaS and SaaS\nIntroduction to APIs and API roles\nPublic, private, and partner API models\nThe service API lifecycle\nDecoupled contracts and service facades\nContract centralization and service agents\nTypes of positive and negative service coupling\nText-based data serialization formats (XML, JSON)\nBinary data serialization protocols (Apache Avro, Thrift, Google Protocol Buffer)\nREST APIs and REST properties\nEndpoint redirection, entity linking, and idempotent capabilities\nLight endpoints and uniform contracts\nAPI gateways and service intermediaries\nData model and format transformation, protocol bridging\nIntermediate routing, intermediary authentication, and multi-channel endpoints\nUnderstanding gRPC for (.proto and XML)\nUnary RPC, client/server streaming RPC, and bidirectional RPC\nUnderstanding GraphQL, data request and fetching, caching\nUnderstanding Falcor, Falcor vs. GraphQL, request batching\nUnderstanding Thrift (processor, protocol, and transport layers)\nSimultaneous contracts, contract denormalization, and canonical schema\nSchema centralization, policy centralization, and canonical protocol\nDual protocols and legacy wrappers\nMessaging metadata and state messaging\nService mesh model, library, proxy, and sidecar\nService mesh vs. API gateway\nService API management\nDecomposed capability, distributed capability, and proxy capability\nValidation abstraction and partial validation",
+        "Vigencia Certificación": "Does not expire",
+        "Cantidad de horas de capacitación": "6 sessions, 3 hours each",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "1 attempt with possibility of a second attempt. (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual + official platform to watch videos related to the topic and review class content"
+    },
+     {
+        "course_image":"assets/courses/scrum_studies.jpg",
+        "Certificaciones": "SCRUMstudy Agile Master Certified (SAMC)",
+        "Área": "Scrum & Agile",
+        "Ente Certificador": "Scrum Study",
+        "Dirigido a / Perfil de entrada": "The \"Agile Master\" course is designed for professionals who wish to acquire deep knowledge about agile methodologies and their application in project management.",
+        "Perfil de salida": "Upon completion of the certification, the participant will be able to understand, compare, and integrate different agile approaches, leading teams and projects with an agile, adaptable mindset focused on continuous value delivery.",
+        "Objetivo general": "To provide participants with a solid understanding of the most relevant agile frameworks and methodologies, enabling them to apply agile principles strategically to lead organizational change and innovation processes.",
+        "Objetivos específicos": "Identify and differentiate agile methodologies such as Scrum, Kanban, Lean, XP, and Crystal, understanding their applications and benefits.\nApply agile principles in project management, promoting collaboration, adaptability, and continuous improvement.\nGuide agile teams in changing environments, facilitating customer-focused decision-making and incremental value delivery.",
+        "Contenidos": "Introduction\n\nTest-Driven Development\n\nAgile Overview\n\nScrum Overview\n\nLean Kanban Software Development\n\nUnderstanding Lean Software Development\n\nUnderstanding Kanban\n\nAgile Practice Domains\n\nCrystal\n\nDSDM (Dynamic Systems Development Method)\n\nBest-Fit Analysis Tools\n\nComparison of Agile Methods",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "3 attempts, with an extra charge for an additional possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual modality"
+    },
+    {
+        "course_image":"assets/courses/scrum_studies.jpg",
+        "Certificaciones": "Scaled Scrum Master Certified (SSMC™)",
+        "Área": "Scaled Scrum Master",
+        "Ente Certificador": "Scrum Study",
+        "Dirigido a / Perfil de entrada": "The \"Scaled Scrum Master\" course is designed for professionals seeking to acquire advanced knowledge and skills in implementing Scrum at scale in their organizations.",
+        "Perfil de salida": "Upon completion of the certification, the participant will be prepared to facilitate and coordinate Scrum teams in large-scale project environments, ensuring alignment between multiple teams and promoting agile value delivery in complex organizations.",
+        "Objetivo general": "To provide participants with the knowledge and skills necessary to perform the Scrum Master role in scaled frameworks, ensuring effective collaboration between teams and successful implementation of Scrum at the organizational level.",
+        "Objetivos específicos": "Understand the principles of scaled Scrum and its application in organizations with multiple teams.\nCoordinate and facilitate collaboration between Scrum Masters and Product Owners in complex development environments.\nImplement agile management practices and tools that optimize value delivery at scale.",
+        "Contenidos": "Introduction\n\nAgile Overview\n\nScrum Overview\n\nScrum Roles\n\nScrum Phases\n\nScrum Scalability\n\nScaling Scrum for Large Projects\n\nScaling Scrum for the Enterprise",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "3 attempts, with an extra charge for an additional possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual modality"
+    },
+    {
+        "course_image":"assets/courses/scrum_studies.jpg",
+        "Certificaciones": "Scaled Scrum Product Owner Certified (SSPOC'')",
+        "Área": "Scaled Scrum Product Owner",
+        "Ente Certificador": "Scrum Study",
+        "Dirigido a / Perfil de entrada": "The \"Scaled Scrum Product Owner Certified (SSPOC™)\" course is designed for professionals who wish to acquire advanced knowledge in product management using scaled Scrum methodologies.",
+        "Perfil de salida": "Upon completion of the certification, the participant will be prepared to assume the Product Owner role in scaled Scrum environments, managing multiple teams, maximizing product value, and aligning priorities with business objectives.",
+        "Objetivo general": "To provide participants with the key competencies to manage products and priorities in large-scale Scrum frameworks, ensuring continuous value delivery and coordination between multiple teams.",
+        "Objetivos específicos": "Understand the Product Owner role in scaled Scrum contexts, their responsibility in product vision and strategic decision-making.\nLearn to manage and prioritize a complex product backlog, maintaining alignment with business objectives and customer needs.\nApply collaborative tools and practices to facilitate communication and coordination between multiple Scrum teams working on the same solution.",
+        "Contenidos": "Introduction\n\nAgile Overview\n\nScrum Overview\n\nInitiation\n\nPlanning and Estimation\n\nImplementation\n\nReview and Retrospective\n\nRelease\n\nScaling Scrum for Large Projects\n\nScaling Scrum at the Enterprise Level",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "3 attempts, with an extra charge for an additional possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual modality"
+    },
+   
+    {
+        "course_image":"assets/courses/scrum_studies.jpg",
+        "Certificaciones": "Marketing Strategy Specialist",
+        "Área": "Marketing",
+        "Ente Certificador": "Scrum Study",
+        "Dirigido a / Perfil de entrada": "People who wish to acquire practical skills in developing and executing marketing strategies.",
+        "Perfil de salida": "",
+        "Objetivo general": "",
+        "Objetivos específicos": "",
+        "Contenidos": "Introduction\n\nMarket Opportunity Analysis\n\nDefining Competition, Segmentation, and Positioning\n\nDetermining Pricing and Distribution Strategies\n\nDetermining Metrics, Objectives, Marketing Aspects, and Budget Allocation",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "12 hours",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "2 attempts, with an extra charge for an additional possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual + official platform to watch videos related to the topic and review class content"
+    },
+    {
+        "course_image":"assets/courses/scrum_studies.jpg",
+        "Certificaciones": "Marketing Strategy Professional",
+        "Área": "Marketing",
+        "Ente Certificador": "Scrum Study",
+        "Dirigido a / Perfil de entrada": "Experienced professionals seeking to lead strategic marketing initiatives within an organization.",
+        "Perfil de salida": "",
+        "Objetivo general": "",
+        "Objetivos específicos": "",
+        "Contenidos": "Introduction\n\nMarket Opportunity Analysis\n\nDefining Competition, Segmentation, and Positioning\n\nDetermining Pricing and Distribution Strategies\n\nDefining Metrics, Objectives, Marketing Aspects, and Budget Allocation",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "15 hours",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "2 attempts, with an extra charge for an additional possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual + official platform to watch videos related to the topic and review class content"
+    },
+    {
+        "course_image":"assets/courses/scrum_studies.jpg",
+        "Certificaciones": "Marketing Strategy Expert",
+        "Área": "Marketing",
+        "Ente Certificador": "Scrum Study",
+        "Dirigido a / Perfil de entrada": "Marketing experts who wish to validate and deepen their knowledge in large-scale strategy planning and execution.",
+        "Perfil de salida": "",
+        "Objetivo general": "",
+        "Objetivos específicos": "",
+        "Contenidos": "Introduction\n\nMarket Opportunity Analysis\n\nDefining Competition, Segmentation, and Positioning\n\nDetermining Pricing and Distribution Strategies\n\nDetermining Metrics, Objectives, Marketing Aspects, and Budget Allocation",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "15 hours",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "2 attempts, with an extra charge for an additional possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual + official platform to watch videos related to the topic and review class content"
+    },
+    {
+        "course_image":"assets/courses/scrum_studies.jpg",
+        "Certificaciones": "Digital Marketing Professional",
+        "Área": "Marketing",
+        "Ente Certificador": "Scrum Study",
+        "Dirigido a / Perfil de entrada": "Professionals who want to learn key digital marketing techniques such as SEO, SEM, email marketing, and web analytics.",
+        "Perfil de salida": "",
+        "Objetivo general": "",
+        "Objetivos específicos": "",
+        "Contenidos": "Introduction\n\nMarket Opportunity Analysis\n\nDefining Competition, Segmentation, and Positioning\n\nDetermining Pricing and Distribution Strategies\n\nDetermining Metrics, Objectives, Marketing Aspects, and Budget Allocation",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "12 hours",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "2 attempts, with an extra charge for an additional possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual + official platform to watch videos related to the topic and review class content"
+    },
+    {
+        "course_image":"assets/courses/scrum_studies.jpg",
+        "Certificaciones": "Digital Marketing Specialist",
+        "Área": "Marketing",
+        "Ente Certificador": "Scrum Study",
+        "Dirigido a / Perfil de entrada": "People with previous knowledge in digital marketing who wish to specialize in advanced strategies and digital tools.",
+        "Perfil de salida": "",
+        "Objetivo general": "",
+        "Objetivos específicos": "",
+        "Contenidos": "Introduction\n\nUnderstanding and Evaluating Digital Marketing (DM) Channels\n\nPlanning and Developing Digital Marketing Channels\n\nWebsite Optimization\n\nMobile/Tablet/Device Optimization\n\nSocial Media Optimization\n\nOther Important Elements of Digital Marketing Channels",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "15 hours",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "2 attempts, with an extra charge for an additional possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual + official platform to watch videos related to the topic and review class content"
+    },
+    {
+        "course_image":"assets/courses/scrum_studies.jpg",
+        "Certificaciones": "Digital Marketing Expert",
+        "Área": "Marketing",
+        "Ente Certificador": "Scrum Study",
+        "Dirigido a / Perfil de entrada": "Senior professionals who wish to master all aspects of digital marketing, including automation, omnichannel, and big data.",
+        "Perfil de salida": "",
+        "Objetivo general": "",
+        "Objetivos específicos": "",
+        "Contenidos": "Introduction\n\nUnderstanding and Evaluating Digital Marketing Channels\n\nPlanning and Developing Digital Marketing Channels\n\nWebsite Optimization\n\nMobile/Tablet/Device Optimization\n\nSocial Media Optimization\n\nOther Important Elements of Digital Marketing Channels",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "15 hours",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "2 attempts, with an extra charge for an additional possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual + official platform to watch videos related to the topic and review class content"
+    },
+      {
+        "course_image":"assets/courses/image (3).png",
+        "Certificaciones": "OKR Master Professional Certification*",
+        "Área": "OKR",
+        "Ente Certificador": "Certiprof",
+        "Dirigido a / Perfil de entrada": "Leaders and managers interested in implementing and managing objectives and key results.\nWork teams seeking to align their objectives with those of the organization.\nProfessionals who wish to improve the effectiveness and focus of their teams.\nProject managers looking for an effective methodology to set and achieve objectives.\nBusiness consultants who want to help organizations implement and manage OKRs effectively.",
+        "Perfil de salida": "Upon completion of the certification, the participant will be able to implement and manage the OKR (Objectives and Key Results) framework to align teams and organizations with clear, measurable, and results-oriented objectives, improving strategic execution and performance.",
+        "Objetivo general": "To provide participants with the knowledge and skills to effectively design, implement, and manage OKRs, facilitating organizational alignment, transparency, and focus on key results that drive growth and innovation.",
+        "Objetivos específicos": "Understand the fundamentals and benefits of the OKR framework in performance management and strategic execution.\nDesign effective OKRs aligned with the organizational vision and mission, ensuring clarity, focus, and objective measurement.\nImplement practices for reviewing, monitoring, and adjusting OKRs, promoting accountability, collaboration, and continuous improvement in teams and organizations.",
+        "Contenidos": "Introduction to OKRs I\n\nIntroduction to OKRs II\n\nOKR Adjustments I\n\nAdjusting OKRs II\n\nAligning OKRs\n\nManagement with OKRs",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual modality"
+    },
+    {
+        "course_image":"assets/courses/okr-certified-certiprof 2.jpg",
+        "Certificaciones": "OKR Certified Professional*",
+        "Área": "OKR",
+        "Ente Certificador": "Certiprof",
+        "Dirigido a / Perfil de entrada": "Management and leadership professionals seeking to improve their objective setting and management skills.\nWork teams interested in adopting an effective methodology for setting and achieving objectives.\nBusiness consultants who want to help organizations implement OKRs effectively.\nProject managers looking for an agile methodology for objective planning and tracking.\nBusiness leaders seeking to strategically align company objectives with individual and team objectives.",
+        "Perfil de salida": "Upon completion of the certification, the participant will be able to implement and manage the OKR (Objectives and Key Results) framework to align teams, improve strategic focus, and measure progress toward key objectives, driving productivity and organizational growth.",
+        "Objetivo general": "To provide participants with the knowledge and skills to understand, design, and implement the OKR framework, facilitating organizational alignment, effective objective tracking, and continuous improvement in business environments.",
+        "Objetivos específicos": "Understand the fundamentals and benefits of the OKR framework in performance management and strategic alignment.\nLearn to define clear and measurable objectives, as well as key results that drive the achievement of organizational goals.\nApply practices to implement OKRs in teams and organizations, including monitoring, evaluation, and adjustments to maximize results.",
+        "Contenidos": "Module 1: What is the value of OKRs?\n\nModule II: OKR Fundamentals\n\nModule III: Intermediate OKR\n\nModule IV: Advanced OKR",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "5 sessions, 3 hours each",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "2 attempts, with an extra charge for a third possibility (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual modality"
+    },
+     {
+        "course_image":"assets/courses/WhatsApp Image 2025-11-16 at 03.43.10_5a1446a8.jpg",
+        "Certificaciones": "Project Management Professional PMP",
+        "Área": "Proyectos",
+        "Ente Certificador": "PMI",
+        "Dirigido a / Perfil de entrada": "The \"Project Management Professional (PMP)\" course is designed for professionals seeking to acquire advanced knowledge and skills in project management, based on the best practices of the Project Management Institute (PMI).",
+        "Perfil de salida": "Upon completion of the certification, the participant will be qualified to lead and manage projects effectively in various sectors, applying best practices in project direction, team management, resource control, and achievement of strategic objectives.",
+        "Objetivo general": "To train professionals capable of planning, executing, monitoring, and closing projects successfully, aligning project goals with organizational objectives under PMI standards.",
+        "Objetivos específicos": "Apply project management methodologies and tools according to the PMBOK Guide and global standards.\nEffectively manage scope, time, costs, risks, and quality in complex projects.\nLead multidisciplinary work teams, promoting communication, collaboration, and continuous value delivery.",
+        "Contenidos": "",
+        "Vigencia Certificación": "3 years",
+        "Cantidad de horas de capacitación": "16 sessions, 3 hours each",
+        "Metodología (examen o proyecto)": "Exam",
+        "Cantidad de intentos": "1 attempt with possibility of a second attempt. (The cost will depend on the exam to be repeated)",
+        "Modalidad": "Live virtual modality"
+    }
+
 // Additional Courses
 // {
 // "course_image":"assets/courses/certified_tester_foundation_level.jpg",
@@ -5301,6 +6822,10 @@ const CourseCard = ({ course, onBookSeat }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { t } = useLocalization();
 
+  const description = course["Objetivo general"] || t('courseDefaultDescription');
+  const maxChars = 100; // Adjust this value as needed for character limit
+  const shortDesc = description.length > maxChars ? description.slice(0, maxChars) + '...' : description;
+
   return (
     <div 
       className="group relative"
@@ -5313,7 +6838,7 @@ const CourseCard = ({ course, onBookSeat }) => {
           <img 
             src={course.course_image}
             alt={course.Certificaciones}
-            className="w-full h-full mt-0object-contain transition-transform duration-300 group-hover:scale-105"
+            className="w-full h-full mt-0 object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </div>
 
@@ -5342,14 +6867,40 @@ const CourseCard = ({ course, onBookSeat }) => {
           <p className="text-gray-500 text-sm mb-2">{course["Ente Certificador"]}</p>
           <h3 className="font-semibold text-lg mb-4">{course.Certificaciones}</h3>
           
-          <p className="text-sm text-gray-600 mb-4 line-clamp-3">
-            {course["Objetivo general"] || t('courseDefaultDescription')}
+          <p className="text-sm text-gray-600 mb-4">
+            {shortDesc}
+            {description.length > maxChars && (
+              <Dialog>
+                <DialogTrigger asChild>
+                  <span 
+                    className="text-blue-500 cursor-pointer ml-1"
+                  >
+                    {t('learnMore')}
+                  </span>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>{t('courseDescription')}</DialogTitle>
+                  </DialogHeader>
+                  <DialogDescription>
+                    {description}
+                  </DialogDescription>
+                  <DialogFooter>
+                    <DialogClose asChild>
+                      <Button variant="secondary">
+                        {t('close')}
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+            )}
           </p>
 
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2">
               <GraduationCap className="w-4 h-4 text-gray-400" />
-              <span className="text-sm text-gray-400">{course["Modalidad"]}</span>
+              <span className="text-sm text-gray-400">{t('availableMode')}</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-gray-400" />
@@ -5362,7 +6913,7 @@ const CourseCard = ({ course, onBookSeat }) => {
             className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-xl"
           >
             <Calendar className="w-4 h-4 mr-2" />
-            {t('bookMySeat')}
+            {t('learnmore')}
           </Button>
         </div>
       </Card>

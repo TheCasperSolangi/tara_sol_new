@@ -7,6 +7,7 @@ const LocalizationContext = createContext();
 // Extended Translation dictionaries
 const translations = {
   en: {
+    courseDescription: "Course description",
     selectCertifier:"Select Certifier",
     allCertifiers: "All Certifier",
     home: 'Home',
@@ -46,6 +47,7 @@ const translations = {
     introVideoTitle: 'Company Introduction Video',
     videoNotSupported: 'Your browser does not support the video tag.',
      // Partners section translations
+     availableMode: "Virtual and in-person mode",
     ourPartners: 'Our Partners',
     partnersDescription: 'We have quality partners in a variety of destinations around the globe.',
     bacAlt: 'BAC',
@@ -315,6 +317,7 @@ testimonial4: 'The executive program and certification guidance I received was i
     dataCollectionOverview: "Data Collection Overview",
     whatWeCollect: "What We Collect",
     yourRights: "Your Rights",
+    learnmore: "Request more information",
     personalInfo: "Personal information and contact details",
     usageData: "Usage data and service interactions",
     technicalData: "Technical data and device information",
@@ -554,6 +557,7 @@ execPrograms: "Programas Ejecutivos",
     subscribe: 'Suscribirse',
     companyLogoAlt: 'Logo de Tara Solutions',
     bellIconAlt: 'Icono de campana',
+    cursoDescripción: "Descripción del curso",
     aboutSectionTitle: 'Acerca de Tara Solutions',
     aboutDescription: 'Estamos especializados en formación corporativa y cursos líderes en la industria',
     educationAwardAlt: 'Premio de Educación',
@@ -569,6 +573,7 @@ execPrograms: "Programas Ejecutivos",
     locationAlt: 'Ubicación',
     companyAddress: 'Costa Rica, San Jose, Barrio Amón, Ave 13, Calle 7',
     followUs: 'Síguenos',
+    learnmore: "Solicitar más información",
     copyrightText: '© 2025 Tara Solutions. Todos los derechos reservados | Desarrollado por',
     companyName: 'Tara Solutions',
     // About page translations
@@ -601,6 +606,7 @@ execPrograms: "Programas Ejecutivos",
     ourMission: 'Nuestra Misión',
     ourMissionDesc: 'Lograr la excelencia a través de servicios innovadores que hagan la educación de clase mundial accesible dentro de la capacidad de cada estudiante.',
     ourGoal: 'Nuestra Meta',
+    availableMode: "Modalidad virtual y presencial",
     ourGoalDesc: 'Crear oportunidades de estudio internacional que mejoren el crecimiento individual y contribuyan al desarrollo nacional.',
     successStories: 'HISTORIAS DE ÉXITO',
     testimonialsTitle: 'Estudiantes que Alcanzaron el Éxito Globalmente',
@@ -609,7 +615,7 @@ testimonial1: 'TaraSolutions me ayudó a obtener mi certificación internacional
 testimonial2: 'Los formadores de TaraSolutions son verdaderos expertos. Hicieron que mi preparación para los exámenes de ScrumStudy y PeopleCert fuera clara y efectiva.',
 testimonial3: 'Gracias a TaraSolutions, aprobé mi examen de Microsoft en el primer intento. Su apoyo y materiales de estudio marcaron una gran diferencia.',
 testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolutions me ayudó a elegir los programas ejecutivos más adecuados para mi desarrollo profesional.',
-
+    
     ctaTitle: '¿Listo para Comenzar tu Viaje de Educación Global?',
     ctaDescription: 'Únete a miles de estudiantes exitosos que han transformado sus vidas con la guía experta de Eduplan.',
     startFreeConsultation: 'Comenzar Consulta Gratuita',

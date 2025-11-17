@@ -10,6 +10,7 @@ export default function PartnersSection() {
   
   const partners = [
     { logo: '/assets/brands/Cloud_Credential_Council_logo.png', altKey: 'cloudCredentialAlt' },
+    { logo: "/assets/courses/WhatsApp Image 2025-11-16 at 03.43.10_5a1446a8.jpg", altKey: "PMP"},
     { logo: "/assets/brands/american.png", altKey: "American Marketing Association"},
     { logo: "/assets/brands/651fbf9cc81f6688480772.png", altKey: "Python Institute Py"},
     { logo: "/assets/brands/ProfessionalDesignations_logo.png", altKey: "Professional Designations"},
