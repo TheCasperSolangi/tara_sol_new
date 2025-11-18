@@ -5,6 +5,7 @@ import { useLocalization } from '../context/LocalizationContext';
 import { Menu, X, Search, Globe, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { m } from 'framer-motion';
 
 export default function Header() {
   const { t, language, setLanguage, availableLanguages } = useLocalization();
@@ -37,6 +38,9 @@ export default function Header() {
       children: [
         { name: `${t('intCert')}`, href: '/international_certifications' },
         { name: `${t('execPrograms')}`, href: '/executive_programs' },
+        { name: `${t('microsoftLicense')}`, href: '/microsoft_licenses'},
+        { name: `${t('customService')}`, href: '/custom_solutions'},
+        { name: `${t('ai_services')}`, href: "/ai_services"}
       ]
     },
     { name: 'contact', href: '/contact' },
