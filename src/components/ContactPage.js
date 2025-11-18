@@ -169,11 +169,7 @@ export default function ContactPage() {
                         color: "hover:bg-blue-500",
                         href: "https://www.facebook.com/profile.php?id=61552120787685&mibextid=LQQJ4d",
                       },
-                      {
-                        icon: WhatsappIcon,
-                        color: "hover:bg-green-500",
-                        href: "https://wa.me/message/IGSA6YHQPVHDB1",
-                      },
+                      
                       {
                         icon: Linkedin,
                         color: "hover:bg-blue-700",
