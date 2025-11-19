@@ -93,8 +93,8 @@ Le recomendamos que revise esta política de privacidad con frecuencia para esta
 ## Información de Contacto
 
 Si tiene preguntas o comentarios sobre esta política, puede contactar a nuestro Oficial de Protección de Datos en:
-Email: dpo@tarasolutions.com
-Teléfono: +880 2 5566 7788
-Dirección: 199, Venus Complex, 12th Floor, Kha-199/2, 4 Bir Uttam Rafiqul Islam Ave, Dhaka 1212
+Email: info@tarasolutions-cr.com
+Phone: +506 8701-6253
+Address: Costa Rica, San Jose, Barrio Amón, Ave 13, Calle 7
 
 También tiene derecho a presentar una queja ante su autoridad local de protección de datos si no está satisfecho con cómo hemos manejado su información personal.

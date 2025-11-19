@@ -123,9 +123,9 @@ Para consultas relacionadas con derechos de autor, informes de infracción o sol
 
 **Agente de Derechos de Autor Designado**
 Departamento de Derechos de Autor de Tara Solutions
-Email: copyright@tarasolutions.com
-Teléfono: +880 2 5566 7788
-Dirección: 199, Venus Complex, 12th Floor, Kha-199/2, 4 Bir Uttam Rafiqul Islam Ave, Dhaka 1212
+Email: info@tarasolutions-cr.com
+Phone: +506 8701-6253
+Address: Costa Rica, San Jose, Barrio Amón, Ave 13, Calle 7
 
 Normalmente respondemos a consultas legítimas dentro de 24-48 horas. Los informes de infracción de emergencia reciben atención inmediata.
 

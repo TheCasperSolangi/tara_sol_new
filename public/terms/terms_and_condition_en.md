@@ -53,6 +53,6 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
 ## Contact Information
 
 If you have any questions about these Terms and Conditions, please contact us at:
-Email: legal@tarasolutions.com
-Phone: +880 2 5566 7788
-Address: 199, Venus Complex, 12th Floor, Kha-199/2, 4 Bir Uttam Rafiqul Islam Ave, Dhaka 1212
+Email: info@tarasolutions-cr.com
+Phone: +506 8701-6253
+Address: Costa Rica, San Jose, Barrio Amón, Ave 13, Calle 7

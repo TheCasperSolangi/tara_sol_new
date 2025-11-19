@@ -123,9 +123,9 @@ For copyright-related inquiries, infringement reports, or permission requests, c
 
 **Designated Copyright Agent**
 Tara Solutions Copyright Department
-Email: copyright@tarasolutions.com
-Phone: +880 2 5566 7788
-Address: 199, Venus Complex, 12th Floor, Kha-199/2, 4 Bir Uttam Rafiqul Islam Ave, Dhaka 1212
+Email: info@tarasolutions-cr.com
+Phone: +506 8701-6253
+Address: Costa Rica, San Jose, Barrio Amón, Ave 13, Calle 7
 
 We typically respond to legitimate inquiries within 24-48 hours. Emergency infringement reports receive immediate attention.
 
