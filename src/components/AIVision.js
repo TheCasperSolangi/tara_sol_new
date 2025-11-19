@@ -458,7 +458,7 @@ export default function AIServices() {
               onClick={() => setIsModalOpen(true)}
               className="rounded-lg bg-white px-10 py-4 text-lg font-semibold text-purple-700 shadow-lg transition-all hover:shadow-xl hover:scale-105"
             >
-              {t('discussProject')}
+              {t('tellUsIdea')}
             </button>
           </div>
         </div>

@@ -181,6 +181,24 @@ export default function Footer() {
                     {t('executivePrograms')}
                   </Link>
                 </li>
+                <li>
+                  <Link href="/microsoft_licenses" className="text-gray-400 hover:text-purple-400 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3 group-hover:scale-150 transition-transform"></span>
+                    {t('microsoftLicense')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/ai_services" className="text-gray-400 hover:text-purple-400 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3 group-hover:scale-150 transition-transform"></span>
+                    {t('ai_services')}
+                  </Link>
+                </li>
+                 <li>
+                  <Link href="/custom_solutions" className="text-gray-400 hover:text-purple-400 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3 group-hover:scale-150 transition-transform"></span>
+                    {t('customService')}
+                  </Link>
+                </li>
               </ul>
             </div>
 

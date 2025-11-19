@@ -309,15 +309,15 @@ export default function CookiePolicyPage() {
           </Card>
         </div>
 
-        {/* Cookie Policy Content */}
-        <Card className="border-0 shadow-2xl overflow-hidden mb-8">
-          <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-            <CardTitle className="flex items-center gap-3">
+       {/* Cookie Policy Content */}
+        <Card className="border-0 shadow-2xl overflow-hidden mb-8 p-0">
+          <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 m-0">
+            <CardTitle className="flex items-center gap-3 m-0">
               <FileText className="w-6 h-6" />
               {t('cookiePolicyDetails')}
             </CardTitle>
           </CardHeader>
-          <CardContent className="p-0">
+          <CardContent className="p-0 m-0">
             <ScrollArea className="h-[600px]">
               <div className="p-8">
                 {sections.length > 0 ? (
