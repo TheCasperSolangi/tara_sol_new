@@ -457,11 +457,7 @@ export default function TaraSolutions() {
                   <p className="text-gray-600">
                     {category.description}
                   </p>
-                  <div className="mt-6">
-                    <button className="w-full rounded-lg border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-pink-50 py-2 font-semibold text-purple-700 transition-all hover:border-purple-400 hover:shadow-md">
-                      {t('viewProducts')}
-                    </button>
-                  </div>
+                 
                 </div>
               );
             })}
