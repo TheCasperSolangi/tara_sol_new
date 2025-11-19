@@ -55,4 +55,4 @@ We may update this Cookie Policy from time to time. We will notify you of any ch
 
 ## Contact Us
 
-If you have any questions about our use of cookies, please contact us at privacy@tarasolutions.com.
+If you have any questions about our use of cookies, please contact us at info@tarasolutions-cr.com.

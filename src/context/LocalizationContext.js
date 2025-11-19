@@ -1075,7 +1075,7 @@ testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolut
     ourOffice: "Nuestra Oficina",
     officeAddress: "Costa Rica, San Jose, Barrio Amón, Ave 13, Calle 7",
     phoneNumbers: "Números de Teléfono",
-    phoneDetails: "+506 8701-6253 & +507 6473-6099",
+    phoneDetails: "+506 8701-6253",
     emailAddress: "Correo Electrónico",
     emailDetails: "info@tarasolutions-cr.com & gerencia@tarasolutions-cr.com",
     businessHours: "Horario Comercial",
