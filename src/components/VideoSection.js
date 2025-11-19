@@ -201,8 +201,8 @@ export default function FeedbackSection() {
                     poster="/assets/video-poster.jpg"
                     title={t('introVideoTitle')}
                   >
-                    <source src="/assets/video.mp4" type="video/mp4" />
-                    <source src="/assets/video.webm" type="video/webm" />
+                    <source src="https://staging.ebadgeid.com/assets/video.mp4" type="video/mp4" />
+                    <source src="https://staging.ebadgeid.com/assets/video.webm" type="video/webm" />
                     {t('videoNotSupported')}
                   </video>
                   {/* Custom controls overlay */}
