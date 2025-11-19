@@ -25,6 +25,25 @@ export default function FeedbackSection() {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  // Add at the top with other useEffects
+useEffect(() => {
+  const video = videoRef.current
+  if (video) {
+    video.load()
+    setIsLoading(true)
+    setHasError(false)
+    setIsPlaying(false)
+  }
+  
+  return () => {
+    if (video) {
+      video.pause()
+      video.src = ''
+      video.load()
+    }
+  }
+}, [])
+
   const handleVideoLoad = () => {
     setIsLoading(false)
   }
@@ -39,20 +58,21 @@ export default function FeedbackSection() {
     setIsLoading(false)
   }
 
-  const handlePlayPause = (e) => {
-    e.stopPropagation() // Prevent event bubbling
-    if (videoRef.current) {
+// Updated handlePlayPause
+const handlePlayPause = async (e) => {
+  e?.stopPropagation()
+  if (videoRef.current) {
+    try {
       if (isPlaying) {
         videoRef.current.pause()
       } else {
-        videoRef.current.play().catch(error => {
-          console.log('Play prevented:', error)
-        })
+        await videoRef.current.play()
       }
-      setIsPlaying(!isPlaying)
+    } catch (error) {
+      console.log('Play prevented:', error)
     }
   }
-
+}
   const handleVideoPlay = () => {
     setIsPlaying(true)
   }
