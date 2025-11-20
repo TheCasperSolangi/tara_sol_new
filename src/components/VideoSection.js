@@ -11,7 +11,7 @@ export default function FeedbackSection() {
   const [showCustomControls, setShowCustomControls] = useState(true)
   const [isMobile, setIsMobile] = useState(false)
   const videoRef = useRef(null)
-  const { t } = useLocalization()
+  const { t, language } = useLocalization()
 
   // Detect mobile devices
   useEffect(() => {
@@ -26,23 +26,28 @@ export default function FeedbackSection() {
   }, [])
 
   // Add at the top with other useEffects
+// Language change effect (no cleanup here)
 useEffect(() => {
-  const video = videoRef.current
+  const video = videoRef.current;
   if (video) {
-    video.load()
-    setIsLoading(true)
-    setHasError(false)
-    setIsPlaying(false)
+    video.load();
+    setIsLoading(true);
+    setHasError(false);
+    setIsPlaying(false);
   }
-  
+}, [language]);
+
+useEffect(() => {
   return () => {
+    const video = videoRef.current;
     if (video) {
-      video.pause()
-      video.src = ''
-      video.load()
+      video.pause();
+      // Optional: If you really need to release the source, but this may not be necessary
+      // video.src = '';
+      video.load();
     }
-  }
-}, [])
+  };
+}, []);
 
   const handleVideoLoad = () => {
     setIsLoading(false)
@@ -132,6 +137,9 @@ const handlePlayPause = async (e) => {
     </div>
   )
 
+  const videoSrc = language === 'es' ? "https://staging.ebadgeid.com/assets/spanish.mp4" : "https://staging.ebadgeid.com/assets/video.mp4"
+  const webmSrc = language === 'es' ? "https://staging.ebadgeid.com/assets/spanish.webm" : "https://staging.ebadgeid.com/assets/video.webm"
+
   return (
     <section className="feedback-section py-20 bg-gradient-to-br from-white to-purple-50">
       <div className="container mx-auto px-4">
@@ -218,11 +226,11 @@ const handlePlayPause = async (e) => {
                     onClick={handlePlayPause}
                     playsInline
                     preload="metadata"
-                    poster="/assets/video-poster.jpg"
+                  
                     title={t('introVideoTitle')}
                   >
-                    <source src="https://staging.ebadgeid.com/assets/video.mp4" type="video/mp4" />
-                    <source src="https://staging.ebadgeid.com/assets/video.webm" type="video/webm" />
+                    <source src={videoSrc} type="video/mp4" />
+                    <source src={webmSrc} type="video/webm" />
                     {t('videoNotSupported')}
                   </video>
                   {/* Custom controls overlay */}
@@ -235,4 +243,4 @@ const handlePlayPause = async (e) => {
       </div>
     </section>
   )
-}
+} 
