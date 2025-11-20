@@ -123,7 +123,7 @@ faqAnswer2: 'Yes, we provide complete study abroad solutions including counselin
 faqQuestion3: 'Which country is safe and better for higher study?',
 faqAnswer3: 'Countries like Norway, USA, UK, Germany, and Italy are safe and popular choices for Bangladeshi students due to quality education and international student support.',
 
-faqQuestion4: 'Which countries offer PR after study and getting a job?',
+faqQuestion4: 'Which countries offer permanent residency after study and getting a job?',
 faqAnswer4: 'Countries such as Canada, Australia, Germany, and New Zealand offer pathways to Permanent Residency (PR) after completing studies and securing employment.',
 
 faqQuestion5: 'Can I get a scholarship with a low CGPA?',
