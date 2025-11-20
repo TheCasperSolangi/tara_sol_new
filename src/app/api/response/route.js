@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend('re_cYYUqzNK_T6No6EdYZqd6mZ2gt4KAhBMo');
+const resend = new Resend('re_QHsVHHVM_5zY5rMWdyoLmDqsTboyiYX2b');
 
 // Replace with your actual business email
-const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || 'naveeddsolangi@gmail.com';
-const FROM_EMAIL = process.env.FROM_EMAIL || 'Tara Solutions <responses@ebadgeid.com>';
+const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || 'info@tarasolutions-cr.com';
+const FROM_EMAIL = process.env.FROM_EMAIL || 'Tara Solutions <leads@tarasolutions-cr.com>';
 
 export async function POST(request) {
   try {

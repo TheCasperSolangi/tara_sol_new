@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend('re_cYYUqzNK_T6No6EdYZqd6mZ2gt4KAhBMo');
+const resend = new Resend('re_QHsVHHVM_5zY5rMWdyoLmDqsTboyiYX2b');
 
 // Replace with your actual business email
-const BUSINESS_EMAIL = 'naveeddsolangi@gmail.com';
+const BUSINESS_EMAIL = 'info@tarasolutions-cr.com';
 
 export async function POST(request) {
   try {
@@ -30,7 +30,7 @@ export async function POST(request) {
 
     // Send confirmation email to user
     const userEmailPromise = resend.emails.send({
-      from: 'Tara Solutions <no-reply@ebadgeid.com>', // Replace with your verified domain
+      from: 'Tara Solutions <leads@tarasolutions-cr.com>', // Replace with your verified domain
       to: email,
       subject: `Thank You for Contacting Us - ${subject}`,
       html: `
