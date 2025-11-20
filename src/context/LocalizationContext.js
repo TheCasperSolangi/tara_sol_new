@@ -113,19 +113,25 @@ const translations = {
     faqDescriptionLine1: 'Still do you have any questions to know?',
     faqDescriptionLine2: 'Feel free to ask our experts here.',
     askYourQuestions: 'ASK YOUR QUESTIONS',
-    // FAQ Questions and Answers
-    faqQuestion1: 'How is get admission in abroad university?',
-    faqAnswer1: 'Norway, USA, UK, Germany & Italy is most safest country in the world for Bangladeshi students for higher study.',
-    faqQuestion2: 'Do you offer complete solution for students?',
-    faqAnswer2: 'Norway, USA, UK, Germany & Italy is most safest country in the world for Bangladeshi students for higher study.',
-    faqQuestion3: 'Which country is safe and better for higher study?',
-    faqAnswer3: 'Norway, USA, UK, Germany & Italy is most safest country in the world for Bangladeshi students for higher study.',
-    faqQuestion4: 'Which country offer PR after study getting job?',
-    faqAnswer4: 'Norway, USA, UK, Germany & Italy is most safest country in the world for Bangladeshi students for higher study.',
-    faqQuestion5: 'Can I get scholarship with my low cGPA?',
-    faqAnswer5: 'Norway, USA, UK, Germany & Italy is most safest country in the world for Bangladeshi students for higher study.',
-    faqQuestion6: 'Do you allow accommodation for students in abroad?',
-    faqAnswer6: 'Norway, USA, UK, Germany & Italy is most safest country in the world for Bangladeshi students for higher study.',
+// FAQ Questions and Answers
+faqQuestion1: 'How to get admission in an abroad university?',
+faqAnswer1: 'You can get admission by preparing required documents (passport, academics, motivation letter), choosing a suitable program, meeting language requirements (IELTS/TOEFL), and applying within deadlines. We guide you through the entire process.',
+
+faqQuestion2: 'Do you offer a complete solution for students?',
+faqAnswer2: 'Yes, we provide complete study abroad solutions including counseling, university selection, application processing, visa assistance, accommodation support, and pre-departure guidance.',
+
+faqQuestion3: 'Which country is safe and better for higher study?',
+faqAnswer3: 'Countries like Norway, USA, UK, Germany, and Italy are safe and popular choices for Bangladeshi students due to quality education and international student support.',
+
+faqQuestion4: 'Which countries offer PR after study and getting a job?',
+faqAnswer4: 'Countries such as Canada, Australia, Germany, and New Zealand offer pathways to Permanent Residency (PR) after completing studies and securing employment.',
+
+faqQuestion5: 'Can I get a scholarship with a low CGPA?',
+faqAnswer5: 'Yes, some universities offer scholarships based on motivation letters, extracurricular activities, or financial need. Additionally, countries like Italy and Germany offer government-funded scholarships that do not always require a high CGPA.',
+
+faqQuestion6: 'Do you assist with student accommodation abroad?',
+faqAnswer6: 'Yes, we help students find safe and affordable accommodation options including dormitories, shared apartments, and private rentals.', 
+
      // Footer translations
     newsletterTitle: 'Subscribe to Our Newsletter',
     newsletterDescription: 'Stay updated with our latest offers, study abroad opportunities, and educational insights',
@@ -851,19 +857,25 @@ execPrograms: "Programas Ejecutivos",
     completeTasksDesc: 'Termina asignaciones, ejercicios prácticos y proyectos para demostrar tus habilidades.',
     getCertified: 'Certifícate',
     getCertifiedDesc: 'Recibe tu certificación reconocida por la industria y lleva tu carrera al siguiente nivel.',
-     // FAQ Questions and Answers
-    faqQuestion1: '¿Cómo obtener admisión en una universidad en el extranjero?',
-    faqAnswer1: 'Noruega, USA, Reino Unido, Alemania e Italia son los países más seguros del mundo para estudiantes de Bangladesh para estudios superiores.',
-    faqQuestion2: '¿Ofrecen solución completa para estudiantes?',
-    faqAnswer2: 'Noruega, USA, Reino Unido, Alemania e Italia son los países más seguros del mundo para estudiantes de Bangladesh para estudios superiores.',
-    faqQuestion3: '¿Qué país es seguro y mejor para estudios superiores?',
-    faqAnswer3: 'Noruega, USA, Reino Unido, Alemania e Italia son los países más seguros del mundo para estudiantes de Bangladesh para estudios superiores.',
-    faqQuestion4: '¿Qué país ofrece residencia permanente después de estudiar y conseguir trabajo?',
-    faqAnswer4: 'Noruega, USA, Reino Unido, Alemania e Italia son los países más seguros del mundo para estudiantes de Bangladesh para estudios superiores.',
-    faqQuestion5: '¿Puedo obtener una beca con mi bajo promedio de calificaciones?',
-    faqAnswer5: 'Noruega, USA, Reino Unido, Alemania e Italia son los países más seguros del mundo para estudiantes de Bangladesh para estudios superiores.',
-    faqQuestion6: '¿Ofrecen alojamiento para estudiantes en el extranjero?',
-    faqAnswer6: 'Noruega, USA, Reino Unido, Alemania e Italia son los países más seguros del mundo para estudiantes de Bangladesh para estudios superiores.',
+// FAQ Questions and Answers
+faqQuestion1: '¿Cómo obtener admisión en una universidad en el extranjero?',
+faqAnswer1: 'Puedes obtener admisión preparando los documentos necesarios (pasaporte, certificados académicos, carta de motivación), cumpliendo los requisitos del idioma (IELTS/TOEFL) y aplicando dentro del plazo. Nosotros te guiamos en cada paso del proceso.',
+
+faqQuestion2: '¿Ofrecen solución completa para estudiantes?',
+faqAnswer2: 'Sí, ofrecemos una solución completa para estudios en el extranjero: asesoría, selección de universidades, gestión de solicitudes, asistencia de visa, apoyo para alojamiento y orientación previa al viaje.',
+
+faqQuestion3: '¿Qué país es seguro y mejor para estudios superiores?',
+faqAnswer3: 'Países como Noruega, Estados Unidos, Reino Unido, Alemania e Italia son opciones seguras y populares para estudiantes internacionales debido a su alta calidad educativa y ambiente multicultural.',
+
+faqQuestion4: '¿Qué país ofrece residencia permanente después de estudiar y conseguir trabajo?',
+faqAnswer4: 'Países como Canadá, Australia, Alemania y Nueva Zelanda ofrecen caminos claros para obtener residencia permanente (PR) después de completar estudios y conseguir empleo.',
+
+faqQuestion5: '¿Puedo obtener una beca con mi bajo promedio de calificaciones?',
+faqAnswer5: 'Sí, algunas universidades ofrecen becas basadas en motivación, actividades extracurriculares o necesidad financiera. Además, países como Italia y Alemania ofrecen becas gubernamentales que no siempre requieren un promedio alto.',
+
+faqQuestion6: '¿Ofrecen alojamiento para estudiantes en el extranjero?',
+faqAnswer6: 'Sí, ayudamos a los estudiantes a encontrar alojamiento seguro y asequible en el país de destino, incluyendo residencias universitarias y apartamentos privados.',
+
      // Footer translations
     newsletterTitle: 'Suscríbete a nuestro boletín',
     newsletterDescription: 'Mantente actualizado con nuestras últimas ofertas, oportunidades de estudio en el extranjero y perspectivas educativas',
