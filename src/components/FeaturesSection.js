@@ -5,27 +5,49 @@ import Image from 'next/image'
 import { useLocalization } from '../context/LocalizationContext'
 
 export default function FeaturesSection() {
-  const {t} = useLocalization();
-  
+  const { t } = useLocalization();
+
   const features = [
     {
       icon: '/assets/img/icon/idea.png',
-      titleKey: 'digitalTransformation',
-      descriptionKey: 'digitalTransformationDesc',
+      titleKey: 'internationalCertifications',
+      descriptionKey: 'internationalCertificationsText',
       link: '#0'
     },
     {
       icon: '/assets/img/icon/coversation.png',
-      titleKey: 'boutiqueRecruitment',
-      descriptionKey: 'boutiqueRecruitmentDesc',
+      titleKey: 'executivePrograms',
+      descriptionKey: 'executiveProgramsText',
       link: '#0'
     },
     {
+      icon: '/assets/brands/pngimg.com - windows_logos_PNG31.png',
+      titleKey: 'microsoftLicense',
+      descriptionKey: 'microsoftText',
+      link: '#0'
+    },
+
+    {
+      icon: '/assets/brands/2752489.png',
+      titleKey: 'customService',
+      descriptionKey: 'customServiceText',
+      link: '#0'
+    },
+
+    {
+      icon: '/assets/brands/ai.png',
+      titleKey: 'ai_services',
+      descriptionKey: 'ai_services_text',
+      link: '#0'
+    },
+
+    {
       icon: '/assets/img/icon/emergency.png',
-      titleKey: 'endToEndSupport',
-      descriptionKey: 'endToEndSupportDesc',
+      titleKey: 'helpdeskSystem',
+      descriptionKey: 'helpdeskSystemText',
       link: '#0'
     }
+
   ]
 
   return (
@@ -37,7 +59,7 @@ export default function FeaturesSection() {
         height={150}
         className="shape absolute -bottom-8 -left-8 opacity-20"
       />
-      
+
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row flex-wrap -mx-4">
           {features.map((feature, index) => (
@@ -61,7 +83,7 @@ export default function FeaturesSection() {
                   </p>
                 </div>
                 <div className="btn-wrap">
-                
+
                 </div>
               </div>
             </div>

@@ -7,11 +7,16 @@ const LocalizationContext = createContext();
 // Extended Translation dictionaries
 const translations = {
   en: {
+    microsoftText: "We provide genuine Microsoft licenses for businesses and individuals, including Windows, Office 365, and server products. Our licensing solutions ensure full compliance, security, and seamless integration with your existing systems. Whether you need licenses for a single device or an entire organization, we offer reliable and cost-effective options",
     courseDescription: "Course description",
-    selectCertifier:"Select Certifier",
+    customServiceText: "We develop fully customized software solutions tailored to your unique business requirements. From automation systems to enterprise-level applications, our team delivers secure, scalable, and high-performance systems designed to improve efficiency and reduce operational costs",
+    selectCertifier: "Select Certifier",
     allCertifiers: "All Certifier",
+    ai_services_text: "Our AI services help businesses leverage the power of artificial intelligence to automate processes, enhance decision-making, and improve customer experiences. We specialize in AI chatbots, machine learning models, predictive analytics, and intelligent automation solutions that support digital transformation",
     home: 'Home',
+    helpdeskSystem: "Helpdesk System (Coming Soon)",
     about: 'About',
+    helpdeskSystemText: "Our Help Desk System is coming soon with powerful features to manage customer inquiries, support tickets, and team workflows. Designed for efficiency and transparency, it will include real-time tracking, automated responses, and seamless communication to enhance customer support operations",
     services: 'Services',
     contact: 'Contact',
     welcome: 'Welcome to our site',
@@ -27,13 +32,17 @@ const translations = {
     planeAlt: 'plane',
     locationAlt: 'location',
     studentAlt: 'Student',
-      heroTitlePart1: 'Your',
+    heroTitlePart1: 'Your',
     heroTitleHighlight: 'success',
     heroTitlePart2: 'journey start with us!',
     heroDescriptionLine1: 'we enable companies to thrive in a rapidly evolving digital landscape',
     heroDescriptionLine2: 'Ready to transform? Let\'s explore how we can elevate your organisation together.',
+    internationalCertificationsText: "We offer globally recognized international certification programs designed to enhance your professional skills and career opportunities. Our certifications provide industry-standard knowledge, practical training, and credibility that helps you stand out in competitive job markets. Whether you're advancing in IT, business, or management, we provide pathways to internationally accepted qualifications",
+    executiveProgramsText: "Our executive programs are tailored for professionals, managers, and leaders seeking to expand their strategic skills and leadership capabilities. These programs focus on real-world business challenges, advanced management concepts, and practical decision-making tools. Designed for career growth, our executive courses empower you to lead with confidence and drive organizational success",
+
+
     // Feature Section Localization
-     digitalTransformation: 'Digital Transformation',
+    digitalTransformation: 'Digital Transformation',
     digitalTransformationDesc: 'Modernize your processes, streamline operations, and embrace technology that drives efficiency and long-term business growth.',
     boutiqueRecruitment: 'Boutique Recruitment',
     boutiqueRecruitmentDesc: 'Find the right talent through tailored recruitment services designed to build agile, high-performing teams for your organization.',
@@ -41,13 +50,13 @@ const translations = {
     endToEndSupportDesc: 'From strategy to execution, we provide comprehensive guidance and continuous support to ensure smooth adoption and sustainable results.',
     learnMore: 'Learn More',
     graduationAlt: 'graduation cap',
-      // Feedback section translations
+    // Feedback section translations
     quickIntro: 'Quick Intro',
     quickIntroTitle: 'Here\'s a quick intro about us',
     introVideoTitle: 'Company Introduction Video',
     videoNotSupported: 'Your browser does not support the video tag.',
-     // Partners section translations
-     availableMode: "Virtual and in-person mode",
+    // Partners section translations
+    availableMode: "Virtual and in-person mode",
     ourPartners: 'Our Partners',
     partnersDescription: 'We have quality partners in a variety of destinations around the globe.',
     bacAlt: 'BAC',
@@ -58,7 +67,7 @@ const translations = {
     amaAlt: 'American Marketing Association',
     pdtsAlt: 'PDTS',
     mountainAlt: 'mountain',
-     // Certifications section translations
+    // Certifications section translations
     ourSpecializations: 'OUR SPECIALIZATIONS',
     popularCertifications: 'Certifications',
     internationalCertifications: 'International Certifications',
@@ -93,7 +102,7 @@ const translations = {
     powerBI: 'Power BI',
     reactNative: 'React Native',
     nodejs: 'Nodejs',
-      // Steps section translations
+    // Steps section translations
     stepsTitle: 'STEPS',
     stepsSubtitle: 'Steps to get yourself certified',
     stepsDescription: 'Follow this simple 5-step process to achieve your certification and unlock new career opportunities',
@@ -107,32 +116,32 @@ const translations = {
     completeTasksDesc: 'Finish assignments, practical exercises, and projects to demonstrate your skills.',
     getCertified: 'Certified',
     getCertifiedDesc: 'Receive your industry-recognized certification and take your career to the next level.',
-     // FAQ section translations
+    // FAQ section translations
     faqTitle: 'FAQ',
     faqSubtitle: 'Frequently asked question',
     faqDescriptionLine1: 'Still do you have any questions to know?',
     faqDescriptionLine2: 'Feel free to ask our experts here.',
     askYourQuestions: 'ASK YOUR QUESTIONS',
-// FAQ Questions and Answers
-faqQuestion1: 'How to get admission in an abroad university?',
-faqAnswer1: 'You can get admission by preparing required documents (passport, academics, motivation letter), choosing a suitable program, meeting language requirements (IELTS/TOEFL), and applying within deadlines. We guide you through the entire process.',
+    // FAQ Questions and Answers
+    faqQuestion1: 'How to get admission in an abroad university?',
+    faqAnswer1: 'You can get admission by preparing required documents (passport, academics, motivation letter), choosing a suitable program, meeting language requirements (IELTS/TOEFL), and applying within deadlines. We guide you through the entire process.',
 
-faqQuestion2: 'Do you offer a complete solution for students?',
-faqAnswer2: 'Yes, we provide complete study abroad solutions including counseling, university selection, application processing, visa assistance, accommodation support, and pre-departure guidance.',
+    faqQuestion2: 'Do you offer a complete solution for students?',
+    faqAnswer2: 'Yes, we provide complete study abroad solutions including counseling, university selection, application processing, visa assistance, accommodation support, and pre-departure guidance.',
 
-faqQuestion3: 'Which country is safe and better for higher study?',
-faqAnswer3: 'Countries like Norway, USA, UK, Germany, and Italy are safe and popular choices for Bangladeshi students due to quality education and international student support.',
+    faqQuestion3: 'Which country is safe and better for higher study?',
+    faqAnswer3: 'Countries like Norway, USA, UK, Germany, and Italy are safe and popular choices for Bangladeshi students due to quality education and international student support.',
 
-faqQuestion4: 'Which countries offer permanent residency after study and getting a job?',
-faqAnswer4: 'Countries such as Canada, Australia, Germany, and New Zealand offer pathways to Permanent Residency (PR) after completing studies and securing employment.',
+    faqQuestion4: 'Which countries offer permanent residency after study and getting a job?',
+    faqAnswer4: 'Countries such as Canada, Australia, Germany, and New Zealand offer pathways to Permanent Residency (PR) after completing studies and securing employment.',
 
-faqQuestion5: 'Can I get a scholarship with a low CGPA?',
-faqAnswer5: 'Yes, some universities offer scholarships based on motivation letters, extracurricular activities, or financial need. Additionally, countries like Italy and Germany offer government-funded scholarships that do not always require a high CGPA.',
+    faqQuestion5: 'Can I get a scholarship with a low CGPA?',
+    faqAnswer5: 'Yes, some universities offer scholarships based on motivation letters, extracurricular activities, or financial need. Additionally, countries like Italy and Germany offer government-funded scholarships that do not always require a high CGPA.',
 
-faqQuestion6: 'Do you assist with student accommodation abroad?',
-faqAnswer6: 'Yes, we help students find safe and affordable accommodation options including dormitories, shared apartments, and private rentals.', 
+    faqQuestion6: 'Do you assist with student accommodation abroad?',
+    faqAnswer6: 'Yes, we help students find safe and affordable accommodation options including dormitories, shared apartments, and private rentals.',
 
-     // Footer translations
+    // Footer translations
     newsletterTitle: 'Subscribe to Our Newsletter',
     newsletterDescription: 'Stay updated with our latest offers, study abroad opportunities, and educational insights',
     emailPlaceholder: 'Enter your email address',
@@ -190,16 +199,16 @@ faqAnswer6: 'Yes, we help students find safe and affordable accommodation option
     successStories: 'SUCCESS STORIES',
     testimonialsTitle: 'Students Who Soared Globally',
     testimonialsDescription: 'Hear from our students who have transformed their lives through international education',
-testimonial1: 'TaraSolutions helped me earn my international certification with confidence. Their guidance was exceptional from start to finish!',
-testimonial2: 'The trainers at TaraSolutions are true experts. They made preparing for my ScrumStudy and PeopleCert exams simple and stress-free.',
-testimonial3: 'Thanks to TaraSolutions, I successfully cleared my Microsoft certification on the first attempt. Their support made all the difference!',
-testimonial4: 'The executive program and certification guidance I received was invaluable. TaraSolutions helped me choose the right path and unlock opportunities I didn’t even know existed.',
+    testimonial1: 'TaraSolutions helped me earn my international certification with confidence. Their guidance was exceptional from start to finish!',
+    testimonial2: 'The trainers at TaraSolutions are true experts. They made preparing for my ScrumStudy and PeopleCert exams simple and stress-free.',
+    testimonial3: 'Thanks to TaraSolutions, I successfully cleared my Microsoft certification on the first attempt. Their support made all the difference!',
+    testimonial4: 'The executive program and certification guidance I received was invaluable. TaraSolutions helped me choose the right path and unlock opportunities I didn’t even know existed.',
 
     ctaTitle: 'Ready to Start Your Global Education Journey?',
     ctaDescription: 'Join thousands of successful students who have transformed their lives with Eduplan\'s expert guidance.',
     startFreeConsultation: 'Start Free Consultation',
     browseCourses: 'Browse Courses',
-      // Course listing translations
+    // Course listing translations
     courseListingTitle: 'We have total courses:',
     courseListingDescription: 'We have professional alliance\'s with leading Universities and Colleges around the world.',
     category: 'Category',
@@ -225,7 +234,7 @@ testimonial4: 'The executive program and certification guidance I received was i
     thankYouMessage: 'Thank you for your interest. We\'ll get back to you soon.',
     prev: 'PREV',
     next: 'NEXT',
-      // Courses page translations
+    // Courses page translations
     exclusivePrograms: 'Exclusive Programs',
     executivePrograms: 'Executive Programs',
     executiveProgramsDescription: 'Advanced leadership programs designed for senior professionals seeking transformative growth and strategic impact.',
@@ -236,7 +245,7 @@ testimonial4: 'The executive program and certification guidance I received was i
     allCategories: 'All Categories',
     technology: 'Technology',
     allTechnologies: 'All Technologies',
-      // Modal translations
+    // Modal translations
     modalTitle: "Share Your Vision",
     modalSubtitle: "Tell us about your {serviceType} project",
     fullName: "Full Name",
@@ -297,7 +306,7 @@ testimonial4: 'The executive program and certification guidance I received was i
     readyToBuildTitle: "Ready to Build Something Amazing?",
     readyToBuildDesc: "Let's collaborate to turn your custom project vision into a powerful reality",
     startProject: "Start Your Custom Project",
-      // Modal
+    // Modal
     shareYourVision: "Share Your Vision",
     tellUsAbout: "Tell us about your",
     fullName: "Full Name",
@@ -309,17 +318,17 @@ testimonial4: 'The executive program and certification guidance I received was i
     sendingVision: "Sending your vision...",
     submitVision: "Submit Your Vision",
     bySubmitting: "By submitting this form, you agree to our terms and privacy policy",
-    
+
     // Success Modal
     visionReceived: "Vision Received!",
     thankYouMessage: "Thank you for sharing your project idea with us.",
     confirmationSent: "Confirmation sent to",
     reviewTime: "Our team will review your vision and contact you within",
     hours: "24-48 hours",
-    
+
     // Error
     submitError: "Failed to send inquiry. Please try again.",
-    
+
     // Hero Section
     poweredBy: "Powered by Advanced AI Technology",
     transformBusiness: "Transform Your Business",
@@ -330,7 +339,7 @@ testimonial4: 'The executive program and certification guidance I received was i
     clientSatisfaction: "Client Satisfaction",
     aiSpecialists: "AI Specialists",
     supportAvailable: "Support Available",
-    
+
     // AI Services
     ourCapabilities: "Our AI Capabilities",
     capabilitiesDesc: "Comprehensive AI solutions to solve complex business challenges",
@@ -342,11 +351,11 @@ testimonial4: 'The executive program and certification guidance I received was i
     computerVisionDesc: "Image recognition, object detection, and visual analytics",
     nlp: "Natural Language Processing",
     nlpDesc: "Text analysis, sentiment detection, and language understanding",
-    
+
     uniqueProject: "Have a Unique AI Project in Mind?",
     uniqueProjectDesc: "We specialize in turning innovative ideas into reality. Share your vision with us!",
     discussProject: "Discuss Your Project",
-    
+
     // Why Choose Us
     whyChoose: "Why Choose Tara Solutions for AI?",
     whyChooseDesc: "We combine expertise, innovation, and dedication to deliver exceptional AI solutions",
@@ -358,7 +367,7 @@ testimonial4: 'The executive program and certification guidance I received was i
     expertTeamDesc: "Experienced AI engineers and data scientists at your service",
     secureScalable: "Secure & Scalable",
     secureScalableDesc: "Enterprise-grade security with scalability built-in",
-    
+
     readyToInnovate: "Ready to Innovate with AI?",
     readyToInnovateDesc: "Let's discuss how AI can transform your business and bring your vision to life",
     startJourney: "Start Your AI Journey",
@@ -389,7 +398,7 @@ testimonial4: 'The executive program and certification guidance I received was i
     close: 'Close',
     previous: 'Previous',
     next: 'Next',
-      // Contact page translations
+    // Contact page translations
     contactHeroTitle: "Let's Connect",
     contactHeroDescription: "Ready to start your journey? We're here to help you every step of the way. Get in touch with our dedicated team today.",
     responseTime: "We typically respond within 2 hours",
@@ -419,11 +428,11 @@ testimonial4: 'The executive program and certification guidance I received was i
     sendMessageButton: "Send Message",
     visitOurCampus: "Visit Our Campus",
     campusDescription: "Located in the heart of the city, our campus is easily accessible and equipped with state-of-the-art facilities.",
-      // Terms and Conditions translations
+    // Terms and Conditions translations
     termsAndConditions: "Terms and Conditions",
     microsoftLicense: "Microsoft Licenses",
-customService: "Custom Solutions",
-ai_services: "AI Services",
+    customService: "Custom Solutions",
+    ai_services: "AI Services",
     termsDescription: "Please read these terms carefully before using our services",
     lastUpdated: "Last Updated",
     dataProtection: "Data Protection",
@@ -438,7 +447,7 @@ ai_services: "AI Services",
     acceptanceDescription: "By continuing to use our services, you acknowledge that you have read and agree to our Terms and Conditions.",
     acceptTerms: "I Accept Terms",
     downloadPDF: "Download PDF Version",
-      // Privacy Policy translations
+    // Privacy Policy translations
     privacyPolicy: "Privacy Policy",
     privacyDescription: "Learn how we protect and manage your personal information",
     dataSecurity: "Data Security",
@@ -467,7 +476,7 @@ ai_services: "AI Services",
     downloadPrivacyPolicy: "Download Privacy Policy",
     requestDataReport: "Request Data Report",
     updatePreferences: "Update Preferences",
-     // Disclaimer & Copyright translations
+    // Disclaimer & Copyright translations
     disclaimerCopyright: "Disclaimer & Copyright",
     disclaimerDescription: "Important legal information about our services and intellectual property",
     importantNotice: "Important Legal Notice",
@@ -497,7 +506,7 @@ ai_services: "AI Services",
     downloadCopyrightPolicy: "Download Copyright Policy",
     requestPermission: "Request Permission",
     reportInfringement: "Report Infringement",
-       // Modal translations
+    // Modal translations
     modalTitle: "Get in Touch",
     modalSubtitle: "We'll get back to you within 24 hours",
     fullName: "Full Name",
@@ -522,7 +531,7 @@ ai_services: "AI Services",
     trustedBy: "Trusted by 10,000+ Customers Worldwide",
     heroTitle1: "Authentic Microsoft",
     heroTitle2: "Licenses & Solutions",
-    heroDescription: "Your trusted source for genuine Microsoft licenses. Access our extensive catalog of 1000+ authentic products with instant delivery and lifetime support.",
+    heroDescription: "Your trusted technology partner for Microsoft licenses, AI solutions, custom software, and professional certifications. Explore our growing catalog of 1000+ digital products and services with instant delivery, expert guidance, and lifetime support",
     requestInfo: "Request More Information",
     microsoftProducts: "Microsoft Products",
     happyCustomers: "Happy Customers",
@@ -559,7 +568,7 @@ ai_services: "AI Services",
     readyToStartTitle: "Ready to Get Started?",
     readyToStartDesc: "Join thousands of satisfied customers who trust Tara Solutions for their Microsoft licensing needs",
     getInTouch: "Get In Touch",
-     // Copyright page translations
+    // Copyright page translations
     copyrightPolicy: "Copyright Policy",
     copyrightDescription: "Protecting our intellectual property and your rights",
     copyrightPolicyDetails: "Copyright Policy Details",
@@ -576,7 +585,7 @@ ai_services: "AI Services",
     emergencyResponse: "Emergency infringement reports: 2-4 hours",
     legalProceedings: "Legal proceedings: Immediate action",
     internationalClaims: "International claims: Coordinated response",
-     // ... existing translations ...
+    // ... existing translations ...
     cookiePolicy: "Cookie Policy",
     cookieDescription: "Learn how we use cookies to enhance your browsing experience",
     cookiePolicyDetails: "Cookie Policy Details",
@@ -628,17 +637,17 @@ ai_services: "AI Services",
   },
   es: {
     searchPlaceholder: "¿Buscas algo específico? inténtalo conmigo",
-selectCategory: "Seleccionar categoría",
+    selectCategory: "Seleccionar categoría",
     intCert: "Certificaciones Internacionales",
-execPrograms: "Programas Ejecutivos",
+    execPrograms: "Programas Ejecutivos",
     securePaymentTitle: "Facilidad de Pago Seguro",
     securePaymentDesc: "Aceptamos pagos de forma segura con American Express, Mastercard, Visa, BAC y Diners Club.",
-      heroTitlePart1: 'Votre voyage vers le',
+    heroTitlePart1: 'Votre voyage vers le',
     heroTitleHighlight: 'succès',
     heroTitlePart2: 'commence avec nous !',
     heroDescriptionLine1: 'nous permettons aux entreprises de prospérer dans un paysage numérique en évolution rapide',
     heroDescriptionLine2: 'Prêt à vous transformer ? Explorons ensemble comment nous pouvons élever votre organisation.',
-     heroTitlePart1: '¡Tu viaje al',
+    heroTitlePart1: '¡Tu viaje al',
     heroTitleHighlight: 'éxito',
     heroTitlePart2: 'comienza con nosotros!',
     heroDescriptionLine1: 'habilitamos a las empresas para prosperar en un panorama digital en rápida evolución',
@@ -661,7 +670,7 @@ execPrograms: "Programas Ejecutivos",
     locationAlt: 'ubicación',
     studentAlt: 'Estudiante',
     // Feature Section Localization
-      digitalTransformation: 'Transformación Digital',
+    digitalTransformation: 'Transformación Digital',
     digitalTransformationDesc: 'Modernice sus procesos, optimice operaciones y adopte tecnología que impulse la eficiencia y el crecimiento empresarial a largo plazo.',
     boutiqueRecruitment: 'Reclutamiento Especializado',
     boutiqueRecruitmentDesc: 'Encuentre el talento adecuado a través de servicios de reclutamiento personalizados diseñados para construir equipos ágiles y de alto rendimiento para su organización.',
@@ -669,12 +678,12 @@ execPrograms: "Programas Ejecutivos",
     endToEndSupportDesc: 'Desde la estrategia hasta la ejecución, proporcionamos orientación integral y soporte continuo para garantizar una adopción sin problemas y resultados sostenibles.',
     learnMore: 'Saber Más',
     graduationAlt: 'gorro de graduación',
-     // Feedback section translations
+    // Feedback section translations
     quickIntro: 'Introducción Rápida',
     quickIntroTitle: 'Aquí tienes una breve introducción sobre nosotros',
     introVideoTitle: 'Video de Introducción de la Empresa',
     videoNotSupported: 'Tu navegador no soporta la etiqueta de video.',
-     // Partners section translations
+    // Partners section translations
     ourPartners: 'Nuestros Socios',
     partnersDescription: 'Contamos con socios de calidad en una variedad de destinos alrededor del mundo.',
     bacAlt: 'BAC',
@@ -685,7 +694,7 @@ execPrograms: "Programas Ejecutivos",
     amaAlt: 'Asociación Americana de Marketing',
     pdtsAlt: 'PDTS',
     mountainAlt: 'montaña',
-      // Certifications section translations
+    // Certifications section translations
     ourSpecializations: 'NUESTRAS ESPECIALIZACIONES',
     popularCertifications: 'Certificaciones',
     internationalCertifications: 'Certificaciones Internacionales',
@@ -704,7 +713,7 @@ execPrograms: "Programas Ejecutivos",
     management: 'Gestión',
     leanSixSigma: 'Instituto Lean Six Sigma',
     agileCertifications: 'Certificaciones Ágiles',
-      // Modal translations
+    // Modal translations
     modalTitle: "Comparte Tu Visión",
     modalSubtitle: "Cuéntanos sobre tu proyecto de {serviceType}",
     fullName: "Nombre Completo",
@@ -733,7 +742,7 @@ execPrograms: "Programas Ejecutivos",
     shareProject: "Comparte Tu Proyecto Personalizado",
     customProjects: "Proyectos Personalizados",
     successRate: "Tasa de Éxito",
-     // Modal translations
+    // Modal translations
     modalTitle: "Ponte en Contacto",
     modalSubtitle: "Te responderemos dentro de 24 horas",
     fullName: "Nombre Completo",
@@ -843,7 +852,7 @@ execPrograms: "Programas Ejecutivos",
     powerBI: 'Power BI',
     reactNative: 'React Native',
     nodejs: 'Nodejs',
-       // Steps section translations
+    // Steps section translations
     stepsTitle: 'PASOS',
     stepsSubtitle: 'Pasos para obtener tu certificación',
     stepsDescription: 'Sigue este simple proceso de 5 pasos para lograr tu certificación y desbloquear nuevas oportunidades profesionales',
@@ -857,33 +866,33 @@ execPrograms: "Programas Ejecutivos",
     completeTasksDesc: 'Termina asignaciones, ejercicios prácticos y proyectos para demostrar tus habilidades.',
     getCertified: 'Certifícate',
     getCertifiedDesc: 'Recibe tu certificación reconocida por la industria y lleva tu carrera al siguiente nivel.',
-// FAQ Questions and Answers
-faqQuestion1: '¿Cómo obtener admisión en una universidad en el extranjero?',
-faqAnswer1: 'Puedes obtener admisión preparando los documentos necesarios (pasaporte, certificados académicos, carta de motivación), cumpliendo los requisitos del idioma (IELTS/TOEFL) y aplicando dentro del plazo. Nosotros te guiamos en cada paso del proceso.',
+    // FAQ Questions and Answers
+    faqQuestion1: '¿Cómo obtener admisión en una universidad en el extranjero?',
+    faqAnswer1: 'Puedes obtener admisión preparando los documentos necesarios (pasaporte, certificados académicos, carta de motivación), cumpliendo los requisitos del idioma (IELTS/TOEFL) y aplicando dentro del plazo. Nosotros te guiamos en cada paso del proceso.',
 
-faqQuestion2: '¿Ofrecen solución completa para estudiantes?',
-faqAnswer2: 'Sí, ofrecemos una solución completa para estudios en el extranjero: asesoría, selección de universidades, gestión de solicitudes, asistencia de visa, apoyo para alojamiento y orientación previa al viaje.',
+    faqQuestion2: '¿Ofrecen solución completa para estudiantes?',
+    faqAnswer2: 'Sí, ofrecemos una solución completa para estudios en el extranjero: asesoría, selección de universidades, gestión de solicitudes, asistencia de visa, apoyo para alojamiento y orientación previa al viaje.',
 
-faqQuestion3: '¿Qué país es seguro y mejor para estudios superiores?',
-faqAnswer3: 'Países como Noruega, Estados Unidos, Reino Unido, Alemania e Italia son opciones seguras y populares para estudiantes internacionales debido a su alta calidad educativa y ambiente multicultural.',
+    faqQuestion3: '¿Qué país es seguro y mejor para estudios superiores?',
+    faqAnswer3: 'Países como Noruega, Estados Unidos, Reino Unido, Alemania e Italia son opciones seguras y populares para estudiantes internacionales debido a su alta calidad educativa y ambiente multicultural.',
 
-faqQuestion4: '¿Qué país ofrece residencia permanente después de estudiar y conseguir trabajo?',
-faqAnswer4: 'Países como Canadá, Australia, Alemania y Nueva Zelanda ofrecen caminos claros para obtener residencia permanente (PR) después de completar estudios y conseguir empleo.',
+    faqQuestion4: '¿Qué país ofrece residencia permanente después de estudiar y conseguir trabajo?',
+    faqAnswer4: 'Países como Canadá, Australia, Alemania y Nueva Zelanda ofrecen caminos claros para obtener residencia permanente (PR) después de completar estudios y conseguir empleo.',
 
-faqQuestion5: '¿Puedo obtener una beca con mi bajo promedio de calificaciones?',
-faqAnswer5: 'Sí, algunas universidades ofrecen becas basadas en motivación, actividades extracurriculares o necesidad financiera. Además, países como Italia y Alemania ofrecen becas gubernamentales que no siempre requieren un promedio alto.',
+    faqQuestion5: '¿Puedo obtener una beca con mi bajo promedio de calificaciones?',
+    faqAnswer5: 'Sí, algunas universidades ofrecen becas basadas en motivación, actividades extracurriculares o necesidad financiera. Además, países como Italia y Alemania ofrecen becas gubernamentales que no siempre requieren un promedio alto.',
 
-faqQuestion6: '¿Ofrecen alojamiento para estudiantes en el extranjero?',
-faqAnswer6: 'Sí, ayudamos a los estudiantes a encontrar alojamiento seguro y asequible en el país de destino, incluyendo residencias universitarias y apartamentos privados.',
+    faqQuestion6: '¿Ofrecen alojamiento para estudiantes en el extranjero?',
+    faqAnswer6: 'Sí, ayudamos a los estudiantes a encontrar alojamiento seguro y asequible en el país de destino, incluyendo residencias universitarias y apartamentos privados.',
 
-     // Footer translations
+    // Footer translations
     newsletterTitle: 'Suscríbete a nuestro boletín',
     newsletterDescription: 'Mantente actualizado con nuestras últimas ofertas, oportunidades de estudio en el extranjero y perspectivas educativas',
     emailPlaceholder: 'Ingresa tu dirección de correo electrónico',
     subscribe: 'Suscribirse',
     microsoftLicense: "Licencias de Microsoft",
-customService: "Soluciones Personalizadas",
-ai_services: "Servicios de IA",
+    customService: "Soluciones Personalizadas",
+    ai_services: "Servicios de IA",
     companyLogoAlt: 'Logo de Tara Solutions',
     bellIconAlt: 'Icono de campana',
     cursoDescripción: "Descripción del curso",
@@ -917,28 +926,29 @@ ai_services: "Servicios de IA",
     sendingVision: "Enviando tu visión...",
     submitVision: "Enviar Tu Visión",
     bySubmitting: "Al enviar este formulario, aceptas nuestros términos y política de privacidad",
-    
+
     // Success Modal
     visionReceived: "¡Visión Recibida!",
     thankYouMessage: "Gracias por compartir tu idea de proyecto con nosotros.",
     confirmationSent: "Confirmación enviada a",
     reviewTime: "Nuestro equipo revisará tu visión y te contactará en",
     hours: "24-48 horas",
-    
+
     // Error
     submitError: "Error al enviar la consulta. Por favor, intenta de nuevo.",
-    
+    internationalCertificationsText: "Ofrecemos programas de certificación internacional reconocidos globalmente, diseñados para mejorar sus habilidades profesionales y sus oportunidades de carrera. Nuestras certificaciones brindan conocimientos con estándares de la industria, capacitación práctica y credibilidad que le ayudan a destacar en mercados laborales competitivos. Ya sea que avance en TI, negocios o gestión, ofrecemos rutas hacia cualificaciones aceptadas internacionalmente.",
+    executiveProgramsText: "Nuestros programas ejecutivos están diseñados para profesionales, gerentes y líderes que buscan ampliar sus habilidades estratégicas y capacidades de liderazgo. Estos programas se enfocan en desafíos empresariales reales, conceptos avanzados de gestión y herramientas prácticas para la toma de decisiones. Diseñados para el crecimiento profesional, nuestros cursos ejecutivos le permiten liderar con confianza y impulsar el éxito organizacional.",
     // Hero Section
     poweredBy: "Impulsado por Tecnología Avanzada de IA",
     transformBusiness: "Transforma Tu Negocio",
     withAI: "Con Soluciones de IA",
-    heroDescription: "Dale vida a tu visión de IA. Construimos soluciones de inteligencia artificial personalizadas adaptadas a tus necesidades y desafíos comerciales únicos.",
+    heroDescription: "Su socio tecnológico de confianza para licencias de Microsoft, soluciones de IA, software a medida y certificaciones profesionales. Explore nuestro catálogo en crecimiento de más de 1000 productos y servicios digitales con entrega instantánea, asesoría experta y soporte de por vida.",
     shareAIVision: "Comparte Tu Visión de IA",
     projectsDelivered: "Proyectos de IA Entregados",
     clientSatisfaction: "Satisfacción del Cliente",
     aiSpecialists: "Especialistas en IA",
     supportAvailable: "Soporte Disponible",
-    
+
     // AI Services
     ourCapabilities: "Nuestras Capacidades de IA",
     capabilitiesDesc: "Soluciones integrales de IA para resolver desafíos comerciales complejos",
@@ -950,11 +960,16 @@ ai_services: "Servicios de IA",
     computerVisionDesc: "Reconocimiento de imágenes, detección de objetos y análisis visual",
     nlp: "Procesamiento de Lenguaje Natural",
     nlpDesc: "Análisis de texto, detección de sentimientos y comprensión del lenguaje",
-    
+
     uniqueProject: "¿Tienes un Proyecto de IA Único en Mente?",
     uniqueProjectDesc: "Nos especializamos en convertir ideas innovadoras en realidad. ¡Comparte tu visión con nosotros!",
     discussProject: "Discute Tu Proyecto",
-    
+    microsoftText: "Ofrecemos licencias originales de Microsoft para empresas y usuarios individuales, incluyendo Windows, Office 365 y productos de servidor. Nuestras soluciones de licenciamiento garantizan cumplimiento total, seguridad e integración fluida con sus sistemas actuales. Ya sea para un solo dispositivo o para toda su organización, brindamos opciones confiables y rentables.",
+    customServiceText: "Desarrollamos soluciones de software completamente personalizadas según las necesidades específicas de su empresa. Desde sistemas de automatización hasta aplicaciones empresariales, nuestro equipo ofrece sistemas seguros, escalables y de alto rendimiento diseñados para mejorar la eficiencia y reducir los costos operativos.",
+    ai_services_text: "Nuestros servicios de IA ayudan a las empresas a aprovechar el poder de la inteligencia artificial para automatizar procesos, mejorar la toma de decisiones y optimizar la experiencia del cliente. Nos especializamos en chatbots de IA, modelos de aprendizaje automático, análisis predictivo y soluciones de automatización inteligente que impulsan la transformación digital.",
+    helpdeskSystemText: "Nuestro Sistema de Mesa de Ayuda llegará muy pronto con funciones avanzadas para gestionar consultas de clientes, tickets de soporte y flujos de trabajo del equipo. Diseñado para brindar eficiencia y transparencia, incluirá seguimiento en tiempo real, respuestas automáticas y comunicación fluida para mejorar las operaciones de atención al cliente.",
+    helpdeskSystem: "Sistema de Mesa de Ayuda (Próximamente)",
+
     // Why Choose Us
     whyChoose: "¿Por Qué Elegir Tara Solutions para IA?",
     whyChooseDesc: "Combinamos experiencia, innovación y dedicación para ofrecer soluciones excepcionales de IA",
@@ -966,7 +981,7 @@ ai_services: "Servicios de IA",
     expertTeamDesc: "Ingenieros de IA y científicos de datos experimentados a tu servicio",
     secureScalable: "Seguro y Escalable",
     secureScalableDesc: "Seguridad de nivel empresarial con escalabilidad integrada",
-    
+
     readyToInnovate: "¿Listo para Innovar con IA?",
     readyToInnovateDesc: "Hablemos sobre cómo la IA puede transformar tu negocio y dar vida a tu visión",
     startJourney: "Comienza Tu Viaje con IA",
@@ -1005,16 +1020,16 @@ ai_services: "Servicios de IA",
     successStories: 'HISTORIAS DE ÉXITO',
     testimonialsTitle: 'Estudiantes que Alcanzaron el Éxito Globalmente',
     testimonialsDescription: 'Escucha a nuestros estudiantes que han transformado sus vidas a través de la educación internacional',
-testimonial1: 'TaraSolutions me ayudó a obtener mi certificación internacional con facilidad. ¡La guía durante todo el proceso fue excepcional!',
-testimonial2: 'Los formadores de TaraSolutions son verdaderos expertos. Hicieron que mi preparación para los exámenes de ScrumStudy y PeopleCert fuera clara y efectiva.',
-testimonial3: 'Gracias a TaraSolutions, aprobé mi examen de Microsoft en el primer intento. Su apoyo y materiales de estudio marcaron una gran diferencia.',
-testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolutions me ayudó a elegir los programas ejecutivos más adecuados para mi desarrollo profesional.',
-    
+    testimonial1: 'TaraSolutions me ayudó a obtener mi certificación internacional con facilidad. ¡La guía durante todo el proceso fue excepcional!',
+    testimonial2: 'Los formadores de TaraSolutions son verdaderos expertos. Hicieron que mi preparación para los exámenes de ScrumStudy y PeopleCert fuera clara y efectiva.',
+    testimonial3: 'Gracias a TaraSolutions, aprobé mi examen de Microsoft en el primer intento. Su apoyo y materiales de estudio marcaron una gran diferencia.',
+    testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolutions me ayudó a elegir los programas ejecutivos más adecuados para mi desarrollo profesional.',
+
     ctaTitle: '¿Listo para Comenzar tu Viaje de Educación Global?',
     ctaDescription: 'Únete a miles de estudiantes exitosos que han transformado sus vidas con la guía experta de Eduplan.',
     startFreeConsultation: 'Comenzar Consulta Gratuita',
     browseCourses: 'Explorar Cursos',
-     // Course listing translations
+    // Course listing translations
     courseListingTitle: 'Tenemos cursos en total:',
     courseListingDescription: 'Tenemos alianzas profesionales con las principales universidades y colegios de todo el mundo.',
     category: 'Categoría',
@@ -1040,7 +1055,7 @@ testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolut
     thankYouMessage: 'Gracias por tu interés. Nos pondremos en contacto contigo pronto.',
     prev: 'ANTERIOR',
     next: 'SIGUIENTE',
-     // Courses page translations
+    // Courses page translations
     exclusivePrograms: 'Programas Exclusivos',
     executivePrograms: 'Programas Ejecutivos',
     executiveProgramsDescription: 'Programas de liderazgo avanzado diseñados para profesionales senior que buscan crecimiento transformador e impacto estratégico.',
@@ -1078,7 +1093,7 @@ testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolut
     close: 'Cerrar',
     previous: 'Anterior',
     next: 'Siguiente',
-     // Contact page translations
+    // Contact page translations
     contactHeroTitle: "Conectemos",
     contactHeroDescription: "¿Listo para comenzar tu viaje? Estamos aquí para ayudarte en cada paso. Ponte en contacto con nuestro equipo dedicado hoy.",
     responseTime: "Normalmente respondemos en 2 horas",
@@ -1108,7 +1123,7 @@ testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolut
     sendMessageButton: "Enviar Mensaje",
     visitOurCampus: "Visita Nuestro Campus",
     campusDescription: "Ubicado en el corazón de la ciudad, nuestro campus es de fácil acceso y está equipado con instalaciones de última generación.",
-      // Terms and Conditions translations
+    // Terms and Conditions translations
     termsAndConditions: "Términos y Condiciones",
     termsDescription: "Por favor lea estos términos cuidadosamente antes de usar nuestros servicios",
     lastUpdated: "Última Actualización",
@@ -1124,7 +1139,7 @@ testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolut
     acceptanceDescription: "Al continuar usando nuestros servicios, usted reconoce que ha leído y acepta nuestros Términos y Condiciones.",
     acceptTerms: "Acepto los Términos",
     downloadPDF: "Descargar Versión PDF",
-     // Privacy Policy translations
+    // Privacy Policy translations
     privacyPolicy: "Política de Privacidad",
     privacyDescription: "Aprenda cómo protegemos y gestionamos su información personal",
     dataSecurity: "Seguridad de Datos",
@@ -1182,7 +1197,7 @@ testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolut
     downloadCopyrightPolicy: "Descargar Política de Derechos de Autor",
     requestPermission: "Solicitar Permiso",
     reportInfringement: "Reportar Infracción",
-     // Copyright page translations
+    // Copyright page translations
     copyrightPolicy: "Política de Derechos de Autor",
     copyrightDescription: "Protegiendo nuestra propiedad intelectual y sus derechos",
     copyrightPolicyDetails: "Detalles de la Política de Derechos de Autor",
@@ -1196,12 +1211,12 @@ testimonial4: 'La orientación corporativa que recibí fue invaluable. TaraSolut
     responseInfo: "Información de Respuesta",
     hours: "horas",
     selectCertifier: "Seleccionar certificador",
-allCertifiers: "Todos los certificadores",
+    allCertifiers: "Todos los certificadores",
     typicalResponse: "Tiempo de respuesta típico",
     emergencyResponse: "Informes de infracción de emergencia: 2-4 horas",
     legalProceedings: "Procedimientos legales: Acción inmediata",
     internationalClaims: "Reclamos internacionales: Respuesta coordinada",
-     // ... existing Spanish translations ...
+    // ... existing Spanish translations ...
     cookiePolicy: "Política de Cookies",
     cookieDescription: "Aprenda cómo utilizamos las cookies para mejorar su experiencia de navegación",
     cookiePolicyDetails: "Detalles de la Política de Cookies",
@@ -1654,8 +1669,8 @@ allCertifiers: "Todos los certificadores",
   //   preferencesSaved: "Vos préférences de cookies ont été enregistrées avec succès !",
   //   confirmClearCookies: "Êtes-vous sûr de vouloir effacer tous les cookies ? Cela peut affecter votre expérience de navigation.",
   //   cookiesCleared: "Tous les cookies ont été effacés avec succès.",
-    
-    
+
+
   // },
 };
 
