@@ -123,23 +123,55 @@ const translations = {
     faqDescriptionLine2: 'Feel free to ask our experts here.',
     askYourQuestions: 'ASK YOUR QUESTIONS',
     // FAQ Questions and Answers
-    faqQuestion1: 'How to get admission in an abroad university?',
-    faqAnswer1: 'You can get admission by preparing required documents (passport, academics, motivation letter), choosing a suitable program, meeting language requirements (IELTS/TOEFL), and applying within deadlines. We guide you through the entire process.',
+    faqQuestion1: 'What international certifications does Tara Solutions offer?',
+    faqAnswer1: 'Tara Solutions offers globally recognized certifications in cybersecurity, artificial intelligence, agile methodologies, quality, semiconductors, IoT, project management and more than 100 hundred certifications. We work with international organizations to ensure high validity and strong applicability in the job market.',
 
-    faqQuestion2: 'Do you offer a complete solution for students?',
-    faqAnswer2: 'Yes, we provide complete study abroad solutions including counseling, university selection, application processing, visa assistance, accommodation support, and pre-departure guidance.',
+    faqQuestion2: 'Can the executive programs be customized to the needs of my company or institution?',
+    faqAnswer2: 'Yes. We design fully customized executive programs based on your organization’s goals, participant profiles, and identified talent gaps. This includes an initial diagnostic and personalized instructional design.',
 
-    faqQuestion3: 'Which country is safe and better for higher study?',
-    faqAnswer3: 'Countries like Norway, USA, UK, Germany, and Italy are safe and popular choices for Bangladeshi students due to quality education and international student support.',
+    faqQuestion3: 'What type of digital solutions does Tara Solutions develop?',
+    faqAnswer3: 'We create custom platforms, tailor-made ERPs, automation systems, BI dashboards, chatbots, digital learning systems, and personalized apps, aligned with the client’s workflow and objectives.',
 
-    faqQuestion4: 'Which countries offer permanent residency after study and getting a job?',
-    faqAnswer4: 'Countries such as Canada, Australia, Germany, and New Zealand offer pathways to Permanent Residency (PR) after completing studies and securing employment.',
+    faqQuestion4: 'Do you offer Artificial Intelligence services for companies?',
+    faqAnswer4: 'Yes. We implement AI models, AI-driven automation, predictive analytics, recommendation systems, virtual assistants, risk engines, and process optimization for the education, finance, healthcare, and commerce sectors',
 
-    faqQuestion5: 'Can I get a scholarship with a low CGPA?',
-    faqAnswer5: 'Yes, some universities offer scholarships based on motivation letters, extracurricular activities, or financial need. Additionally, countries like Italy and Germany offer government-funded scholarships that do not always require a high CGPA.',
+    faqQuestion5: 'Can I obtain Microsoft licenses through Tara Solutions?',
+    faqAnswer5: 'Yes. Tara Solutions is an authorized provider of Microsoft 365, Office, Azure, and enterprise solutions. We also offer technical support and assistance during implementation.',
 
-    faqQuestion6: 'Do you assist with student accommodation abroad?',
-    faqAnswer6: 'Yes, we help students find safe and affordable accommodation options including dormitories, shared apartments, and private rentals.',
+    faqQuestion6: 'Does Tara Solutions work with educational institutions?',
+    faqAnswer6: 'Yes. We support universities, technical colleges, and training centers with: •	International certifications •	STEM executive programs •	Educational platforms •	Academic Business Intelligence systems •	AI for student retention analysis',
+
+    faqQuestion7: "What types of organizations can benefit from your services?",
+    faqAnswer7: "We work with small and medium-sized businesses, large enterprises, educational institutions, startups, and government organizations seeking digital transformation, talent development, or high-impact technological solutions.",
+
+    faqQuestion8: "Are the courses and certifications 100% online?",
+    faqAnswer8: "It depends on the program. We offer: •	Live online sessions •	Asynchronous learning •	Hybrid formats •	On-site corporate training when requested",
+
+    faqQuestion9: "What benefits do companies gain by training with Tara Solutions?",
+    faqAnswer9: "•	Programs aligned with global market demand •	Practical, real-world learning •	Recognized certifications •	Flexible schedules •	Progress and performance reports •	Certified instructors with industry experience",
+
+    faqQuestion10: "Do you develop platforms or software from scratch?",
+    faqAnswer10: "Yes. We design and develop complete custom solutions, including: •	Requirements analysis •	UX/UI design •	Development •	Integrations •	Testing •	Deployment and technical maintenance",
+
+    faqQuestion11: "How does the process of creating a customized executive program work?",
+    faqAnswer11: "1.	Diagnostic meeting 2.	Definition of objectives 3.	Program design and approval 4.	Selection of expert instructors 5.	Program execution 6.	Evaluation of results and impact",
+
+    faqQuestion12: "Do you offer corporate packages or training for complete teams?",
+    faqAnswer12: "Yes. We offer group packages, special pricing, and annual licenses for institutions or companies that want to train entire departments.",
+
+    faqQuestion13: "Does Tara Solutions provide support after implementing a digital or AI solution?",
+    faqAnswer13: "Yes. We provide continuous support, maintenance, updates, and optimization to ensure the solution remains efficient and scalable.",
+
+    faqQuestion14: "Can I request a demo of your solutions or certifications?",
+    faqAnswer14: "Absolutely. We can schedule a personalized demo of our platforms, executive programs, or certifications",
+
+    faqQuestion15: "How can I request an official quotation?",
+    faqAnswer15: "You can request a quotation via email, WhatsApp, or our website form. The Tara Solutions team responds within 24 hours with a proposal tailored to your needs.",
+
+    faqQuestion16: "Does Tara Solutions work exclusively with internationally recognized providers?",
+    faqAnswer16: "Yes. Tara Solutions works exclusively with internationally renowned providers, certifiers, and technology partners, ensuring high standards of quality, reliability, and continuous innovation. This guarantees that every certification, platform, license, executive program, or digital solution meets global best practices and has official backing",
+
+
 
     // Footer translations
     newsletterTitle: 'Subscribe to Our Newsletter',
@@ -867,23 +899,53 @@ const translations = {
     getCertified: 'Certifícate',
     getCertifiedDesc: 'Recibe tu certificación reconocida por la industria y lleva tu carrera al siguiente nivel.',
     // FAQ Questions and Answers
-    faqQuestion1: '¿Cómo obtener admisión en una universidad en el extranjero?',
-    faqAnswer1: 'Puedes obtener admisión preparando los documentos necesarios (pasaporte, certificados académicos, carta de motivación), cumpliendo los requisitos del idioma (IELTS/TOEFL) y aplicando dentro del plazo. Nosotros te guiamos en cada paso del proceso.',
-
-    faqQuestion2: '¿Ofrecen solución completa para estudiantes?',
-    faqAnswer2: 'Sí, ofrecemos una solución completa para estudios en el extranjero: asesoría, selección de universidades, gestión de solicitudes, asistencia de visa, apoyo para alojamiento y orientación previa al viaje.',
-
-    faqQuestion3: '¿Qué país es seguro y mejor para estudios superiores?',
-    faqAnswer3: 'Países como Noruega, Estados Unidos, Reino Unido, Alemania e Italia son opciones seguras y populares para estudiantes internacionales debido a su alta calidad educativa y ambiente multicultural.',
-
-    faqQuestion4: '¿Qué país ofrece residencia permanente después de estudiar y conseguir trabajo?',
-    faqAnswer4: 'Países como Canadá, Australia, Alemania y Nueva Zelanda ofrecen caminos claros para obtener residencia permanente (PR) después de completar estudios y conseguir empleo.',
-
-    faqQuestion5: '¿Puedo obtener una beca con mi bajo promedio de calificaciones?',
-    faqAnswer5: 'Sí, algunas universidades ofrecen becas basadas en motivación, actividades extracurriculares o necesidad financiera. Además, países como Italia y Alemania ofrecen becas gubernamentales que no siempre requieren un promedio alto.',
-
-    faqQuestion6: '¿Ofrecen alojamiento para estudiantes en el extranjero?',
-    faqAnswer6: 'Sí, ayudamos a los estudiantes a encontrar alojamiento seguro y asequible en el país de destino, incluyendo residencias universitarias y apartamentos privados.',
+ "faqQuestion1": "¿Qué certificaciones internacionales ofrece Tara Solutions?",
+  "faqAnswer1": "Tara Solutions ofrece certificaciones reconocidas globalmente en ciberseguridad, inteligencia artificial, metodologías ágiles, calidad, semiconductores, IoT, gestión de proyectos, en total más de 100 certificaciones internacionales. Trabajamos con organismos internacionales para garantizar alta validez y aplicabilidad laboral.",
+  
+  "faqQuestion2": "¿Los programas ejecutivos pueden adaptarse a las necesidades de mi empresa o institución?",
+  "faqAnswer2": "Sí. Diseñamos programas ejecutivos totalmente a la medida, basados en los objetivos de la organización, nivel de los participantes y brechas de talento que se desean cerrar. Incluye diagnóstico inicial y diseño instruccional personalizado.",
+  
+  "faqQuestion3": "¿Qué tipo de soluciones digitales desarrolla Tara Solutions?",
+  "faqAnswer3": "Creamos plataformas, ERP a la medida, sistemas de automatización, dashboards de BI, chatbots, sistemas educativos digitales y apps personalizadas, según el flujo de trabajo y los objetivos del cliente.",
+  
+  "faqQuestion4": "¿Ofrecen servicios de Inteligencia Artificial para empresas?",
+  "faqAnswer4": "Sí. Implementamos modelos de IA, automatización con IA, análisis predictivo, sistemas de recomendación, asistentes virtuales, motores de riesgo y optimización de procesos para sectores educativos, financieros, salud y comercio.",
+  
+  "faqQuestion5": "¿Puedo obtener licencias de Microsoft con Tara Solutions?",
+  "faqAnswer5": "Sí. Tara Solutions es proveedor autorizado para ofrecer licencias Microsoft 365, Office, Azure y soluciones empresariales. También brindamos soporte técnico y acompañamiento en la implementación.",
+  
+  "faqQuestion6": "¿Tara Solutions trabaja con instituciones educativas?",
+  "faqAnswer6": "Sí. Apoyamos universidades, colegios técnicos y centros de formación en: • Certificaciones internacionales • Programas ejecutivos STEM • Plataformas educativas • Sistemas de Business Intelligence académico • IA para análisis de retención estudiantil",
+  
+  "faqQuestion7": "¿Qué tipo de empresas pueden beneficiarse de sus servicios?",
+  "faqAnswer7": "Trabajamos con Pymes, grandes empresas, instituciones educativas, startups y organizaciones gubernamentales que buscan mejorar su transformación digital, capacitar su talento o crear soluciones tecnológicas de alto impacto.",
+  
+  "faqQuestion8": "¿Los cursos y certificaciones son 100% en línea?",
+  "faqAnswer8": "Depende del programa. Ofrecemos: • Modalidad online en vivo • Asincrónico • Híbrido • Y también presencial corporativo si el cliente lo requiere.",
+  
+  "faqQuestion9": "¿Qué beneficios obtienen las empresas al capacitar con Tara Solutions?",
+  "faqAnswer9": "• Programas alineados al mercado global • Capacitación práctica y aplicable • Certificaciones reconocidas • Flexibilidad de horarios • Reportes de avance y desempeño • Instructores certificados y con experiencia real",
+  
+  "faqQuestion10": "¿Desarrollan plataformas o software desde cero?",
+  "faqAnswer10": "Sí. Diseñamos y desarrollamos soluciones completas a la medida, incluyendo: • Análisis de requerimientos • Diseño UX/UI • Programación • Integraciones • Pruebas • Despliegue y mantenimiento técnico",
+  
+  "faqQuestion11": "¿Cómo funciona el proceso para crear un programa ejecutivo personalizado?",
+  "faqAnswer11": "1. Reunión de diagnóstico 2. Definición de objetivos 3. Diseño y aprobación del programa 4. Selección de instructores expertos 5. Ejecución del programa 6. Evaluación de resultados e impacto",
+  
+  "faqQuestion12": "¿Ofrecen paquetes corporativos o capacitaciones para equipos completos?",
+  "faqAnswer12": "Sí. Contamos con paquetes para grupos, precios especiales y licencias anuales para instituciones o empresas que desean capacitar a todo un departamento.",
+  
+  "faqQuestion13": "¿Tara Solutions brinda acompañamiento después de implementar una solución digital o IA?",
+  "faqAnswer13": "Sí. Ofrecemos soporte continuo, mantenimiento, actualizaciones y optimización para asegurar que la solución siga siendo eficiente y escalable.",
+  
+  "faqQuestion14": "¿Puedo solicitar una demostración de sus soluciones o certificaciones?",
+  "faqAnswer14": "Claro. Podemos coordinar una demo personalizada, ya sea de nuestras plataformas, programas ejecutivos o certificaciones.",
+  
+  "faqQuestion15": "¿Cómo puedo solicitar una cotización oficial?",
+  "faqAnswer15": "Puedes solicitar una cotización directamente por correo, WhatsApp o formulario web. El equipo de Tara Solutions responde en menos de 24 horas con una propuesta ajustada al proyecto o necesidad.",
+  
+  "faqQuestion16": "¿Tara Solutions trabaja únicamente con proveedores reconocidos a nivel mundial?",
+  "faqAnswer16": "Sí. Tara Solutions colabora exclusivamente con proveedores, certificadores y socios tecnológicos de prestigio internacional, garantizando estándares altos de calidad, confiabilidad y actualización constante. Esto asegura que cada certificación, plataforma, licencia, programa ejecutivo o solución digital cumpla con las mejores prácticas globales y tenga respaldo oficial.",
 
     // Footer translations
     newsletterTitle: 'Suscríbete a nuestro boletín',
