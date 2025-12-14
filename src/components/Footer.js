@@ -199,6 +199,12 @@ export default function Footer() {
                     {t('customService')}
                   </Link>
                 </li>
+                 <li>
+                  <Link href="/ebadgeid" className="text-gray-400 hover:text-purple-400 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3 group-hover:scale-150 transition-transform"></span>
+                    eBadge ID
+                  </Link>
+                </li>
               </ul>
             </div>
 
