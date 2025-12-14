@@ -40,7 +40,8 @@ export default function Header() {
         { name: `${t('execPrograms')}`, href: '/executive_programs' },
         { name: `${t('microsoftLicense')}`, href: '/microsoft_licenses' },
         { name: `${t('customService')}`, href: '/custom_solutions' },
-        { name: `${t('ai_services')}`, href: "/ai_services" }
+        { name: `${t('ai_services')}`, href: "/ai_services" },
+        { name: "eBadgeID", href:"/ebadgeid"}
       ]
     },
     { name: 'contact', href: '/contact' },
