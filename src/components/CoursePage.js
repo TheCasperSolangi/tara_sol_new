@@ -2417,11 +2417,11 @@ export default function CoursesPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50/30">
+    <main className="min-h-screen bg-gradient-to-br from-purple-100 via-white to-pink-50">
 
 
       {/* Executive Programs Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-purple-200 via-white to-pink-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-4 border-blue-200 text-blue-700 bg-blue-50 px-4 py-2">

@@ -11,7 +11,7 @@ export default function Header() {
   const { t, language, setLanguage, availableLanguages } = useLocalization();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
-  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [isLogoLoaded, setIsLogoLoaded] = useState(false);
 
   // Complete language data with fallbacks
@@ -41,7 +41,14 @@ export default function Header() {
         { name: `${t('microsoftLicense')}`, href: '/microsoft_licenses' },
         { name: `${t('customService')}`, href: '/custom_solutions' },
         { name: `${t('ai_services')}`, href: "/ai_services" },
-        { name: "eBadge ID", href:"/ebadgeid"}
+      ]
+    },
+    {
+      name: "Software",
+      href: "/ebadgeid",
+      children: [
+        {name: "eBadge ID", href: "/ebadgeid"},
+        {name: "Helpdesk Management System", href: "/helpdesk", is_locked: true}
       ]
     },
     { name: 'contact', href: '/contact' },
@@ -114,8 +121,8 @@ export default function Header() {
               <div
                 key={item.name}
                 className="relative"
-                onMouseEnter={() => item.children && setIsServicesDropdownOpen(true)}
-                onMouseLeave={() => item.children && setIsServicesDropdownOpen(false)}
+                onMouseEnter={() => item.children && setOpenDropdown(item.name)}
+                onMouseLeave={() => item.children && setOpenDropdown(null)}
               >
                 {item.children ? (
                   <div className="relative">
@@ -129,20 +136,29 @@ export default function Header() {
 
                     {/* Improved Services Dropdown with better hover handling */}
                     <div
-                      className={`absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50 transition-all duration-200 ${isServicesDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                      className={`absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50 transition-all duration-200 ${openDropdown === item.name ? 'opacity-100 visible' : 'opacity-0 invisible'
                         }`}
-                      onMouseEnter={() => setIsServicesDropdownOpen(true)}
-                      onMouseLeave={() => setIsServicesDropdownOpen(false)}
+                      onMouseEnter={() => setOpenDropdown(item.name)}
+                      onMouseLeave={() => setOpenDropdown(null)}
                     >
                       {item.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          href={child.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
-                          onClick={() => setIsServicesDropdownOpen(false)}
-                        >
-                          {t(child.name)}
-                        </Link>
+                        child.is_locked ? (
+                          <span
+                            key={child.name}
+                            className="block px-4 py-2 text-sm text-gray-400 cursor-not-allowed"
+                          >
+                            {child.name} (Coming Soon)
+                          </span>
+                        ) : (
+                          <Link
+                            key={child.name}
+                            href={child.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {child.name}
+                          </Link>
+                        )
                       ))}
                     </div>
                   </div>
@@ -261,14 +277,23 @@ export default function Header() {
                       </div>
                       <div className="ml-4 flex flex-col space-y-1">
                         {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="text-gray-600 hover:text-gray-900 py-2 rounded-md text-base transition-colors"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {t(child.name)}
-                          </Link>
+                          child.is_locked ? (
+                            <span
+                              key={child.name}
+                              className="text-gray-400 py-2 rounded-md text-base cursor-not-allowed"
+                            >
+                              {child.name} (Coming Soon)
+                            </span>
+                          ) : (
+                            <Link
+                              key={child.name}
+                              href={child.href}
+                              className="text-gray-600 hover:text-gray-900 py-2 rounded-md text-base transition-colors"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {child.name}
+                            </Link>
+                          )
                         ))}
                       </div>
                     </div>

@@ -679,20 +679,7 @@ export default function EBadgeIDService() {
             })}
           </div>
           
-          <div className="mt-12 rounded-3xl bg-gradient-to-r from-purple-600 to-pink-600 p-12 text-center shadow-2xl">
-            <h3 className="mb-4 text-3xl font-bold text-white">
-              {t('ebadgeid.customNeedsTitle')}
-            </h3>
-            <p className="mb-8 text-lg text-purple-100">
-              {t('ebadgeid.customNeedsDesc')}
-            </p>
-            <button 
-              onClick={() => setIsModalOpen(true)}
-              className="rounded-lg bg-white px-10 py-4 text-lg font-semibold text-purple-700 shadow-lg transition-all hover:shadow-xl hover:scale-105"
-            >
-              {t('ebadgeid.requestCustom')}
-            </button>
-          </div>
+         
         </div>
       </section>
 
@@ -736,12 +723,21 @@ export default function EBadgeIDService() {
             <p className="mb-8 text-lg text-gray-600">
               {t('ebadgeid.readyToStartDesc')}
             </p>
-            <button 
-              onClick={handleTryNow}
-              className="rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-10 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
-            >
-              {t('ebadgeid.tryNow')}
-            </button>
+           <div className="flex justify-center gap-4">
+  <button 
+    onClick={handleTryNow}
+    className="rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-10 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
+  >
+    {t('ebadgeid.tryNow')}
+  </button>
+
+<button 
+  onClick={() => setIsModalOpen(true)}
+  className="rounded-lg bg-black px-10 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105 hover:bg-gray-900"
+>
+  {t('ebadgeid.requestCustom')}
+</button>
+</div>
           </div>
         </div>
       </section>

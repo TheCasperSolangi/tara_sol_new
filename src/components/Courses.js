@@ -7435,9 +7435,9 @@ export default function CourseListing() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <div className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-white to-pink-50">
+      <div className="bg-gradient-to-br from-purple-100 via-white to-pink-50 border-b">
+        <div className="max-w-7xl mx-auto px-4 py-12 ">
           <h1 className="text-4xl font-bold mb-4">
             {t('courseListingTitle')} {filteredCourses.length}
           </h1>
@@ -7447,7 +7447,7 @@ export default function CourseListing() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-8 ">
         {/* Redesigned Filter Section */}
         <Card className="p-6 mb-8 shadow-sm border">
           <div className="flex flex-col lg:flex-row items-end gap-4">
