@@ -137,8 +137,8 @@ const handlePlayPause = async (e) => {
     </div>
   )
 
-  const videoSrc = language === 'es' ? "https://staging.ebadgeid.com/assets/spanish.mp4" : "https://staging.ebadgeid.com/assets/video.mp4"
-  const webmSrc = language === 'es' ? "https://staging.ebadgeid.com/assets/spanish.webm" : "https://staging.ebadgeid.com/assets/video.webm"
+  const videoSrc = language === 'es' ? "https://tarasolutions-cr.com/assets/spanish.mp4" : "https://tarasolutions-cr.com/assets/video.mp4"
+  const webmSrc = language === 'es' ? "https://tarasolutions-cr.com/assets/spanish.webm" : "https://tarasolutions-cr.com/assets/video.webm"
 
   return (
     <section className="feedback-section py-20 bg-gradient-to-br from-white to-purple-50">
